@@ -1,0 +1,187 @@
+{
+  "id": "potassium_salt",
+  "commonName": "Potassium Salt (KCl)",
+  "iupacName": "potassium chloride",
+  "formula": "KCl",
+  "molecularWeight": 74.55,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#075985",
+  "category": "salinity",
+  "subCategory": "ionic_salt",
+  "boilingPoint": "1420 °C at 1 atm",
+  "vaporPressure": null,
+  "waterSolubility": "~344 g/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "High — K⁺ binds to soil cation exchange sites; Cl⁻ leaches; persists as ionic component",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.35,
+    "necrosis": 0.3,
+    "curl": 0.35,
+    "stomatalClose": 0.25,
+    "pigmentation": 0.2,
+    "chlorosis": 0.4,
+    "defenseProteins": 0.2,
+    "wilting": 0.45
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 85,
+      "weekFactor": 1
+    },
+    {
+      "mz": 119,
+      "label": "Glycine betaine",
+      "base": 65,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 60,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 203,
+      "label": "Mg-deficiency marker (K/Mg antagonism)",
+      "base": 55,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 133,
+      "label": "Malate (stomatal marker)",
+      "base": 50,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Mild to moderate — K⁺ is a plant nutrient so dual nature; osmotic stress at high concentrations",
+    "leafSize": "Mildly reduced at high doses",
+    "leafCurl": "Mild to moderate — osmotic effect",
+    "wilting": "Moderate — osmotic stress; less than NaCl",
+    "chlorosis": "Moderate — Cl⁻ toxicity and Mg antagonism causes interveinal chlorosis",
+    "necrosis": "Mild to moderate — Cl⁻ tip burn; less than NaCl",
+    "pigmentation": "Mild",
+    "rootGrowth": "Mildly inhibited at high doses",
+    "newVsOldLeaves": "Old leaves show Cl⁻ burn; young leaves show Mg-deficiency interveinal chlorosis (K/Mg antagonism)"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — Mg antagonism reduces chlorophyll synthesis",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Mild effect — K⁺ is actually the stomatal motor ion; complex dose-dependent effect",
+    "transpiration": "Near-normal at low dose; reduced at high dose",
+    "waterUptake": "Impaired at high concentrations",
+    "nutrientTransport": "Mildly disrupted — K⁺ excess antagonizes Mg²⁺ and Ca²⁺"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Mild to moderate",
+    "antioxidantEnzymes": [
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Mild to moderate",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "osmotic stress proteins",
+      "Mg-deficiency response proteins"
+    ],
+    "metabolitesIncreasing": [
+      "proline",
+      "glycine betaine",
+      "MDA",
+      "Mg-deficiency markers"
+    ],
+    "metabolitesDecreasing": [
+      "Mg²⁺-dependent enzymes",
+      "Ca²⁺-dependent processes"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild — less disruptive than NaCl; K⁺ is a micronutrient",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Near-normal at moderate doses",
+    "fungalEffect": "Near-normal",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Near-normal to mildly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "mild wilting",
+      "mild curl"
+    ],
+    "lateSymptoms": [
+      "interveinal chlorosis (Mg deficiency pattern)",
+      "Cl⁻ tip burn"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–3 weeks",
+    "acclimation": true,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Mild wilting → interveinal chlorosis → tip burn — least dramatic of salinity group",
+    "firstAffectedRegion": "Leaf tips (Cl⁻) and young leaf interveinal zones (Mg deficiency)",
+    "damageSpread": "Tip-inward and interveinal spreading",
+    "damagePattern": "Mixed tip burn + interveinal chlorosis — distinguishes KCl from NaCl (pure tip/margin burn)",
+    "heatmapGlow": "Mild — proline and Mg-deficiency marker signature",
+    "microbiomeParticles": "Near-normal",
+    "leafAppearance": [
+      "mild_wilting",
+      "interveinal_chlorosis",
+      "tip_burn"
+    ],
+    "recoveryVisual": "Good — best alongside CaCl₂"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "sodium_chloride",
+      "magnesium_chloride",
+      "calcium_chloride"
+    ],
+    "synergyNote": "Multi-salt saline soil — KCl contributes to the total ionic stress load. The educational value is contrasting KCl (dual nutrient/toxin) with NaCl (pure stressor) at equivalent salt concentrations.",
+    "antagonizesWith": [
+      "magnesium_chloride"
+    ],
+    "antagonismNote": "High K⁺ and high Mg²⁺ together create mutual antagonism — each reduces uptake of the other",
+    "amplifiesOxidativeStressOf": [
+      "sodium_chloride"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Natural saline soils, agricultural runoff in potassium-fertilized fields, ocean spray in coastal areas",
+    "classification": "Ionic salt / abiotic stress agent",
+    "agriculturalUse": "Also used as a fertilizer (muriate of potash) — dual character as nutrient and stressor depending on dose is the key teaching point",
+    "humanToxicity": "Very low — potassium chloride is a salt substitute for people on low-sodium diets; used in executions at very high IV doses (cardiac arrest)",
+    "climateLink": "Saline soil expansion in semi-arid regions from changing precipitation patterns — KCl from agricultural runoff contributes to soil salinization",
+    "indoorOutdoor": "Outdoor — agricultural; also natural coastal soils",
+    "whyStudentsCare": "Salt substitutes used in food (Morton Salt Substitute, NuSalt) contain KCl — the same compound. The nutrient-vs-toxin dual character is an excellent illustration of dose-response principles.",
+    "realWorldIssue": "Agricultural soil salinization, saline water irrigation, coastal agriculture"
+  },
+  "sources": [
+    "Munns R, Tester M (2008). Mechanisms of salinity tolerance. Annual Review of Plant Biology, 59, 651–681.",
+    "Greenway H, Munns R (1980). Mechanisms of salt tolerance in nonhalophytes. Annual Review of Plant Physiology, 31, 149–190.",
+    "Marosz A (2004). Effect of soil salinity on nutrient uptake, growth, and decorative value of four ground cover shrubs. Journal of Plant Nutrition, 27(6), 977–989."
+  ]
+}

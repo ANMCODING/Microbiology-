@@ -1,0 +1,195 @@
+{
+  "id": "nitric_acid",
+  "commonName": "Nitric Acid",
+  "iupacName": "nitric acid",
+  "formula": "HNO3",
+  "molecularWeight": 63.01,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "foliar_spray",
+    "root_drench",
+    "soil"
+  ],
+  "color": "#EF4444",
+  "category": "acid_rain",
+  "subCategory": "strong_acid",
+  "boilingPoint": "83 °C at 1 atm (concentrated azeotrope)",
+  "vaporPressure": "~48 mmHg at 20 °C",
+  "waterSolubility": "Miscible in all proportions",
+  "odor": "Sharp, suffocating, characteristic acid smell",
+  "environmentalPersistence": "Low as free acid — rapidly neutralized; nitrate ion persists and contributes to eutrophication",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "stomata",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "roots"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.7,
+    "curl": 0.55,
+    "stomatalClose": 0.65,
+    "pigmentation": 0.15,
+    "chlorosis": 0.55,
+    "defenseProteins": 0.25,
+    "wilting": 0.45
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 62,
+      "label": "Nitrate ion [NO3]-",
+      "base": 100,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 85,
+      "weekFactor": 1
+    },
+    {
+      "mz": 133,
+      "label": "Malate (pH stress marker)",
+      "base": 65,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 60,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 146,
+      "label": "Nitrosylated protein fragment",
+      "base": 50,
+      "weekFactor": 0.85
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — similar to sulfuric acid but slightly less soil pH impact",
+    "leafSize": "Reduced",
+    "leafCurl": "Moderate — cuticle damage; slightly less structural damage than H₂SO₄",
+    "wilting": "Moderate",
+    "chlorosis": "Moderate — Mg displacement; nutrient disruption",
+    "necrosis": "Strong — acid burn necrosis at contact points; slightly less than H₂SO₄",
+    "pigmentation": "Minimal",
+    "rootGrowth": "Moderately inhibited by soil acidification; nitrate excess also causes root tip damage",
+    "newVsOldLeaves": "Contact-exposed leaves affected immediately regardless of age"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate-strong",
+    "photosyntheticRate": "Significantly reduced",
+    "stomatalConductance": "Strongly reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "nutrientTransport": "Disrupted",
+    "membranePermeability": "Strongly increased",
+    "additionalNote": "Nitrate at low doses is actually a nutrient — this is the key distinction from sulfuric acid for educational purposes"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — nitric acid generates reactive nitrogen species (RNS) in addition to ROS",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Minimal",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "nitrate reductase (stress induction)",
+      "cell wall repair proteins"
+    ],
+    "metabolitesIncreasing": [
+      "nitrate",
+      "MDA",
+      "malate",
+      "nitrosylated proteins",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b",
+      "membrane lipids"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — acidification and nitrate excess disrupt microbiome",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — nitrogen-fixing bacteria especially sensitive",
+    "fungalEffect": "Disrupted; nitrate-tolerant species may proliferate",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "2–12 hours",
+    "firstSymptoms": [
+      "foliar bleaching at contact",
+      "stomatal closure"
+    ],
+    "lateSymptoms": [
+      "interveinal necrosis",
+      "chlorosis",
+      "root damage"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor for contact damage; soil recovery possible with buffering",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Bleaching at contact → necrotic brown; interveinal chlorosis pattern",
+    "firstAffectedRegion": "Leaf surface contact points",
+    "damageSpread": "Contact zones → interveinal spreading",
+    "damagePattern": "Similar to sulfuric acid — interveinal necrosis/bleaching; slightly more irregular",
+    "heatmapGlow": "Moderate — nitrate and MDA signature; nitrosylated protein peak distinctive",
+    "microbiomeParticles": "Strongly reduced; pathogen fraction elevated",
+    "leafAppearance": [
+      "bleached",
+      "spotted",
+      "curled"
+    ],
+    "recoveryVisual": "Minimal — contact damage permanent; new growth healthy if acid source removed"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "sulfuric_acid",
+      "so2",
+      "no2"
+    ],
+    "synergyNote": "Real-world acid rain is always a mixture of both acids — HNO₃ and H₂SO₄ together create faster and more complete cuticle dissolution than either alone",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "ozone",
+      "so2"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "NOₓ emissions from vehicles and power plants → atmospheric oxidation to HNO₃; lightning (natural source)",
+    "classification": "Acid rain component / industrial pollutant",
+    "agriculturalUse": "Fertilizer production intermediate; dilute form used in pH adjustment",
+    "humanToxicity": "High — strong oxidizing acid; severe burns; nitrous fumes highly toxic to lungs",
+    "climateLink": "Vehicle and power plant NOₓ emissions directly linked to acid rain; reducing combustion reduces HNO₃ deposition",
+    "indoorOutdoor": "Outdoor — atmospheric deposition",
+    "whyStudentsCare": "The acid rain crisis taught a generation that air pollution crosses borders — acid from US power plants damaged Canadian forests. An early example of transboundary pollution.",
+    "realWorldIssue": "Transboundary acid rain, vehicle emissions, forest and lake acidification"
+  },
+  "sources": [
+    "Likens GE, Bormann FH (1974). Acid rain: a serious regional environmental problem. Science, 184(4142), 1176–1179.",
+    "Wellburn AR (1990). Why are atmospheric oxides of nitrogen usually phytotoxic and not alternative fertilizers? New Phytologist, 115(3), 395–429.",
+    "Cape JN (1993). Direct damage to vegetation caused by acid rain and polluted cloud. Environmental Pollution, 82(2), 167–180."
+  ]
+}

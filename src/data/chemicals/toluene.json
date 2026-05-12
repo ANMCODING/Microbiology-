@@ -1,0 +1,191 @@
+{
+  "id": "toluene",
+  "commonName": "Toluene",
+  "iupacName": "methylbenzene",
+  "formula": "C7H8",
+  "molecularWeight": 92.14,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "gas",
+    "fumigation",
+    "liquid"
+  ],
+  "color": "#A16207",
+  "category": "voc",
+  "subCategory": "pollutant_voc",
+  "boilingPoint": "110.6 °C at 1 atm",
+  "vaporPressure": "~28.4 mmHg at 20 °C",
+  "waterSolubility": "~526 mg/L at 25 °C",
+  "odor": "Sweet, pungent, paint-like",
+  "environmentalPersistence": "Moderate — atmospheric half-life ~2 days via OH radical; moderate soil persistence",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.45,
+    "curl": 0.4,
+    "stomatalClose": 0.55,
+    "pigmentation": 0.2,
+    "chlorosis": 0.55,
+    "defenseProteins": 0.3,
+    "wilting": 0.4
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 93,
+      "label": "Toluene [M+H]+",
+      "base": 100,
+      "weekFactor": 0.4
+    },
+    {
+      "mz": 109,
+      "label": "Cresol (toluene metabolite)",
+      "base": 80,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 125,
+      "label": "Benzyl alcohol derivative",
+      "base": 65,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 85,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 55,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — slightly less toxic than benzene; similar mechanism via aromatic metabolites",
+    "leafSize": "Reduced at moderate-high doses",
+    "leafCurl": "Moderate",
+    "wilting": "Moderate",
+    "chlorosis": "Moderate-strong — chloroplast membrane disruption",
+    "necrosis": "Moderate — margin necrosis similar to benzene but slightly less severe",
+    "pigmentation": "Mild",
+    "rootGrowth": "Mildly to moderately inhibited",
+    "newVsOldLeaves": "Older leaves show chlorosis first; uniform effects at high dose"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate-strong — 35–55% at moderate-high doses",
+    "photosyntheticRate": "Significantly reduced",
+    "stomatalConductance": "Reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Mildly to moderately impaired",
+    "membranePermeability": "Increased — lipophilic aromatic ring disrupts bilayer"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate-strong",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate-strong",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "cytochrome P450 detox enzymes",
+      "glutathione S-transferase"
+    ],
+    "metabolitesIncreasing": [
+      "cresol",
+      "benzyl alcohol",
+      "MDA",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate-strong",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Suppressed",
+    "fungalEffect": "Disrupted",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "36–72 hours",
+    "firstSymptoms": [
+      "stomatal closure",
+      "mild chlorosis"
+    ],
+    "lateSymptoms": [
+      "margin necrosis",
+      "wilting",
+      "growth arrest"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor — aromatic metabolite damage accumulates",
+    "acclimation": false,
+    "sensitization": "Cumulative"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow-green (chlorosis) → brown margin necrosis",
+    "firstAffectedRegion": "Leaf margins and older leaves",
+    "damageSpread": "Inward from margins",
+    "damagePattern": "Marginal necrosis with chlorotic background — very similar to benzene",
+    "heatmapGlow": "Moderate orange — MDA and cresol metabolite signature",
+    "microbiomeParticles": "Reduced; elevated pathogen fraction",
+    "leafAppearance": [
+      "yellowing",
+      "margin_necrosis",
+      "brittle"
+    ],
+    "recoveryVisual": "Minimal recovery — similar to benzene"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "benzene",
+      "xylene",
+      "formaldehyde"
+    ],
+    "synergyNote": "BTEX mixture (benzene + toluene + ethylbenzene + xylene) is a classic indoor/industrial pollutant combo — synergistic GSH depletion and membrane disruption",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2",
+      "formaldehyde"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Paint, nail polish remover, gasoline, adhesives, industrial solvents — extremely common indoor and outdoor pollutant",
+    "classification": "Aromatic hydrocarbon pollutant",
+    "agriculturalUse": "None — environmental contaminant",
+    "humanToxicity": "High — neurotoxin at high concentrations; reproductive toxin; suspected carcinogen",
+    "climateLink": "Major component of urban smog precursor emissions",
+    "indoorOutdoor": "Both — major indoor source from paints and adhesives; outdoor from traffic",
+    "whyStudentsCare": "In nail polish, paint, and markers — products students use regularly. The neurotoxicity angle is immediately impactful.",
+    "realWorldIssue": "Indoor air quality, occupational health, urban air pollution"
+  },
+  "sources": [
+    "Ugrekhelidze D, Kvesitadze G (2009). Uptake and transformation of benzene and toluene by plant leaves. Ecotoxicology and Environmental Safety, 72(2), 496–501.",
+    "Heiden AC, et al. (1999). Emission of volatile organic compounds from ozone-exposed plants. Ecological Applications, 9(4), 1160–1167.",
+    "EPA (2012). Toluene: Integrated Risk Information System (IRIS). US Environmental Protection Agency."
+  ]
+}

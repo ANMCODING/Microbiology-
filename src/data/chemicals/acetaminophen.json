@@ -1,0 +1,190 @@
+{
+  "id": "acetaminophen",
+  "commonName": "Acetaminophen (Paracetamol)",
+  "iupacName": "N-(4-hydroxyphenyl)acetamide",
+  "formula": "C8H9NO2",
+  "molecularWeight": 151.16,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#5B21B6",
+  "category": "pharmaceutical",
+  "subCategory": "analgesic",
+  "boilingPoint": "168 °C at 1 atm",
+  "vaporPressure": "~0.0000014 mmHg at 25 °C",
+  "waterSolubility": "~14 g/L at 25 °C",
+  "odor": "Slightly bitter medicinal odor",
+  "environmentalPersistence": "Low to moderate — soil half-life ~1–7 days; relatively fast degradation vs ibuprofen; detected in wastewater effluents and receiving waters globally",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.4,
+    "necrosis": 0.3,
+    "curl": 0.3,
+    "stomatalClose": 0.3,
+    "pigmentation": 0.35,
+    "chlorosis": 0.4,
+    "defenseProteins": 0.4,
+    "wilting": 0.3
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 152,
+      "label": "Acetaminophen [M+H]+",
+      "base": 100,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 110,
+      "label": "p-aminophenol (toxic metabolite)",
+      "base": 80,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 168,
+      "label": "Acetaminophen glucuronide",
+      "base": 65,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 60,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (oxidative stress)",
+      "base": 55,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate",
+    "leafSize": "Mildly to moderately reduced",
+    "leafCurl": "Mild to moderate",
+    "wilting": "Moderate",
+    "chlorosis": "Moderate",
+    "necrosis": "Mild to moderate — p-aminophenol metabolite is more directly cytotoxic than parent compound",
+    "pigmentation": "Moderate — acetaminophen induces defense-like pigmentation; SA pathway cross-talk via phenolic structure",
+    "rootGrowth": "Moderately inhibited",
+    "newVsOldLeaves": "Both affected; similar to ibuprofen pattern"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 20–40%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "membranePermeability": "Increased — p-aminophenol metabolite is membrane-disruptive"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — acetaminophen metabolites generate quinone intermediates that cause oxidative stress; mechanistically similar to hepatotoxicity in animals",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD",
+      "GST"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Moderate — phenolic structure of acetaminophen cross-talks with phenylpropanoid pathway",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "GST (detox of quinone metabolites)",
+      "peroxidases"
+    ],
+    "metabolitesIncreasing": [
+      "p-aminophenol",
+      "acetaminophen glucuronide",
+      "anthocyanins",
+      "MDA",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed",
+    "fungalEffect": "Mildly disrupted",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "mild chlorosis",
+      "root growth slowing"
+    ],
+    "lateSymptoms": [
+      "moderate wilting",
+      "pigmentation increase",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks — degrades faster than ibuprofen",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → moderate purple tint + chlorosis — pharmaceutical category signature shared with ibuprofen and caffeine",
+    "firstAffectedRegion": "Roots; then systemic",
+    "damageSpread": "Root-to-shoot",
+    "damagePattern": "Purple-chlorotic pharmaceutical signature",
+    "heatmapGlow": "Moderate — p-aminophenol metabolite + anthocyanin signature",
+    "microbiomeParticles": "Moderately reduced; resistome elevated",
+    "leafAppearance": [
+      "mild_purple",
+      "yellowing",
+      "wilted"
+    ],
+    "recoveryVisual": "Good — faster recovery than ibuprofen"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "ibuprofen",
+      "caffeine",
+      "antibiotics"
+    ],
+    "synergyNote": "The pharmaceutical mixture — Tylenol + Advil + caffeine (from coffee) is one of the most commonly co-prescribed combinations; in the environment these co-contaminate wastewater-irrigated soils simultaneously",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ibuprofen",
+      "caffeine"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Most widely used analgesic globally — ~50 billion tablets/year; excreted as glucuronide conjugate; detected in surface water, groundwater, and treated wastewater globally",
+    "classification": "Analgesic / pharmaceutical pollutant",
+    "agriculturalUse": "Not intentionally applied — wastewater irrigation contamination",
+    "humanToxicity": "Low at therapeutic doses; liver toxicity at overdose (leading cause of acute liver failure in US); no environmental health risk at detected concentrations",
+    "climateLink": "Pharmaceutical pollution worsened by increased wastewater irrigation under climate-driven water scarcity",
+    "indoorOutdoor": "Environmental via wastewater",
+    "whyStudentsCare": "Tylenol — in virtually every US medicine cabinet — is the world's most common accidental overdose cause AND an environmental pollutant. Two very different safety stories in one molecule.",
+    "realWorldIssue": "Pharmaceutical water pollution, overdose public health crisis, wastewater irrigation, emerging contaminants"
+  },
+  "sources": [
+    "Verlicchi P, Al Aukidy M, Zambello E (2012). Occurrence of pharmaceutical compounds in urban wastewater. Science of the Total Environment, 429, 123–155.",
+    "Christou A, et al. (2017). Implications of reclaimed wastewater reuse for irrigation on the agricultural environment. Environment International, 104, 37–53.",
+    "Henschel KP, Wenzel A, Diedrich M, Fliedner A (1997). Environmental hazard assessment of pharmaceuticals. Regulatory Toxicology and Pharmacology, 25(3), 220–225."
+  ]
+}

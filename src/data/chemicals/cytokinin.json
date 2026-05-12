@@ -1,0 +1,218 @@
+{
+  "id": "cytokinin",
+  "commonName": "Cytokinin (BAP/6-BA)",
+  "iupacName": "6-benzylaminopurine / N6-benzyladenine",
+  "formula": "C12H11N5",
+  "molecularWeight": 225.25,
+  "phase": "solid",
+  "deliveryMethods": [
+    "liquid",
+    "foliar_spray",
+    "root_drench"
+  ],
+  "color": "#4ADE80",
+  "category": "plant_hormone",
+  "subCategory": "growth_regulator",
+  "boilingPoint": "Decomposes before boiling; melting point ~233 °C",
+  "vaporPressure": null,
+  "waterSolubility": "~60 mg/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "Low — degraded by cytokinin oxidase (CKX) rapidly in plant tissue and soil",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.1–5 µM",
+      "description": "Anti-senescence effects — maintains chlorophyll, promotes cell division and branching, delays leaf aging, promotes bud break, enhances sink strength. Leaves stay green longer; lateral buds activated.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0.1,
+        "chlorosis": 0,
+        "defenseProteins": 0.1,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">50 µM",
+      "description": "Excessive cell division leads to callus-like growth, abnormal leaf morphology, epinasty, chlorosis from impaired chloroplast development at extreme doses. Abnormal meristematic proliferation.",
+      "simulationVector": {
+        "heightSuppress": 0.3,
+        "necrosis": 0.2,
+        "curl": 0.4,
+        "stomatalClose": 0.2,
+        "pigmentation": 0.3,
+        "chlorosis": 0.35,
+        "defenseProteins": 0.2,
+        "wilting": 0.2
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.3,
+    "necrosis": 0.2,
+    "curl": 0.4,
+    "stomatalClose": 0.2,
+    "pigmentation": 0.3,
+    "chlorosis": 0.35,
+    "defenseProteins": 0.2,
+    "wilting": 0.2
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 226,
+      "label": "BAP [M+H]+",
+      "base": 100,
+      "weekFactor": 0.55
+    },
+    {
+      "mz": 208,
+      "label": "BAP fragment (-H2O)",
+      "base": 70,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 288,
+      "label": "BAP-riboside conjugate",
+      "base": 60,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor (low dose)",
+      "base": 65,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 249,
+      "label": "Zeatin (endogenous CK marker)",
+      "base": 45,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Mildly negative (promotes branching over height) at low dose; moderate at high dose from abnormal proliferation",
+    "leafSize": "Mildly increased at low dose; abnormal at high dose",
+    "leafCurl": "Mild at low dose (normal bushy growth); moderate epinasty at high dose",
+    "wilting": "Reduced at low dose (anti-senescence); mild at high dose",
+    "chlorosis": "Strongly reduced at low dose (stay-green effect); moderate at high dose",
+    "necrosis": "Strongly reduced at low dose; mild at high dose",
+    "pigmentation": "Mild at high dose",
+    "rootGrowth": "Mildly inhibited at both doses — cytokinins favor shoot over root",
+    "branching": "Strongly increased at low dose — lateral bud break is a primary cytokinin effect",
+    "newVsOldLeaves": "Old leaves benefit most from anti-senescence at low dose; new growth abnormal at high dose"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Opposite at low dose (maintains chlorophyll — anti-senescence); moderate at high dose",
+    "photosyntheticRate": "Maintained and extended at low dose; disrupted at high dose",
+    "stomatalConductance": "Maintained at low dose; mildly reduced at high dose",
+    "transpiration": "Normal at low dose",
+    "waterUptake": "Normal at low dose"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "Reduced at low dose (anti-senescence antioxidant effect); mild at high dose",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD"
+    ],
+    "lipidPeroxidation": "Reduced at low dose; mild at high dose",
+    "anthocyaninInduction": "Mild at high dose",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "type-A ARR response regulators",
+      "CKX (cytokinin oxidase)"
+    ],
+    "metabolitesIncreasing": [
+      "zeatin",
+      "BAP-riboside",
+      "chlorophyll (low dose)",
+      "cyclin proteins (cell division)"
+    ],
+    "metabolitesDecreasing": [
+      "ethylene (antagonized)",
+      "ABA (antagonized)",
+      "senescence markers (low dose)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Minimal",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Near-normal — some PGPR produce cytokinins; exogenous CK can affect root exudate composition mildly",
+    "fungalEffect": "Near-normal",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Near-normal"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "bud break and branching at low dose",
+      "epinasty at high dose"
+    ],
+    "lateSymptoms": [
+      "maintained greenness and extended leaf life at low dose",
+      "callus-like proliferation at extreme high dose"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks",
+    "acclimation": true,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: maintained green on older leaves (anti-senescence). High dose: pale green, distorted leaves",
+    "firstAffectedRegion": "Old leaves (anti-senescence effect at low dose); apical meristem (branching)",
+    "damageSpread": "Distributed through branching pattern at low dose; distorted new growth at high dose",
+    "damagePattern": "Bushy, branched, green-maintained at low dose — very distinctive positive visual. Distorted at high dose.",
+    "heatmapGlow": "Low-moderate — BAP-riboside and zeatin signature; low compared to stress chemicals",
+    "microbiomeParticles": "Near-normal",
+    "leafAppearance": [
+      "green_maintained_at_low_dose",
+      "distorted_at_high_dose",
+      "bushy_branching"
+    ],
+    "recoveryVisual": "Good — normal growth pattern resumes after exposure ends"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "nitrogen"
+    ],
+    "synergyNote": "Cytokinin + N is a natural synergy — N availability signals cytokinin production in roots; together they maximize leaf area and photosynthetic capacity",
+    "antagonizesWith": [
+      "ethylene",
+      "abscisic_acid"
+    ],
+    "antagonismNote": "Cytokinin directly opposes ethylene-driven senescence (why CK keeps leaves green) and ABA-driven dormancy. This is the most educationally important antagonism in plant hormone biology.",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": [
+      "ethylene_senescence"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Endogenous plant hormone — synthesized primarily in root tips; commercial BAP used in tissue culture and floriculture",
+    "classification": "Plant hormone / growth regulator",
+    "agriculturalUse": "Tissue culture (essential for shoot multiplication); delays post-harvest yellowing in broccoli and leafy greens; promotes branching in ornamental plants",
+    "humanToxicity": "Very low — no significant human health risk at horticultural concentrations",
+    "climateLink": "Cytokinin signaling links root nitrogen sensing to shoot growth — relevant to understanding how plants integrate soil nutrient and climate signals",
+    "indoorOutdoor": "Both — tissue culture laboratories; commercial spray products for ornamentals",
+    "whyStudentsCare": "Why cut broccoli turns yellow in the fridge — cytokinin depletion after harvest. Spraying with cytokinins keeps it green. A direct connection between plant hormones and everyday food storage.",
+    "realWorldIssue": "Food shelf life, sustainable horticulture, tissue culture for conservation of endangered plants"
+  },
+  "sources": [
+    "Mok DW, Mok MC (2001). Cytokinin metabolism and action. Annual Review of Plant Physiology, 52, 89–118.",
+    "Buchanan-Wollaston V, et al. (2005). Comparative transcriptome analysis reveals significant differences in gene expression and signalling pathways between delayed and rapid senescing phenotypes in Arabidopsis. Plant Journal, 42(4), 469–481.",
+    "Werner T, Schmülling T (2009). Cytokinin action in plant development. Current Opinion in Plant Biology, 12(5), 527–538."
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "id": "mercury",
+  "commonName": "Mercury (Hg)",
+  "iupacName": "mercury(II) ion",
+  "formula": "Hg",
+  "molecularWeight": 200.59,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#6B7280",
+  "category": "heavy_metal",
+  "subCategory": "transition_metal",
+  "boilingPoint": "356.7 °C at 1 atm",
+  "vaporPressure": "~0.002 mmHg at 20 °C (elemental Hg); ionic forms non-volatile",
+  "waterSolubility": "Hg²⁺ salts highly soluble; HgCl₂ ~69 g/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "Extremely high — mercury cycles globally; methylmercury persists and bioaccumulates in food chains",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "roots",
+    "stomata",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.75,
+    "necrosis": 0.65,
+    "curl": 0.3,
+    "stomatalClose": 0.65,
+    "pigmentation": 0.2,
+    "chlorosis": 0.7,
+    "defenseProteins": 0.35,
+    "wilting": 0.7
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 305,
+      "label": "Phytochelatin PC2",
+      "base": 90,
+      "weekFactor": 1
+    },
+    {
+      "mz": 272,
+      "label": "Metallothionein fragment",
+      "base": 75,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 95,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 147,
+      "label": "Hg-cysteine complex fragment",
+      "base": 80,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 55,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strong — Hg is among the most potent root inhibitors of the heavy metals",
+    "leafSize": "Significantly reduced",
+    "leafCurl": "Mild to moderate — stomatal dysfunction causes some curling",
+    "wilting": "Strong — aquaporin inhibition by Hg²⁺ is one of its most distinctive mechanisms",
+    "chlorosis": "Strong — chloroplast ultrastructure damage; thylakoid membrane disruption",
+    "necrosis": "Strong — root tip necrosis; dark spotting on leaves",
+    "pigmentation": "Mild",
+    "rootGrowth": "Severely inhibited — most sensitive tissue",
+    "newVsOldLeaves": "Both affected; wilting and chlorosis appear across canopy"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 45–70%",
+    "photosyntheticRate": "Severely reduced — thylakoid membrane disruption",
+    "stomatalConductance": "Strongly reduced — Hg²⁺ blocks aquaporins in guard cells directly",
+    "transpiration": "Strongly reduced — aquaporin blockage most distinctive Hg physiological effect",
+    "waterUptake": "Severely impaired — aquaporin (PIP) inhibition is Hg's signature mechanism",
+    "nutrientTransport": "Strongly disrupted",
+    "membranePermeability": "Strongly increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — Hg has high affinity for thiol groups; disables antioxidant enzymes",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "phytochelatins",
+      "metallothioneins",
+      "aquaporin stress markers"
+    ],
+    "metabolitesIncreasing": [
+      "Hg-cysteine complexes",
+      "phytochelatins",
+      "MDA",
+      "proline"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "aquaporin function",
+      "chlorophyll a",
+      "chlorophyll b",
+      "thiol-containing enzymes"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Very strong — Hg is among the most toxic heavy metals to microbiome",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Severely suppressed",
+    "fungalEffect": "Mycorrhizal associations largely destroyed",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Severely destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "rapid wilting",
+      "root browning"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "dark spotting",
+      "near-complete growth arrest"
+    ],
+    "reversible": false,
+    "recoveryTime": "None — Hg binds irreversibly to thiol groups; permanent enzyme inactivation",
+    "acclimation": false,
+    "sensitization": "Accumulative"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow (chlorosis); rapid wilting; dark brown-black root deposits",
+    "firstAffectedRegion": "Roots first (wilting signal), then whole-canopy wilting",
+    "damageSpread": "Systemic via aquaporin blockage — rapid whole-plant wilting is distinctive",
+    "damagePattern": "Rapid wilting distinguishes Hg from other heavy metals; chlorosis follows",
+    "heatmapGlow": "Strong — Hg-cysteine and phytochelatin signature; distinctive from other heavy metals",
+    "microbiomeParticles": "Very sparse; near-zero diversity; high pathogen fraction",
+    "leafAppearance": [
+      "wilted",
+      "yellowing",
+      "spotted"
+    ],
+    "recoveryVisual": "No recovery — permanent wilt and chlorosis"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "cadmium",
+      "lead",
+      "arsenic"
+    ],
+    "synergyNote": "Mercury + cadmium: shared thiol-binding competition overwhelms GSH and phytochelatin detox systems; especially toxic combination",
+    "antagonizesWith": [
+      "selenium"
+    ],
+    "antagonismNote": "Selenium can reduce Hg bioavailability via HgSe complex formation — not in the chemical list but worth noting for completeness",
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2",
+      "formaldehyde"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Coal combustion (primary global source), artisanal gold mining, fluorescent lamps, industrial wastewater, thermometers",
+    "classification": "Heavy metal pollutant / neurotoxin",
+    "agriculturalUse": "None — legacy use as fungicide (now banned); contaminant from atmospheric deposition",
+    "humanToxicity": "Extremely high — methylmercury causes Minamata disease (neurological devastation); prenatal exposure causes severe developmental damage",
+    "climateLink": "Mercury deposition increases near coal plants; climate-driven permafrost thaw releasing mercury stored for millennia",
+    "indoorOutdoor": "Primarily outdoor (atmospheric deposition) and industrial; indoor from broken fluorescent lamps and old thermometers",
+    "whyStudentsCare": "The Minamata Bay disaster in Japan — one of the most dramatic environmental health catastrophes in history. Tuna and swordfish mercury contamination is relevant to students' food choices.",
+    "realWorldIssue": "Coal power pollution, artisanal gold mining, ocean food chain bioaccumulation, Minamata disease"
+  },
+  "sources": [
+    "Israr M, et al. (2006). Antioxidative responses to mercury in the cell suspension cultures of Sesbania drummondii. Chemosphere, 64(8), 1392–1399.",
+    "Mossor-Pietraszewska T (2001). Effect of aluminium on plant growth and metabolism. Acta Biochimica Polonica, 48(3), 673–686.",
+    "Munthe J, et al. (2007). Recovery of mercury-contaminated fisheries. AMBIO, 36(1), 33–44."
+  ]
+}

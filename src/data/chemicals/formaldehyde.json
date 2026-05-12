@@ -1,0 +1,192 @@
+{
+  "id": "formaldehyde",
+  "commonName": "Formaldehyde",
+  "iupacName": "methanal",
+  "formula": "CH2O",
+  "molecularWeight": 30.03,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation",
+    "liquid"
+  ],
+  "color": "#B45309",
+  "category": "voc",
+  "subCategory": "pollutant_voc",
+  "boilingPoint": "-19 °C at 1 atm",
+  "vaporPressure": "~3883 mmHg at 20 °C",
+  "waterSolubility": "~400 g/L at 25 °C (highly soluble)",
+  "odor": "Pungent, sharp, suffocating",
+  "environmentalPersistence": "Low — atmospheric half-life ~1 hour via photolysis; in solution degrades within days",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.6,
+    "necrosis": 0.7,
+    "curl": 0.5,
+    "stomatalClose": 0.7,
+    "pigmentation": 0.2,
+    "chlorosis": 0.65,
+    "defenseProteins": 0.4,
+    "wilting": 0.55
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 31,
+      "label": "Formaldehyde [M+H]+",
+      "base": 100,
+      "weekFactor": 0.4
+    },
+    {
+      "mz": 163,
+      "label": "Formate-GSH adduct",
+      "base": 80,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 90,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 70,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 612,
+      "label": "Oxidized glutathione (GSSG)",
+      "base": 55,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate-strong — cell division inhibited by protein crosslinking",
+    "leafSize": "Reduced",
+    "leafCurl": "Moderate — acute cellular damage causes curling",
+    "wilting": "Moderate — membrane damage disrupts turgor",
+    "chlorosis": "Strong — direct chloroplast protein damage",
+    "necrosis": "Strong — tissue death at point of contact; spreads inward from stomatal entry points",
+    "pigmentation": "Mild — some stress anthocyanin but overwhelmed by necrotic browning",
+    "rootGrowth": "Minimally affected — primarily air-phase chemical",
+    "newVsOldLeaves": "All leaves affected; young leaves with more open stomata more vulnerable"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 50–70% at moderate exposure; direct protein denaturation",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Strongly reduced — guard cell proteins damaged",
+    "transpiration": "Strongly reduced",
+    "waterUptake": "Indirectly impaired",
+    "membranePermeability": "Strongly increased — crosslinking disrupts membrane proteins"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — formaldehyde directly generates ROS and depletes glutathione",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong — MDA accumulation high",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "HCHO-detoxifying aldehyde dehydrogenase",
+      "glutathione S-transferase",
+      "HSP70"
+    ],
+    "metabolitesIncreasing": [
+      "MDA",
+      "GSSG",
+      "formate",
+      "formaldehyde-GSH adducts"
+    ],
+    "metabolitesDecreasing": [
+      "GSH (glutathione)",
+      "chlorophyll a",
+      "chlorophyll b",
+      "RUBISCO"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — formaldehyde is a broad-spectrum biocide",
+    "pathogenSuppression": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — near sterilization at high doses",
+    "fungalEffect": "Strongly suppressed",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Strongly destabilized at high doses"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "6–24 hours — very rapid",
+    "firstSymptoms": [
+      "stomatal closure",
+      "leaf surface bleaching/whitening at contact points"
+    ],
+    "lateSymptoms": [
+      "widespread necrosis",
+      "chlorosis",
+      "wilting"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor — protein crosslinking damage is permanent; only new growth recovers",
+    "acclimation": false,
+    "sensitization": "None — cumulative damage only"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → bleached white/gray at contact points → brown necrosis; background yellowing",
+    "firstAffectedRegion": "Leaf surface at stomatal entry points",
+    "damageSpread": "Inward from leaf surface; acute exposure creates discrete bleached zones",
+    "damagePattern": "Patchy bleached/necrotic spots progressing to uniform damage",
+    "heatmapGlow": "Moderate red-orange glow — MDA and GSH depletion signature",
+    "microbiomeParticles": "Strongly reduced; near-zero diversity at high dose",
+    "leafAppearance": [
+      "spotted",
+      "bleached",
+      "brittle",
+      "curled"
+    ],
+    "recoveryVisual": "No recovery on affected tissue; only new growth post-exposure is healthy"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "benzene",
+      "toluene",
+      "xylene"
+    ],
+    "synergyNote": "Formaldehyde + other indoor VOC pollutants create additive to synergistic oxidative stress — shared GSH depletion mechanism overwhelms antioxidant capacity",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2",
+      "cadmium"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Pressed wood products, furniture, carpets, cigarette smoke, vehicle exhaust, building materials — major indoor air pollutant",
+    "classification": "Volatile organic pollutant / industrial chemical",
+    "agriculturalUse": "Soil fumigant (historical); now largely banned for agricultural use",
+    "humanToxicity": "High — IARC Group 1 carcinogen; causes nasopharyngeal cancer; irritant at low concentrations",
+    "climateLink": "Formed as secondary pollutant from methane and other VOC oxidation in atmosphere",
+    "indoorOutdoor": "Primarily indoor — off-gassing from furniture and building materials; major sick building syndrome component",
+    "whyStudentsCare": "Present in most classrooms and homes via furniture and building materials — directly relevant to indoor air quality and personal health",
+    "realWorldIssue": "Indoor air quality, sick building syndrome, occupational health, VOC regulation"
+  },
+  "sources": [
+    "Kondo T, et al. (2002). Formaldehyde-induced cell death in plant tissue. Plant & Cell Physiology, 43(9), 1003–1009.",
+    "WHO (2010). WHO Guidelines for Indoor Air Quality: Selected Pollutants. World Health Organization, Geneva.",
+    "Giese M, et al. (1994). Detoxification of formaldehyde by the spider plant and by soybean cell-suspension cultures. Plant Physiology, 104(4), 1301–1309."
+  ]
+}

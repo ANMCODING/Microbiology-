@@ -1,0 +1,191 @@
+{
+  "id": "antibiotics",
+  "commonName": "Antibiotics (Tetracycline)",
+  "iupacName": "(4S,4aS,5aS,6S,12aS)-4-(dimethylamino)-1,6,10,11,12a-pentahydroxy-6-methyl-3,12-dioxo-4a,5,5a,6-tetrahydro-4H-tetracene-2-carboxamide",
+  "formula": "C22H24N2O8",
+  "molecularWeight": 444.43,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#4C1D95",
+  "category": "pharmaceutical",
+  "subCategory": "antibiotic",
+  "boilingPoint": "Decomposes above 170 °C",
+  "vaporPressure": null,
+  "waterSolubility": "~231 mg/L at 25 °C",
+  "odor": "Faint characteristic odor",
+  "environmentalPersistence": "High — tetracycline binds to soil particles and persists months to years; among the most environmentally persistent antibiotics",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.55,
+    "necrosis": 0.35,
+    "curl": 0.35,
+    "stomatalClose": 0.35,
+    "pigmentation": 0.35,
+    "chlorosis": 0.6,
+    "defenseProteins": 0.3,
+    "wilting": 0.4
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 445,
+      "label": "Tetracycline [M+H]+",
+      "base": 100,
+      "weekFactor": 0.45
+    },
+    {
+      "mz": 410,
+      "label": "Anhydrotetracycline (degradation)",
+      "base": 75,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 427,
+      "label": "Epitetracycline (epimerization)",
+      "base": 65,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 60,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (oxidative stress)",
+      "base": 65,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate to strong — tetracycline inhibits plant protein synthesis (chloroplasts and mitochondria have prokaryotic ribosomes which tetracycline targets)",
+    "leafSize": "Moderately reduced",
+    "leafCurl": "Mild to moderate",
+    "wilting": "Moderate — root dysfunction",
+    "chlorosis": "Strong — tetracycline specifically targets chloroplast ribosomes (prokaryotic origin); directly impairs chloroplast protein synthesis",
+    "necrosis": "Mild to moderate",
+    "pigmentation": "Moderate — antibiotic stress induces defense pigmentation",
+    "rootGrowth": "Moderately to strongly inhibited",
+    "newVsOldLeaves": "New leaves most affected — actively synthesizing chloroplast proteins; chlorosis appears first on young leaves"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 40–65%; direct mechanism via chloroplast ribosome inhibition",
+    "photosyntheticRate": "Significantly reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "nutrientTransport": "Moderately disrupted"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate to strong — impaired chloroplast function leads to photo-oxidative stress",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate to strong",
+    "anthocyaninInduction": "Moderate",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "stress-responsive chloroplast proteins",
+      "photo-oxidative stress proteins"
+    ],
+    "metabolitesIncreasing": [
+      "anhydrotetracycline",
+      "epitetracycline",
+      "anthocyanins",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "chloroplast-encoded proteins",
+      "chlorophyll a",
+      "chlorophyll b",
+      "RUBISCO (chloroplast-encoded)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Very strong — tetracycline is a broad-spectrum antibiotic; among the strongest microbiome disruptors in the entire 40-chemical library",
+    "pathogenSuppression": true,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Severely suppressed — all tetracycline-sensitive bacteria killed; only resistant strains survive",
+    "fungalEffect": "Bacterial disruption shifts community toward fungal dominance; mycorrhizal associations disrupted",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Severely destabilized — most dramatic microbiome effect in the simulator"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–120 hours",
+    "firstSymptoms": [
+      "chlorosis on newest leaves",
+      "mild growth slowing"
+    ],
+    "lateSymptoms": [
+      "widespread chlorosis",
+      "growth arrest",
+      "microbiome collapse"
+    ],
+    "reversible": true,
+    "recoveryTime": "3–6 weeks — tetracycline persists in soil; microbiome recovery is the slowest component",
+    "acclimation": false,
+    "sensitization": "None for plant; but surviving microbiome develops resistance"
+  },
+  "visualSimulation": {
+    "colorChanges": "Young leaves chlorotic (distinctive young-leaf pattern from chloroplast ribosome inhibition) + moderate purple pigmentation",
+    "firstAffectedRegion": "Youngest leaves — diagnostic for tetracycline vs most other chemicals",
+    "damageSpread": "Young-leaf-first spreading to older leaves",
+    "damagePattern": "Young-leaf chlorosis + purple tint + microbiome collapse — the most distinctive combined plant/microbiome signature in the pharmaceutical group",
+    "heatmapGlow": "Moderate amber-purple — anhydrotetracycline and anthocyanin signature; distinctive of antibiotics",
+    "microbiomeParticles": "Near-zero diversity — most dramatic microbiome collapse in simulator; only resistant cluster remains; resistome particles dominant",
+    "leafAppearance": [
+      "young_leaf_chlorosis",
+      "mild_purple",
+      "brittle"
+    ],
+    "recoveryVisual": "Plant partial recovery in weeks; microbiome recovery takes months — long-lasting ecological damage even after plant improvement"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "ibuprofen",
+      "caffeine",
+      "acetaminophen"
+    ],
+    "synergyNote": "The pharmaceutical pollutant quartet — antibiotic + NSAID + stimulant + analgesic co-contamination in wastewater-irrigated soils. Antibiotics provide the resistome amplification that makes the mixture uniquely dangerous — resistant pathogens that survive the antibiotic thrive in the NSAID/stimulant-disrupted microbiome.",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ibuprofen",
+      "caffeine",
+      "acetaminophen"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Livestock agriculture (60–80% of antibiotics globally used in animals; excreted into manure and soil), hospital wastewater, pharmaceutical manufacturing, human sewage — found in agricultural soils on every continent",
+    "classification": "Broad-spectrum antibiotic / pharmaceutical pollutant",
+    "agriculturalUse": "Not approved for crop use — massive contamination from livestock manure applied as fertilizer; most commercially used antibiotics in agriculture are tetracyclines",
+    "humanToxicity": "Low at environmental concentrations; antibiotic resistance crisis is the primary human health concern — not direct toxicity but resistance gene selection",
+    "climateLink": "Antibiotic resistance is not directly linked to climate but antibiotic-resistant pathogen spread is worsened by climate-driven migration and extreme weather events affecting sanitation",
+    "indoorOutdoor": "Environmental — livestock and hospital waste; pharmaceutical manufacturing runoff",
+    "whyStudentsCare": "Antibiotic resistance is predicted to kill 10 million people per year by 2050 — more than cancer. Livestock antibiotic use is a primary driver. The food students eat connects directly to one of the most serious medical crises in human history.",
+    "realWorldIssue": "Antibiotic resistance crisis, livestock antibiotic use, pharmaceutical pollution, one health framework"
+  },
+  "sources": [
+    "Thiele-Bruhn S (2003). Pharmaceutical antibiotic compounds in soils — a review. Journal of Plant Nutrition and Soil Science, 166(2), 145–167.",
+    "Boxall AB, et al. (2012). Pharmaceuticals and personal care products in the environment: what are the big questions? Environmental Health Perspectives, 120(9), 1221–1229.",
+    "Van Boeckel TP, et al. (2014). Global antibiotic consumption 2000 to 2010: an analysis. The Lancet Infectious Diseases, 14(8), 742–750."
+  ]
+}

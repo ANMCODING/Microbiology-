@@ -1,0 +1,192 @@
+{
+  "id": "caffeine",
+  "commonName": "Caffeine",
+  "iupacName": "1,3,7-trimethyl-3,7-dihydro-1H-purine-2,6-dione",
+  "formula": "C8H10N4O2",
+  "molecularWeight": 194.19,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#6D28D9",
+  "category": "pharmaceutical",
+  "subCategory": "stimulant_alkaloid",
+  "boilingPoint": "178 °C (sublimation) at 1 atm",
+  "vaporPressure": "~0.000016 mmHg at 25 °C",
+  "waterSolubility": "~21.6 g/L at 25 °C",
+  "odor": "Odorless",
+  "environmentalPersistence": "Low to moderate — soil half-life ~1–30 days; degraded by specific caffeine-degrading bacteria; detected in most urban waterways globally",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.35,
+    "curl": 0.3,
+    "stomatalClose": 0.3,
+    "pigmentation": 0.3,
+    "chlorosis": 0.45,
+    "defenseProteins": 0.35,
+    "wilting": 0.35
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 195,
+      "label": "Caffeine [M+H]+",
+      "base": 100,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 138,
+      "label": "Theophylline (caffeine metabolite)",
+      "base": 75,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 125,
+      "label": "Theobromine (demethylation product)",
+      "base": 65,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 55,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (oxidative stress)",
+      "base": 60,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — caffeine is allelopathic at moderate concentrations; inhibits cell division via phosphodiesterase-like effects",
+    "leafSize": "Mildly to moderately reduced",
+    "leafCurl": "Mild to moderate",
+    "wilting": "Moderate — root inhibition reduces water uptake",
+    "chlorosis": "Moderate — chloroplast disruption",
+    "necrosis": "Mild to moderate — root tip necrosis at high doses",
+    "pigmentation": "Moderate — caffeine-induced anthocyanin documented; caffeine is itself an alkaloid produced as defense in coffee/tea plants — signals defense pathways",
+    "rootGrowth": "Moderately to strongly inhibited — allelopathic root inhibition well documented for caffeine",
+    "newVsOldLeaves": "Root effects cause wilting across canopy; old leaves show chlorosis"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 25–45%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Mildly to moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Moderate — caffeine triggers defense pathways via purine signaling",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "purine-responsive defense proteins",
+      "allelopathy-related peroxidases"
+    ],
+    "metabolitesIncreasing": [
+      "theophylline",
+      "theobromine",
+      "anthocyanins",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "chlorophyll a",
+      "chlorophyll b",
+      "cytokinins (purine competition)",
+      "root auxin"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — caffeine has antimicrobial properties",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed; caffeine-degrading bacteria (Pseudomonas, Rhodococcus) may dominate",
+    "fungalEffect": "Mildly disrupted",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "root growth inhibition",
+      "mild chlorosis"
+    ],
+    "lateSymptoms": [
+      "moderate wilting",
+      "anthocyanin pigmentation",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "2–3 weeks",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → moderate purple tint (anthocyanin) + chlorosis — similar to ibuprofen signature",
+    "firstAffectedRegion": "Roots first; then systemic effects",
+    "damageSpread": "Root-to-shoot",
+    "damagePattern": "Purple-chlorotic pattern — pharmaceutical category signature",
+    "heatmapGlow": "Moderate — theophylline/theobromine metabolite pattern; purine alkaloid signature distinctive",
+    "microbiomeParticles": "Moderately reduced; caffeine-degrader cluster distinctive",
+    "leafAppearance": [
+      "mild_purple",
+      "yellowing",
+      "wilted"
+    ],
+    "recoveryVisual": "Moderate — similar to ibuprofen recovery"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "ibuprofen",
+      "acetaminophen",
+      "antibiotics"
+    ],
+    "synergyNote": "Coffee shop to wastewater to soil pipeline — caffeine, ibuprofen, and acetaminophen are co-detected in wastewater-irrigated fields globally; combined microbiome disruption is additive",
+    "antagonizesWith": [
+      "cytokinin"
+    ],
+    "antagonismNote": "Caffeine is a purine analog; competes with cytokinin (also a purine derivative) for some signaling receptors — may partially reduce cytokinin anti-senescence effect",
+    "amplifiesOxidativeStressOf": [
+      "ibuprofen",
+      "acetaminophen"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Coffee, tea, energy drinks, soft drinks — most consumed psychoactive substance globally; excreted largely unchanged; detected in virtually all urban waterways and treated wastewater",
+    "classification": "Stimulant alkaloid / pharmaceutical pollutant / natural allelopathic compound",
+    "agriculturalUse": "Not intentionally applied as stressor — environmental contaminant; interestingly, coffee grounds (containing caffeine) are used as garden fertilizer and slug deterrent",
+    "humanToxicity": "Low at typical consumption; toxic at very high doses (~150 mg/kg); no environmental risk to humans at detected concentrations",
+    "climateLink": "Caffeine in water is an urban water quality indicator — its distribution maps human population density and is used as a pollution tracer",
+    "indoorOutdoor": "Primarily environmental via wastewater; but coffee grounds applied as garden fertilizer introduce it directly to plant root zones",
+    "whyStudentsCare": "The most consumed drug in the world is polluting rivers and affecting plants — and you might be adding it to garden soil via coffee grounds. Immediately personal connection. Teachers and students both consume it daily.",
+    "realWorldIssue": "Pharmaceutical water pollution, caffeine as environmental tracer, coffee grounds as garden amendment"
+  },
+  "sources": [
+    "Haines DD, et al. (2001). Aquatic caffeine contamination: sources and impact. Environmental Toxicology and Chemistry, 20(9), 1897.",
+    "Winkel-Shirley B (2001). Flavonoid biosynthesis. A colorful model for genetics, biochemistry, cell biology, and biotechnology. Plant Physiology, 126(2), 485–493.",
+    "Mazzafera P (1999). Caffeine, theobromine and theophylline catabolism in Coffea arabica. Phytochemistry, 52(2), 213–219."
+  ]
+}

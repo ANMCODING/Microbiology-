@@ -1,0 +1,219 @@
+{
+  "id": "nitrogen",
+  "commonName": "Nitrogen (Fertilizer)",
+  "iupacName": "ammonium nitrate / urea (primary fertilizer forms)",
+  "formula": "NH4NO3 / CO(NH2)2",
+  "molecularWeight": 80.04,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench",
+    "foliar_spray"
+  ],
+  "color": "#16A34A",
+  "category": "fertilizer",
+  "subCategory": "macronutrient",
+  "boilingPoint": "Decomposes at 210 °C (ammonium nitrate)",
+  "vaporPressure": null,
+  "waterSolubility": "~1900 g/L at 20 °C (ammonium nitrate)",
+  "odor": "Faint ammonia smell at high concentrations",
+  "environmentalPersistence": "Moderate — nitrate is highly mobile in soil; urea degrades to ammonium within days via urease",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "leaf_surface"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems",
+    "roots"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "50–150 mg N/kg soil",
+      "description": "Optimal growth promotion — increased chlorophyll, accelerated shoot elongation, larger leaves, deeper green color, enhanced photosynthetic capacity. Classic fertilizer benefit.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0.1,
+        "chlorosis": 0,
+        "defenseProteins": 0.05,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">400 mg N/kg soil",
+      "description": "Nitrogen toxicity — ammonium accumulation causes root burn, leaf tip necrosis, forced vegetative growth with weakened structure, increased pest susceptibility, nitrate leaching into groundwater.",
+      "simulationVector": {
+        "heightSuppress": 0.3,
+        "necrosis": 0.45,
+        "curl": 0.3,
+        "stomatalClose": 0.2,
+        "pigmentation": 0.3,
+        "chlorosis": 0.35,
+        "defenseProteins": 0.2,
+        "wilting": 0.25
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.3,
+    "necrosis": 0.45,
+    "curl": 0.3,
+    "stomatalClose": 0.2,
+    "pigmentation": 0.3,
+    "chlorosis": 0.35,
+    "defenseProteins": 0.2,
+    "wilting": 0.25
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 132,
+      "label": "Glutamine (N assimilation)",
+      "base": 100,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 147,
+      "label": "Glutamate",
+      "base": 85,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 60,
+      "label": "Urea",
+      "base": 70,
+      "weekFactor": 0.4
+    },
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor fragment",
+      "base": 65,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (high dose toxicity)",
+      "base": 40,
+      "weekFactor": 0.85
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Negative at low dose (promotes height); positive suppression at high dose — structural weakness from forced growth",
+    "leafSize": "Increased at low dose; abnormally large and floppy at high dose",
+    "leafCurl": "Mild at high dose — ammonium toxicity causes some curling",
+    "wilting": "Mild at high dose",
+    "chlorosis": "Opposite at low dose (greener); tip chlorosis/necrosis at high dose from salt burn",
+    "necrosis": "Leaf tip and margin burn at high dose — classic nitrogen toxicity appearance",
+    "pigmentation": "Mild anthocyanin at stress dose; deep green at optimal dose",
+    "rootGrowth": "Stimulated at low dose; root tip burn at high ammonium concentrations",
+    "newVsOldLeaves": "New leaves grow faster at low dose; tip necrosis appears first on older leaves at high dose"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Decreased at low dose (more chlorophyll); mild reduction at high dose from ammonium toxicity",
+    "photosyntheticRate": "Increased at low dose; reduced at very high dose",
+    "stomatalConductance": "Increased at low dose; mildly reduced at high dose",
+    "transpiration": "Increased at low dose",
+    "waterUptake": "Enhanced at low dose; impaired at very high dose (osmotic stress)",
+    "nutrientTransport": "Enhanced at low dose; imbalanced at high dose (N excess suppresses P, K uptake)"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Only at high doses — ammonium accumulation generates ROS",
+    "antioxidantEnzymes": [
+      "GS (glutamine synthetase)",
+      "GOGAT",
+      "NR (nitrate reductase)"
+    ],
+    "lipidPeroxidation": "Mild at high dose only",
+    "anthocyaninInduction": "Mild at high dose",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "nitrate reductase",
+      "glutamine synthetase"
+    ],
+    "metabolitesIncreasing": [
+      "glutamine",
+      "glutamate",
+      "chlorophyll (low dose)",
+      "amino acids broadly"
+    ],
+    "metabolitesDecreasing": [
+      "starch (diluted by growth)",
+      "P and K (antagonized at high dose)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate at high dose — nitrogen excess promotes nitrophilic bacteria at expense of diversity",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Suppresses nitrogen-fixing bacteria (no longer needed); PGPR partially suppressed at very high N",
+    "fungalEffect": "Mycorrhizal associations reduced — plant doesn't need fungal P acquisition when N is abundant",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly destabilized at high dose"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours for visible low-dose response; tip burn from high dose within 72 hours",
+    "firstSymptoms": [
+      "accelerated growth and greening at low dose",
+      "leaf tip yellowing/burn at high dose"
+    ],
+    "lateSymptoms": [
+      "structural weakness",
+      "tip/margin necrosis",
+      "pest susceptibility increase at high dose"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks — nitrate leaches; ammonium toxicity reversible if source removed",
+    "acclimation": true,
+    "sensitization": "No sensitization — dose-response is direct"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: deeper green, taller plants. High dose: tip/margin burn with pale green background",
+    "firstAffectedRegion": "Leaf tips and margins at high dose; whole plant greening at low dose",
+    "damageSpread": "Tip-downward at high dose",
+    "damagePattern": "Tip burn pattern at high dose — diagnostically distinctive for N toxicity",
+    "heatmapGlow": "Moderate green glow at low dose (chlorophyll/glutamine signature); amber at high dose (MDA + tip burn)",
+    "microbiomeParticles": "Near-normal to mildly reduced at optimal; nitrophile cluster visible at high dose",
+    "leafAppearance": [
+      "deep_green_at_low_dose",
+      "tip_burn_at_high_dose",
+      "large_floppy_at_high_dose"
+    ],
+    "recoveryVisual": "Good — tip necrosis scars remain; new growth healthy after source removed"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "phosphorus",
+      "potassium"
+    ],
+    "synergyNote": "The NPK trio — nitrogen + phosphorus + potassium together produce the strongest positive growth response; imbalanced application (too much N, not enough P/K) produces the toxicity scenario",
+    "antagonizesWith": [
+      "sodium_chloride"
+    ],
+    "antagonismNote": "Salt stress and nitrogen excess both cause osmotic stress — combined application is doubly damaging",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": [
+      "mild_drought_stress"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Agricultural fertilizers — largest use of fixed nitrogen globally; also from manure, legume decomposition",
+    "classification": "Essential macronutrient / fertilizer",
+    "agriculturalUse": "Most widely used crop fertilizer globally — ~190 million tonnes/year applied worldwide",
+    "humanToxicity": "Low directly; but nitrate in groundwater (from over-fertilization) causes methemoglobinemia (blue baby syndrome) in infants",
+    "climateLink": "Fertilizer nitrogen → N₂O (nitrous oxide) emissions — agriculture is a major source of this potent greenhouse gas (265x CO₂ over 100 years)",
+    "indoorOutdoor": "Outdoor — agricultural and horticultural use",
+    "whyStudentsCare": "The Haber-Bosch process that makes fertilizer nitrogen feeds half the world's population. The story of how fixing nitrogen transformed human civilization — and the environmental cost.",
+    "realWorldIssue": "Eutrophication of waterways, groundwater nitrate contamination, N₂O climate emissions, food security"
+  },
+  "sources": [
+    "Britto DT, Kronzucker HJ (2002). NH₄⁺ toxicity in higher plants: a critical review. Journal of Plant Physiology, 159(6), 567–584.",
+    "Fageria NK, Baligar VC (2005). Enhancing nitrogen use efficiency in crop plants. Advances in Agronomy, 88, 97–185.",
+    "Galloway JN, et al. (2008). Transformation of the nitrogen cycle: recent trends, questions, and potential solutions. Science, 320(5878), 889–892."
+  ]
+}

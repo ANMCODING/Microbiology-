@@ -1,0 +1,218 @@
+{
+  "id": "methane",
+  "commonName": "Methane",
+  "iupacName": "methane",
+  "formula": "CH4",
+  "molecularWeight": 16.04,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation"
+  ],
+  "color": "#65A30D",
+  "category": "greenhouse_gas",
+  "subCategory": "atmospheric_gas",
+  "boilingPoint": "-161.5 °C at 1 atm",
+  "vaporPressure": "~27,400,000 mmHg at 20 °C (exists purely as gas)",
+  "waterSolubility": "~22.7 mg/L at 25 °C",
+  "odor": "Odorless (natural gas odor is added mercaptans)",
+  "environmentalPersistence": "Moderate as atmospheric gas — atmospheric half-life ~12 years; 86× more potent GHG than CO₂ over 20 years",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "roots"
+  ],
+  "systemicMovement": false,
+  "doseResponse": {
+    "lowDose": {
+      "range": "~2 ppm (atmospheric background) to 100 ppm",
+      "description": "No direct plant effects at background concentrations. Recent research shows low-dose methane may function as a signaling molecule — promoting seed germination, lateral root growth, and mild stress tolerance. Emerging science.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0.05,
+        "pigmentation": 0.05,
+        "chlorosis": 0,
+        "defenseProteins": 0.1,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">1000 ppm (soil gas from decomposition/landfills)",
+      "description": "Soil methane from anaerobic decomposition displaces O₂ in rhizosphere — root hypoxia, aerenchyma formation, reduced aerobic respiration. Also soil methane oxidizing bacteria outcompete PGPR.",
+      "simulationVector": {
+        "heightSuppress": 0.35,
+        "necrosis": 0.25,
+        "curl": 0.2,
+        "stomatalClose": 0.3,
+        "pigmentation": 0.15,
+        "chlorosis": 0.35,
+        "defenseProteins": 0.2,
+        "wilting": 0.3
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.35,
+    "necrosis": 0.25,
+    "curl": 0.2,
+    "stomatalClose": 0.3,
+    "pigmentation": 0.15,
+    "chlorosis": 0.35,
+    "defenseProteins": 0.2,
+    "wilting": 0.3
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 17,
+      "label": "Methane [M+H]+",
+      "base": 100,
+      "weekFactor": 0.3
+    },
+    {
+      "mz": 132,
+      "label": "Proline (hypoxic stress)",
+      "base": 70,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 117,
+      "label": "Ethanol (anaerobic fermentation)",
+      "base": 80,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 89,
+      "label": "Lactate (anaerobic metabolism)",
+      "base": 65,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 55,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate at high dose — root hypoxia from O₂ displacement reduces water/nutrient uptake",
+    "leafSize": "Mildly reduced",
+    "leafCurl": "Mild — hypoxia stress response",
+    "wilting": "Moderate — root dysfunction impairs water uptake",
+    "chlorosis": "Moderate — hypoxia-induced chloroplast stress and nutrient deficiency from impaired roots",
+    "necrosis": "Mild to moderate — root tip necrosis from anaerobic conditions",
+    "pigmentation": "Mild anthocyanin induction",
+    "rootGrowth": "Modified — aerenchyma formation (air channels) as adaptive response; but overall root function reduced",
+    "newVsOldLeaves": "Old leaves show chlorosis from chronic nutrient stress; wilting appears across canopy"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate at high dose — 25–45%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Mildly to moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Impaired — root hypoxia reduces water conductance",
+    "nutrientTransport": "Disrupted — anaerobic root conditions prevent normal nutrient uptake"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — hypoxia followed by re-oxygenation generates ROS",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "ADH (alcohol dehydrogenase)"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "ADH (anaerobic fermentation)",
+      "PDC (pyruvate decarboxylase)",
+      "aerenchyma-forming proteins"
+    ],
+    "metabolitesIncreasing": [
+      "ethanol (anaerobic fermentation)",
+      "lactate",
+      "proline",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "ATP (aerobic metabolism reduced)",
+      "aerobically-produced amino acids",
+      "chlorophyll a"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — methane soil environment selects for methanotrophs and anaerobes at expense of aerobic diversity",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — aerobic PGPR displaced by anaerobic community",
+    "fungalEffect": "Anaerobic conditions suppress most beneficial fungi; some pathogenic anaerobic fungi may increase",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Strongly altered — complete aerobic-to-anaerobic community shift"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–120 hours",
+    "firstSymptoms": [
+      "wilting from root hypoxia",
+      "mild chlorosis"
+    ],
+    "lateSymptoms": [
+      "aerenchyma formation",
+      "moderate necrosis",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–3 weeks if methane source removed and soil re-oxygenated",
+    "acclimation": true,
+    "sensitization": "Aerenchyma formation is adaptive — acclimated plants develop better flood/hypoxia tolerance"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → wilted → mild chlorosis; aerenchyma formation visible in root cross-sections",
+    "firstAffectedRegion": "Root zone first; wilting propagates upward",
+    "damageSpread": "Root-to-shoot via water stress",
+    "damagePattern": "Flooding/waterlogging visual — diagnostic for anaerobic root stress",
+    "heatmapGlow": "Moderate — ethanol and lactate fermentation metabolite signature; distinctive anaerobic profile",
+    "microbiomeParticles": "Community shift visible — aerobic particles disappear; anaerobic methanotroph cluster forms",
+    "leafAppearance": [
+      "wilted",
+      "mild_yellowing",
+      "drooping"
+    ],
+    "recoveryVisual": "Moderate — aerenchyma tissue persists; new root growth resumes after re-oxygenation"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "co2"
+    ],
+    "synergyNote": "Methane and CO₂ are both products of anaerobic decomposition in wetlands and landfills — co-occurrence is realistic. Both accumulate in soil gas phase under waterlogged conditions.",
+    "antagonizesWith": [
+      "ozone"
+    ],
+    "antagonismNote": "Atmospheric methane is oxidized by OH radicals that also destroy ozone — indirect interaction affecting ozone chemistry",
+    "amplifiesOxidativeStressOf": [
+      "ozone"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Wetlands (largest natural source), livestock digestion and manure, landfills, rice paddies, natural gas leaks, permafrost thaw",
+    "classification": "Greenhouse gas / natural gas component",
+    "agriculturalUse": "Not applied intentionally; produced by rice paddy agriculture and livestock — major agricultural GHG",
+    "humanToxicity": "Not toxic at atmospheric concentrations; simple asphyxiant at very high concentrations; highly flammable",
+    "climateLink": "Second most important anthropogenic greenhouse gas after CO₂; 86× more potent over 20 years. Permafrost thaw releasing methane stored for millennia is a key climate feedback. Livestock methane is ~14.5% of global GHG emissions.",
+    "indoorOutdoor": "Outdoor — atmospheric; soil gas near landfills and wetlands; indoor leak hazard",
+    "whyStudentsCare": "Cow burps and farts — livestock are one of the largest methane sources. Landfills in every community emit methane. Permafrost methane release is one of the most feared climate tipping points.",
+    "realWorldIssue": "Livestock agriculture emissions, landfill gas, permafrost tipping points, rice paddy emissions"
+  },
+  "sources": [
+    "Yamasaki H (1997). A function of plant methane. Biogeochemical Cycles, 11(1), 151–155.",
+    "Keppler F, et al. (2006). Methane emissions from terrestrial plants under aerobic conditions. Nature, 439, 187–191.",
+    "IPCC (2021). Climate Change 2021: The Physical Science Basis. Chapter 5: Global Carbon and Other Biogeochemical Cycles and Feedbacks. Cambridge University Press."
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "magnesium_chloride",
+  "commonName": "Magnesium Chloride",
+  "iupacName": "magnesium chloride",
+  "formula": "MgCl2",
+  "molecularWeight": 95.21,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#0284C7",
+  "category": "salinity",
+  "subCategory": "ionic_salt",
+  "boilingPoint": "1412 °C at 1 atm",
+  "vaporPressure": null,
+  "waterSolubility": "~542 g/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "Very high — does not degrade; accumulates in soil",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.35,
+    "curl": 0.45,
+    "stomatalClose": 0.4,
+    "pigmentation": 0.25,
+    "chlorosis": 0.4,
+    "defenseProteins": 0.3,
+    "wilting": 0.55
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 95,
+      "weekFactor": 1
+    },
+    {
+      "mz": 119,
+      "label": "Glycine betaine",
+      "base": 75,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor",
+      "base": 65,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 121,
+      "label": "ABA fragment",
+      "base": 60,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — osmotic stress reduces growth; at low levels Mg²⁺ is actually beneficial",
+    "leafSize": "Mildly to moderately reduced at high doses",
+    "leafCurl": "Moderate — similar mechanism to NaCl but less severe (Mg²⁺ is a plant nutrient)",
+    "wilting": "Moderate to strong — osmotic component dominant at high concentration",
+    "chlorosis": "Moderate — Cl⁻ ion toxicity; paradoxically Mg deficiency can cause chlorosis (Mg is the central chlorophyll atom) but excess MgCl₂ delivers too much Cl⁻",
+    "necrosis": "Moderate — Cl⁻ toxicity causes tip burn",
+    "pigmentation": "Mild to moderate",
+    "rootGrowth": "Moderately inhibited at high doses",
+    "newVsOldLeaves": "Old leaves show Cl⁻ burn first; younger leaves show osmotic wilting first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 20–40% at moderate-high doses",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Impaired at high concentrations — osmotic effect",
+    "nutrientTransport": "Mildly disrupted — Mg²⁺ competes with Ca²⁺ and K⁺ at high concentrations"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — osmotic and Cl⁻ ion stress",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Mild to moderate",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "dehydrins",
+      "osmotic stress proteins"
+    ],
+    "metabolitesIncreasing": [
+      "proline",
+      "glycine betaine",
+      "MDA",
+      "anthocyanins"
+    ],
+    "metabolitesDecreasing": [
+      "Ca²⁺-dependent enzymes at high dose",
+      "K⁺-dependent processes"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — less severe than NaCl due to Mg²⁺ being a micronutrient",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed",
+    "fungalEffect": "Mildly to moderately disrupted",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–72 hours",
+    "firstSymptoms": [
+      "wilting",
+      "mild leaf rolling"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "tip burn",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–3 weeks",
+    "acclimation": true,
+    "sensitization": "Mild"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → wilting/curling → mild yellowing → tip burn",
+    "firstAffectedRegion": "Root tips, then whole-plant wilting",
+    "damageSpread": "Osmotic wilting first; chlorosis follows",
+    "damagePattern": "Similar to NaCl but less severe; tip burn lighter",
+    "heatmapGlow": "Moderate — proline and betaine osmolyte signature",
+    "microbiomeParticles": "Moderately reduced",
+    "leafAppearance": [
+      "wilted",
+      "mild_curl",
+      "tip_burn"
+    ],
+    "recoveryVisual": "Good — better recovery than NaCl; Mg²⁺ is a nutrient and soil can buffer"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "sodium_chloride",
+      "calcium_chloride",
+      "potassium_salt"
+    ],
+    "synergyNote": "MgCl₂ is a common component of road salt mixtures (with NaCl and CaCl₂) — combined salt stress is the real-world scenario for roadside vegetation",
+    "antagonizesWith": [
+      "potassium",
+      "calcium"
+    ],
+    "antagonismNote": "High Mg²⁺ can antagonize Ca²⁺ and K⁺ uptake; but at sub-toxic levels Mg²⁺ is beneficial for chlorophyll",
+    "amplifiesOxidativeStressOf": [
+      "sodium_chloride",
+      "ozone"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Road deicing salt (second most common after NaCl); industrial salt brines; natural saline soils; seawater",
+    "classification": "Ionic salt / abiotic stress agent",
+    "agriculturalUse": "Not intentionally applied as stressor; small amounts used as Mg fertilizer",
+    "humanToxicity": "Very low — used as a food additive (tofu coagulant); supplement in sports drinks",
+    "climateLink": "Increased road salt use in northern cities combined with more variable winters (less snow but more freezing rain) affects urban street trees and roadside vegetation",
+    "indoorOutdoor": "Primarily outdoor — road runoff and saline soil",
+    "whyStudentsCare": "Road salt is the reason trees along city sidewalks die young — the brown-tipped Norway maples lining urban streets are showing MgCl₂ and NaCl stress. Students can observe it in their own neighborhoods.",
+    "realWorldIssue": "Road salt runoff, urban tree health, groundwater salinization, winter road management"
+  },
+  "sources": [
+    "Munns R, Tester M (2008). Mechanisms of salinity tolerance. Annual Review of Plant Biology, 59, 651–681.",
+    "Blomqvist G, Johansson E (1999). Airborne spreading and deposition of de-icing salt. Science of the Total Environment, 235(1–3), 161–168.",
+    "Cekstere G, Nikodemus O, Osvalde A (2008). Toxic impact of the de-icing material to street greenery in Riga, Latvia. Urban Forestry & Urban Greening, 7(3), 207–217."
+  ]
+}

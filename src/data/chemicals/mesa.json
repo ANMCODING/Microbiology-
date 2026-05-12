@@ -1,0 +1,194 @@
+{
+  "id": "mesa",
+  "commonName": "Methyl Salicylate",
+  "iupacName": "methyl 2-hydroxybenzoate",
+  "formula": "C8H8O3",
+  "molecularWeight": 152.15,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "liquid",
+    "gas",
+    "foliar_spray",
+    "fumigation"
+  ],
+  "color": "#DC2626",
+  "category": "voc",
+  "subCategory": "signaling_voc",
+  "boilingPoint": "222.2 °C at 1 atm",
+  "vaporPressure": "~0.03 mmHg at 20 °C",
+  "waterSolubility": "~670 mg/L at 20 °C",
+  "odor": "Wintergreen, sharp medicinal",
+  "environmentalPersistence": "Low to moderate — degrades via photolysis and microbial hydrolysis within days",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.4,
+    "necrosis": 0.3,
+    "curl": 0.35,
+    "stomatalClose": 0.55,
+    "pigmentation": 1.4,
+    "chlorosis": 0.25,
+    "defenseProteins": 0.9,
+    "wilting": 0.15
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 153,
+      "label": "Methyl Salicylate [M+H]+",
+      "base": 100,
+      "weekFactor": 0.65
+    },
+    {
+      "mz": 139,
+      "label": "Salicylic acid [M+H]+",
+      "base": 85,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 95,
+      "weekFactor": 1
+    },
+    {
+      "mz": 449,
+      "label": "Cyanidin-3-glucoside",
+      "base": 80,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 341,
+      "label": "SA-glucoside conjugate",
+      "base": 55,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — SA signaling antagonizes gibberellin-mediated elongation",
+    "leafSize": "Mildly reduced",
+    "leafCurl": "Moderate downward curl — SA-mediated",
+    "wilting": "Mild",
+    "chlorosis": "Mild — less than MeJA; SA primarily activates defense rather than degrading chlorophyll",
+    "necrosis": "Moderate at high doses — hypersensitive response-like lesions",
+    "pigmentation": "Very strong — SA drives anthocyanin biosynthesis strongly in Coleus; near MeJA levels",
+    "rootGrowth": "Mildly inhibited",
+    "newVsOldLeaves": "Young leaves show pigmentation first; lesions form on mid-age leaves"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Mild — 10–25%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Decreased — SA-mediated ABA crosstalk promotes closure",
+    "transpiration": "Reduced",
+    "waterUptake": "Mildly impaired",
+    "membranePermeability": "Slightly increased at high doses"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — SA-triggered oxidative burst is part of hypersensitive response",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Very strong — among strongest anthocyanin inducers in Coleus",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "PR-1",
+      "PR-2",
+      "PR-5",
+      "BGL2",
+      "chitinases"
+    ],
+    "metabolitesIncreasing": [
+      "salicylic acid",
+      "anthocyanins",
+      "PR proteins",
+      "SA-glucoside"
+    ],
+    "metabolitesDecreasing": [
+      "gibberellins",
+      "chlorophyll (mild)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild",
+    "pathogenSuppression": true,
+    "beneficialBacteriaEffect": "Some PGPR suppressed; SA-producing bacteria may increase",
+    "fungalEffect": "Pathogenic fungi suppressed via induced systemic resistance",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly altered"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–72 hours",
+    "firstSymptoms": [
+      "pigmentation increase",
+      "stomatal closure"
+    ],
+    "lateSymptoms": [
+      "necrotic lesions",
+      "height suppression"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks",
+    "acclimation": true,
+    "sensitization": "Strong priming — MeSA exposure induces systemic acquired resistance; second exposure triggers faster, stronger response"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → deep red-purple (anthocyanin); small necrotic lesions at high doses",
+    "firstAffectedRegion": "Young apical leaves for pigmentation; mid-canopy for lesions",
+    "damageSpread": "Patchy lesion formation; uniform pigmentation",
+    "damagePattern": "Patchy necrotic spots on otherwise deeply pigmented leaves",
+    "heatmapGlow": "Very strong — second only to MeJA in anthocyanin signal; SA-glucoside adds secondary peak",
+    "microbiomeParticles": "Mildly reduced diversity; pathogen fraction decreased",
+    "leafAppearance": [
+      "curled",
+      "deep_purple",
+      "spotted_at_high_dose"
+    ],
+    "recoveryVisual": "Good — pigmentation fades, lesion scars remain"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "meja"
+    ],
+    "synergyNote": "MeSA + MeJA is the strongest pigmentation/defense combo in the simulator — both pathways converge on anthocyanin biosynthesis and PR proteins simultaneously",
+    "antagonizesWith": [
+      "ethylene"
+    ],
+    "antagonismNote": "SA and ET/JA pathways have complex crosstalk; SA can suppress JA/ET-mediated necrosis in some contexts",
+    "amplifiesOxidativeStressOf": [
+      "benzene",
+      "formaldehyde",
+      "ozone"
+    ],
+    "protectsAgainst": [
+      "pathogen_attack"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Wintergreen plants, birch bark, many flowering plants under pathogen attack; aspirin (acetylsalicylic acid) is a derivative",
+    "classification": "Signaling VOC / plant defense hormone",
+    "agriculturalUse": "Studied as a biocontrol agent; used in SAR (systemic acquired resistance) research",
+    "humanToxicity": "Low at ambient concentrations; toxic in large doses (related to aspirin toxicity)",
+    "climateLink": "MeSA emissions increase under heat and pathogen stress — relevant to changing disease pressure under climate change",
+    "indoorOutdoor": "Both — wintergreen products indoors; natural plant emissions outdoors",
+    "whyStudentsCare": "Aspirin comes from this molecule — the connection between plant defense chemistry and one of the world's most common medicines is immediately engaging",
+    "realWorldIssue": "Natural disease resistance, sustainable agriculture, pharmaceutical origins"
+  },
+  "sources": [
+    "Park SW, et al. (2007). Methyl salicylate is a critical mobile signal for plant systemic acquired resistance. Science, 318(5847), 113–116.",
+    "Vlot AC, Dempsey DA, Klessig DF (2009). Salicylic acid, a multifaceted hormone to combat disease. Annual Review of Phytopathology, 47, 177–206.",
+    "Seskar M, Shulaev V, Raskin I (1998). Endogenous methyl salicylate in pathogen-inoculated tobacco plants. Plant Physiology, 116(1), 387–392."
+  ]
+}

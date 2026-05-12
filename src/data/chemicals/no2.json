@@ -1,0 +1,192 @@
+{
+  "id": "no2",
+  "commonName": "Nitrogen Dioxide",
+  "iupacName": "nitrogen dioxide",
+  "formula": "NO2",
+  "molecularWeight": 46.01,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation"
+  ],
+  "color": "#B45309",
+  "category": "acid_rain",
+  "subCategory": "atmospheric_pollutant_gas",
+  "boilingPoint": "21.2 °C at 1 atm",
+  "vaporPressure": "~720 mmHg at 20 °C",
+  "waterSolubility": "~0.9 g/L at 20 °C (hydrolyzes to HNO₃ + HNO₂)",
+  "odor": "Sharp, biting, reddish-brown gas — characteristic smell near traffic",
+  "environmentalPersistence": "Low — atmospheric half-life hours to days; reacts with OH to form HNO₃",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.4,
+    "necrosis": 0.5,
+    "curl": 0.45,
+    "stomatalClose": 0.65,
+    "pigmentation": 0.2,
+    "chlorosis": 0.55,
+    "defenseProteins": 0.3,
+    "wilting": 0.35
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 46,
+      "label": "NO2 [M]+",
+      "base": 100,
+      "weekFactor": 0.4
+    },
+    {
+      "mz": 62,
+      "label": "Nitrate [NO3]-",
+      "base": 85,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 80,
+      "weekFactor": 1
+    },
+    {
+      "mz": 146,
+      "label": "Nitrosylated protein fragment",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 55,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — less than SO₂ at equivalent concentrations",
+    "leafSize": "Mildly to moderately reduced",
+    "leafCurl": "Moderate — mesophyll damage from nitrous/nitric acid formed internally",
+    "wilting": "Mild to moderate",
+    "chlorosis": "Moderate — similar pattern to SO₂ but less severe; nitrous acid bleaches chlorophyll",
+    "necrosis": "Moderate — interveinal necrosis similar to SO₂ but lighter",
+    "pigmentation": "Mild",
+    "rootGrowth": "Minimally affected",
+    "newVsOldLeaves": "Mature leaves most sensitive; young leaves somewhat protected"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 25–45%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Strongly reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Mildly impaired",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate to strong — NO₂ generates reactive nitrogen species (peroxynitrite, •NO)",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate-strong",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "nitrate reductase",
+      "nitric oxide synthase-like proteins",
+      "peroxidases"
+    ],
+    "metabolitesIncreasing": [
+      "nitrate",
+      "peroxynitrite",
+      "nitrosylated proteins",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b",
+      "RUBISCO"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed",
+    "fungalEffect": "Moderately disrupted",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly to moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "12–36 hours",
+    "firstSymptoms": [
+      "stomatal closure",
+      "mild interveinal chlorosis"
+    ],
+    "lateSymptoms": [
+      "interveinal necrosis",
+      "chlorosis",
+      "growth suppression"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor for necrotic tissue; partial stomatal recovery possible",
+    "acclimation": "Partial",
+    "sensitization": "Mild"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → pale interveinal → brown necrosis; similar to SO₂ but milder",
+    "firstAffectedRegion": "Interveinal mesophyll of older leaves",
+    "damageSpread": "Interveinal zones spreading inward",
+    "damagePattern": "Interveinal necrosis pattern — similar to SO₂ but lighter; veins remain green",
+    "heatmapGlow": "Moderate — nitrate and nitrosylated protein signature",
+    "microbiomeParticles": "Moderately reduced",
+    "leafAppearance": [
+      "interveinal_chlorosis",
+      "curled",
+      "mild_spotting"
+    ],
+    "recoveryVisual": "Partial — lighter scarring than SO₂; new growth recovers if source removed"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "so2",
+      "ozone",
+      "sulfuric_acid",
+      "nitric_acid"
+    ],
+    "synergyNote": "NO₂ + SO₂ is the foundational acid rain precursor pair. NO₂ + ozone creates the photochemical smog cycle — NO₂ photolysis produces O atoms that form ozone, creating a self-reinforcing oxidative loop.",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2",
+      "benzene",
+      "toluene"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Vehicle engines (primary source), power plants, industrial combustion — the reddish-brown haze over cities is largely NO₂",
+    "classification": "Atmospheric pollutant / acid rain precursor / smog component",
+    "agriculturalUse": "None — environmental pollutant",
+    "humanToxicity": "High — respiratory damage; linked to asthma and cardiovascular disease; WHO standard: 40 µg/m³ annual mean",
+    "climateLink": "NOₓ emissions (NO + NO₂) are central to tropospheric ozone formation and contribute to climate forcing",
+    "indoorOutdoor": "Both — gas stoves and unvented heaters generate indoor NO₂; major outdoor traffic pollutant",
+    "whyStudentsCare": "The reddish-brown smog visible over cities on hot days — students can literally see NO₂. Gas stove NO₂ emissions are a current public health debate.",
+    "realWorldIssue": "Urban smog, traffic pollution, gas stove indoor air quality, asthma epidemics in urban areas"
+  },
+  "sources": [
+    "Wellburn AR (1990). Why are atmospheric oxides of nitrogen usually phytotoxic and not alternative fertilizers? New Phytologist, 115(3), 395–429.",
+    "Darrall NM (1989). The effect of air pollutants on physiological processes in plants. Plant, Cell & Environment, 12(1), 1–30.",
+    "Lovett GM, Tear TH (2008). Effects of nitrogen deposition on ecosystems. New Phytologist, 179(1), 1–2."
+  ]
+}

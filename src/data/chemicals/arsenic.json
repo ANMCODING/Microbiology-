@@ -1,0 +1,198 @@
+{
+  "id": "arsenic",
+  "commonName": "Arsenic (As)",
+  "iupacName": "arsenate(V) ion / arsenite(III) ion",
+  "formula": "As",
+  "molecularWeight": 74.92,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#78716C",
+  "category": "heavy_metal",
+  "subCategory": "metalloid",
+  "boilingPoint": "887 °C (sublimation) at 1 atm",
+  "vaporPressure": null,
+  "waterSolubility": "As arsenate H₃AsO₄: ~16.7 g/L at 20 °C; arsenite H₃AsO₃: ~20 g/L",
+  "odor": null,
+  "environmentalPersistence": "Very high — does not degrade; arsenic cycles between oxidation states but persists indefinitely",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.7,
+    "necrosis": 0.65,
+    "curl": 0.25,
+    "stomatalClose": 0.5,
+    "pigmentation": 0.3,
+    "chlorosis": 0.65,
+    "defenseProteins": 0.5,
+    "wilting": 0.55
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 305,
+      "label": "Phytochelatin PC2",
+      "base": 95,
+      "weekFactor": 1
+    },
+    {
+      "mz": 610,
+      "label": "Phytochelatin PC4",
+      "base": 70,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 85,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 312,
+      "label": "As-phytochelatin complex",
+      "base": 80,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 60,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strong — arsenate competes with phosphate in energy metabolism",
+    "leafSize": "Significantly reduced",
+    "leafCurl": "Mild",
+    "wilting": "Moderate-strong — water uptake impaired by root damage",
+    "chlorosis": "Strong — chloroplast damage and nutrient disruption",
+    "necrosis": "Strong — root tip necrosis; brown patches on leaves",
+    "pigmentation": "Mild to moderate — some anthocyanin induction",
+    "rootGrowth": "Severely inhibited — arsenate entry via phosphate transporters causes direct root toxicity",
+    "newVsOldLeaves": "Older leaves show chlorosis/necrosis first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 40–65%",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately to severely impaired",
+    "nutrientTransport": "Strongly disrupted — arsenate mimics phosphate, disrupts ATP synthesis (arsenate uncouples oxidative phosphorylation)",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — arsenite inhibits thiol-containing enzymes; arsenate uncouples ATP synthesis",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Mild to moderate",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "phytochelatins (highest induction of all heavy metals)",
+      "metallothioneins",
+      "glutaredoxins"
+    ],
+    "metabolitesIncreasing": [
+      "As-phytochelatin complexes",
+      "phytochelatins",
+      "MDA",
+      "proline",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "ATP",
+      "GSH",
+      "phosphate-dependent enzymes",
+      "chlorophyll a",
+      "chlorophyll b"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed",
+    "fungalEffect": "Mycorrhizal fungi disrupted; As-resistant strains may persist",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–120 hours",
+    "firstSymptoms": [
+      "root browning",
+      "wilting",
+      "early chlorosis"
+    ],
+    "lateSymptoms": [
+      "widespread necrosis",
+      "growth arrest",
+      "leaf browning"
+    ],
+    "reversible": false,
+    "recoveryTime": "None — arsenic accumulates and is not metabolized in most plants",
+    "acclimation": false,
+    "sensitization": "Accumulative"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow-green (chlorosis) → brown patches; mild purple tint from anthocyanin",
+    "firstAffectedRegion": "Root tips, then older leaves",
+    "damageSpread": "Upward from roots through vascular tissue",
+    "damagePattern": "Patchy brown necrosis on chlorotic background",
+    "heatmapGlow": "Strong — As-phytochelatin complex gives distinctive dual peak; strongest of heavy metals on phytochelatin axis",
+    "microbiomeParticles": "Sparse; high pathogen fraction; resistome particles elevated",
+    "leafAppearance": [
+      "spotted",
+      "yellowing",
+      "brittle"
+    ],
+    "recoveryVisual": "No recovery"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "cadmium",
+      "lead",
+      "mercury"
+    ],
+    "synergyNote": "Arsenic + cadmium is an especially dangerous combination found in rice paddies — both deplete phytochelatins and GSH simultaneously via different mechanisms",
+    "antagonizesWith": [
+      "phosphorus"
+    ],
+    "antagonismNote": "High phosphate reduces arsenate uptake by competing at phosphate transporter sites",
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "lead",
+      "ozone"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Contaminated groundwater (Bangladesh, West Bengal — affecting 100M+ people), pesticide legacy contamination, copper smelting, pressure-treated wood (pre-2004)",
+    "classification": "Metalloid pollutant / carcinogen",
+    "agriculturalUse": "Legacy use as pesticide and herbicide; now banned; contaminates rice through contaminated irrigation water",
+    "humanToxicity": "Extremely high — IARC Group 1 carcinogen; causes skin, bladder, lung cancer; endemic poisoning in South Asia",
+    "climateLink": "Climate-driven drought concentrates arsenic in groundwater; flooding mobilizes arsenic from sediments into agricultural soils",
+    "indoorOutdoor": "Primarily outdoor/water; indoor via contaminated well water in affected regions",
+    "whyStudentsCare": "The Bangladesh arsenic crisis is one of the largest mass poisonings in human history — drinking water from millions of wells. Rice contamination directly connects to global food security.",
+    "realWorldIssue": "Groundwater contamination, rice food safety, global health crisis, pressure-treated wood legacy"
+  },
+  "sources": [
+    "Meharg AA, Hartley-Whitaker J (2002). Arsenic uptake and metabolism in arsenic resistant and nonresistant plant species. New Phytologist, 154(1), 29–43.",
+    "Zhao FJ, et al. (2009). Arsenic as a food chain contaminant: mechanisms of plant uptake and metabolism. Plant and Soil, 325, 1–21.",
+    "Finnegan PM, Chen W (2012). Arsenic toxicity: the effects on plant metabolism. Frontiers in Physiology, 3, 182."
+  ]
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio-Sim Matrix · Coleus VOC Lab</title>
+    <link rel="stylesheet" href="/src/styles/lab.css" />
+  </head>
+  <body>
+    <div id="guide" class="guide-screen"></div>
+    <div id="entrance" class="entrance-screen hidden-screen"></div>
+    <div id="app" class="hidden-screen">
+      <header class="topbar">
+        <div class="brand">
+          <button class="brand-back" id="brand-back" type="button" title="Return to plant + chemical picker">←</button>
+          <button class="brand-guide" id="brand-guide" type="button" title="How this lab works">How it works</button>
+          <button class="brand-rigor" id="brand-rigor" type="button" title="Why semi-realistic? Accountability by scale — print or save as PDF">Basis</button>
+          <span class="logo-dot"></span>
+          <h1>Bio-Sim Matrix</h1>
+          <span class="subtitle" id="brand-subtitle">Multi-Scale Plant Stress Lab</span>
+        </div>
+        <div class="view-toggle" id="view-toggle">
+          <button data-mode="macro" class="active">Macro</button>
+          <button data-mode="micro">Micro</button>
+          <button data-mode="molecular">Molecular</button>
+        </div>
+      </header>
+
+      <nav id="tab-strip" class="tab-strip"></nav>
+
+      <main class="layout">
+        <aside class="panel left-panel" id="left-panel"></aside>
+
+        <section class="viewport-wrap">
+          <div class="viewport" id="viewport">
+            <canvas id="three-canvas"></canvas>
+            <canvas id="micro-canvas" class="overlay-canvas hidden"></canvas>
+            <div id="molecular-overlay" class="overlay-canvas hidden">
+              <div class="overlay-hint">
+                <b>Molecular view.</b> Stems render as wireframes; leaf
+                emissive intensity maps to combined secondary metabolite
+                concentration.<br><br>
+                <span style="color:var(--accent)">Click any plant</span> to
+                send <em>that single sample</em> through the simulated mass
+                spectrometer and see its individual LC-MS spectrum on the
+                right.
+              </div>
+            </div>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+
+        <aside class="panel right-panel" id="right-panel">
+          <div class="dash-card">
+            <div class="card-head">
+              <h3>Microbiome <span class="card-meta" id="micro-arm-tag">Active bench</span></h3>
+              <div class="seg-toggle" id="micro-region-toggle">
+                <button data-region="phyllosphere" class="active">Phyllo</button>
+                <button data-region="rhizosphere">Rhizo</button>
+              </div>
+            </div>
+            <div class="canvas-host" id="dash-micro-host" title="Reflects the active bench (tab)">
+              <canvas id="dash-micro-canvas"></canvas>
+            </div>
+            <div class="metric-row">
+              <div class="metric"><label>Diversity</label><span id="metric-diversity">1.00</span></div>
+              <div class="metric"><label>Resistome</label><span id="metric-resistome">0</span></div>
+              <div class="metric"><label>Pathogen</label><span id="metric-pathogen">0%</span></div>
+            </div>
+            <div class="micro-legend" id="micro-legend">
+              <span class="leg-chip clickable-info" data-class="beneficial"  title="Click for info">
+                <span class="leg-dot" style="background:#8cf0dc"></span>Beneficial
+              </span>
+              <span class="leg-chip clickable-info" data-class="opportunist" title="Click for info">
+                <span class="leg-dot" style="background:#f5af3c"></span>Opportunist
+              </span>
+              <span class="leg-chip clickable-info" data-class="pathogen"    title="Click for info">
+                <span class="leg-dot" style="background:#e83c46"></span>Pathogen
+              </span>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="card-head">
+              <h3>LC-MS Readout
+                <button class="info-icon" id="info-massspec" title="What is mass spectrometry?">i</button>
+              </h3>
+              <label class="overlay-toggle">
+                <input type="checkbox" id="ms-overlay-all" />
+                <span>overlay all benches</span>
+              </label>
+            </div>
+            <div id="ms-focus-bar" class="ms-focus-bar">
+              <span class="ms-focus-label">Inspect</span>
+              <div id="ms-plant-picker" class="ms-plant-picker"></div>
+            </div>
+            <div class="canvas-host chart-host">
+              <canvas id="ms-chart"></canvas>
+            </div>
+            <div class="ms-hint">
+              Pick a plant above or click any plant in the 3D bench to
+              inspect its individual spectrum — real LC-MS analyses one
+              sample at a time.
+            </div>
+          </div>
+
+          <div class="dash-card log-card">
+            <div class="card-head">
+              <h3>Automated Log</h3>
+              <div class="log-head-right">
+                <span class="card-meta" id="log-week">Day 0</span>
+                <button id="log-add" type="button" title="Capture the current day's per-bench entries">+ entry</button>
+              </div>
+            </div>
+            <div class="log-feed" id="log-feed"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

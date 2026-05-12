@@ -1,0 +1,190 @@
+{
+  "id": "ddt",
+  "commonName": "DDT",
+  "iupacName": "1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane",
+  "formula": "C14H9Cl5",
+  "molecularWeight": 354.49,
+  "phase": "solid",
+  "deliveryMethods": [
+    "foliar_spray",
+    "soil"
+  ],
+  "color": "#78350F",
+  "category": "pesticide",
+  "subCategory": "organochlorine_insecticide",
+  "boilingPoint": "260 °C at 1 atm (decomposes partially)",
+  "vaporPressure": "~1.6 × 10⁻⁷ mmHg at 20 °C",
+  "waterSolubility": "~0.025 mg/L at 25 °C (extremely hydrophobic)",
+  "odor": "Faint aromatic odor",
+  "environmentalPersistence": "Extremely high — soil half-life 2–15 years; DDE and DDD metabolites persist for decades; still detectable globally despite bans",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "roots",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.45,
+    "necrosis": 0.35,
+    "curl": 0.35,
+    "stomatalClose": 0.35,
+    "pigmentation": 0.2,
+    "chlorosis": 0.4,
+    "defenseProteins": 0.2,
+    "wilting": 0.3
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 355,
+      "label": "DDT [M+H]+",
+      "base": 100,
+      "weekFactor": 0.35
+    },
+    {
+      "mz": 319,
+      "label": "DDE (primary metabolite)",
+      "base": 90,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 321,
+      "label": "DDD (reductive metabolite)",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 75,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 50,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — lipophilic accumulation in membranes impairs cell function broadly",
+    "leafSize": "Mildly to moderately reduced",
+    "leafCurl": "Moderate — membrane disruption causes structural changes",
+    "wilting": "Moderate",
+    "chlorosis": "Moderate — chloroplast membrane disruption",
+    "necrosis": "Moderate — lipid-mediated membrane damage causes tissue death",
+    "pigmentation": "Mild",
+    "rootGrowth": "Moderately inhibited — highly lipophilic; accumulates in root cell membranes",
+    "newVsOldLeaves": "Old leaves show chlorosis first; new growth impaired over time"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 30–50%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "membranePermeability": "Strongly increased — extreme lipophilicity disrupts all lipid bilayers"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — membrane disruption generates secondary ROS",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong — extremely lipophilic; partitions into membranes causing peroxidation",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "cytochrome P450 detox enzymes (CYP)",
+      "GST"
+    ],
+    "metabolitesIncreasing": [
+      "DDE",
+      "DDD",
+      "MDA",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "membrane phospholipids",
+      "chlorophyll a",
+      "chlorophyll b"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — DDT persists in soil and continues suppressing microbiome for years",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — DDT accumulates in bacterial cell membranes",
+    "fungalEffect": "Strongly disrupted — mycorrhizal associations severely impaired",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Severely and persistently destabilized — decades-long effect"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–168 hours — slower than more water-soluble compounds",
+    "firstSymptoms": [
+      "chlorosis on older leaves",
+      "mild growth slowdown"
+    ],
+    "lateSymptoms": [
+      "moderate necrosis",
+      "persistent growth suppression",
+      "microbiome collapse"
+    ],
+    "reversible": false,
+    "recoveryTime": "None — DDT does not degrade on plant-relevant timescales; accumulates continuously",
+    "acclimation": false,
+    "sensitization": "Accumulative — lipophilic bioaccumulation causes worsening symptoms over weeks"
+  },
+  "visualSimulation": {
+    "colorChanges": "Slow progression from green → mildly chlorotic; dark spots from lipid deposit accumulation",
+    "firstAffectedRegion": "Older leaves and root-adjacent tissue",
+    "damageSpread": "Slow, uniform progression",
+    "damagePattern": "Uniform mild chlorosis — less dramatic visually than herbicides; the story is the persistence and bioaccumulation",
+    "heatmapGlow": "Moderate — DDE accumulation signature is persistent; doesn't decay over 6 weeks unlike most chemicals",
+    "microbiomeParticles": "Progressive reduction over 6 weeks; near-zero by week 6; resistome elevated",
+    "leafAppearance": [
+      "mild_yellowing",
+      "slightly_spotted",
+      "matte_surface"
+    ],
+    "recoveryVisual": "No recovery — DDT accumulates in tissue; continued slow deterioration"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "chlorpyrifos"
+    ],
+    "synergyNote": "Historical use of organochlorine + organophosphate mixtures; combined lipophilic membrane disruption and AChE inhibition produce synergistic microbiome collapse",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "mercury",
+      "benzene"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Historical agricultural/public health use; banned in US 1972 and most countries; still used for malaria control in some tropical countries; globally persistent — detectable in Arctic wildlife and deep ocean sediments",
+    "classification": "Organochlorine insecticide / persistent organic pollutant (POP)",
+    "agriculturalUse": "Banned in most countries; ~4,000 tonnes/year still produced for malaria vector control in limited countries",
+    "humanToxicity": "High — carcinogen; endocrine disruptor; causes eggshell thinning in birds (brought bald eagle near extinction); linked to breast cancer and diabetes",
+    "climateLink": "DDT is a persistent organic pollutant that concentrates in Arctic ecosystems — climate-driven melting of polar ice releases DDT stored for decades back into the food chain",
+    "indoorOutdoor": "Outdoor — historical agricultural; current use indoor/outdoor for malaria control in Africa and Asia",
+    "whyStudentsCare": "Rachel Carson's Silent Spring — the book that started the modern environmental movement. DDT nearly drove the bald eagle extinct. Still present in the environment 50+ years after the US ban.",
+    "realWorldIssue": "Persistent organic pollutants, bioaccumulation in food chains, DDT and malaria tradeoffs, polar pollutant transport"
+  },
+  "sources": [
+    "Carson R (1962). Silent Spring. Houghton Mifflin, Boston.",
+    "Turusov V, Rakitsky V, Tomatis L (2002). Dichlorodiphenyltrichloroethane (DDT): ubiquity, persistence, and risks. Environmental Health Perspectives, 110(2), 125–128.",
+    "Van den Berg H (2009). Global status of DDT and its alternatives for use in vector control to prevent disease. Environmental Health Perspectives, 117(11), 1656–1663."
+  ]
+}

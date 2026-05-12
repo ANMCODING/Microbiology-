@@ -1,0 +1,217 @@
+{
+  "id": "potassium",
+  "commonName": "Potassium (Fertilizer)",
+  "iupacName": "potassium ion",
+  "formula": "K+",
+  "molecularWeight": 39.1,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench",
+    "foliar_spray"
+  ],
+  "color": "#166534",
+  "category": "fertilizer",
+  "subCategory": "macronutrient",
+  "boilingPoint": "759 °C at 1 atm (elemental K)",
+  "vaporPressure": null,
+  "waterSolubility": "KCl: ~344 g/L at 20 °C; K₂SO₄: ~111 g/L",
+  "odor": null,
+  "environmentalPersistence": "Moderate — K⁺ is moderately mobile in soil; leaches less than nitrate but more than phosphate",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "leaf_surface"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems",
+    "roots"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "100–200 mg K/kg soil",
+      "description": "Optimal — improved turgor pressure, enhanced stomatal regulation, stronger stems, better drought resistance, improved fruit quality. Plants appear vigorous with good structural integrity.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0.05,
+        "chlorosis": 0,
+        "defenseProteins": 0.1,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">500 mg K/kg soil",
+      "description": "Potassium toxicity — induces magnesium and calcium deficiency, causes leaf margin scorch/necrosis, disrupts osmotic balance, reduces Mg-dependent enzyme activity including chlorophyll synthesis.",
+      "simulationVector": {
+        "heightSuppress": 0.35,
+        "necrosis": 0.4,
+        "curl": 0.25,
+        "stomatalClose": 0.2,
+        "pigmentation": 0.2,
+        "chlorosis": 0.45,
+        "defenseProteins": 0.15,
+        "wilting": 0.3
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.35,
+    "necrosis": 0.4,
+    "curl": 0.25,
+    "stomatalClose": 0.2,
+    "pigmentation": 0.2,
+    "chlorosis": 0.45,
+    "defenseProteins": 0.15,
+    "wilting": 0.3
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 133,
+      "label": "Malate (stomatal regulation)",
+      "base": 90,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor",
+      "base": 70,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (high dose toxicity)",
+      "base": 45,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 203,
+      "label": "Mg-deficiency chlorosis marker",
+      "base": 60,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 121,
+      "label": "Abscisic acid fragment",
+      "base": 50,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Negative at low dose (promotes sturdy growth); moderate at high dose via Mg/Ca antagonism",
+    "leafSize": "Increased at low dose; scorch-marginned at high dose",
+    "leafCurl": "Mild at high dose",
+    "wilting": "Reduced at low dose (better turgor); mild at high dose from Mg deficiency",
+    "chlorosis": "Absent at low dose; interveinal chlorosis at high dose (Mg deficiency — Mg needed for chlorophyll)",
+    "necrosis": "Leaf margin scorch at high dose — classic K toxicity pattern",
+    "pigmentation": "Mild anthocyanin at high dose",
+    "rootGrowth": "Stimulated at low dose; mildly inhibited at high dose",
+    "newVsOldLeaves": "K deficiency (opposite scenario) affects old leaves first; excess K toxicity appears on margins of all leaves"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Absent at low dose; moderate at high dose via Mg antagonism",
+    "photosyntheticRate": "Increased at low dose; reduced at high dose",
+    "stomatalConductance": "Strongly improved at low dose (K is the key stomatal motor ion); mildly reduced at high dose",
+    "transpiration": "Optimized at low dose; disrupted at high dose",
+    "waterUptake": "Enhanced at low dose; mildly impaired at high dose"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "Only at high dose via Mg/Ca deficiency",
+    "antioxidantEnzymes": [
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Mild at high dose",
+    "anthocyaninInduction": "Mild at high dose",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "K-dependent enzymes (many)",
+      "stomatal regulators"
+    ],
+    "metabolitesIncreasing": [
+      "malate (guard cell K/malate exchange)",
+      "ATP (low dose)",
+      "Mg-deficiency markers (high dose)"
+    ],
+    "metabolitesDecreasing": [
+      "Mg-dependent enzymes at high dose",
+      "Ca²⁺-dependent processes at high dose"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Minimal at optimal; mild at high dose",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Generally maintained at optimal levels",
+    "fungalEffect": "Maintained",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Stable at optimal; mildly disrupted at high dose"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "96–168 hours for toxicity; 48–96 hours for beneficial effects",
+    "firstSymptoms": [
+      "improved turgor at low dose",
+      "leaf margin yellowing at high dose"
+    ],
+    "lateSymptoms": [
+      "margin scorch",
+      "interveinal chlorosis",
+      "Mg-deficiency patterning at high dose"
+    ],
+    "reversible": true,
+    "recoveryTime": "2–3 weeks",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: vigorous green, upright. High dose: margin scorch (brown edges), interveinal chlorosis",
+    "firstAffectedRegion": "Leaf margins at high dose; whole-plant vigor improvement at low dose",
+    "damageSpread": "Margin-inward at high dose",
+    "damagePattern": "Margin scorch — distinguishes K toxicity from N toxicity (tip) and P toxicity (interveinal on young leaves)",
+    "heatmapGlow": "Moderate — malate/stomatal signature at low dose; Mg-deficiency marker at high dose",
+    "microbiomeParticles": "Near-normal",
+    "leafAppearance": [
+      "vigorous_at_low_dose",
+      "margin_scorch_at_high_dose"
+    ],
+    "recoveryVisual": "Moderate — margin scorch remains; new growth healthy"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "nitrogen",
+      "phosphorus"
+    ],
+    "synergyNote": "K completes the NPK trio — K is the structural and physiological regulator while N builds mass and P builds roots/energy. K also buffers against drought and disease stress.",
+    "antagonizesWith": [
+      "sodium_chloride",
+      "magnesium_chloride"
+    ],
+    "antagonismNote": "High salt (NaCl) competes with K⁺ at uptake sites — salt stress mimics K deficiency. High K antagonizes Mg and Ca uptake.",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": [
+      "mild_drought_stress",
+      "mild_pathogen_stress"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Potash mining (primary sources: Canada, Russia, Belarus), wood ash, manure",
+    "classification": "Essential macronutrient / fertilizer",
+    "agriculturalUse": "Third most used fertilizer globally; critical for fruit and vegetable quality, disease resistance, and water use efficiency",
+    "humanToxicity": "Low — K⁺ is essential for human health; excess in IV form can cause cardiac arrest but no risk from agricultural exposure",
+    "climateLink": "K improves drought tolerance — increasingly relevant as climate change drives water stress in agriculture",
+    "indoorOutdoor": "Outdoor — agricultural/horticultural; indoor in houseplant fertilizers",
+    "whyStudentsCare": "Potassium is why bananas are healthy food — and why sports drinks replenish K after exercise. The same ion that regulates plant stomata regulates human nerve firing.",
+    "realWorldIssue": "Sustainable potash mining, food security, drought-resilient agriculture"
+  },
+  "sources": [
+    "Marschner H (1995). Mineral Nutrition of Higher Plants, 2nd ed. Academic Press, London.",
+    "Cakmak I (2005). The role of potassium in alleviating detrimental effects of abiotic stresses in plants. Journal of Plant Nutrition and Soil Science, 168(4), 521–530.",
+    "White PJ, Karley AJ (2010). Potassium. In: Hell R, Mendel RR (eds) Cell Biology of Metals and Nutrients. Springer, Berlin."
+  ]
+}

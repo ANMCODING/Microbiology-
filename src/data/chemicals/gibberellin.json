@@ -1,0 +1,215 @@
+{
+  "id": "gibberellin",
+  "commonName": "Gibberellin (GA3)",
+  "iupacName": "gibberellin A3 / (3S,3aR,4S,4aS,6S,8aR,8bS,11S)-3-hydroxy-3-(hydroxymethyl)-6-methyl-12-methylidene-2-oxo-1,2,3,3a,4,4a,5,6,7,8,8a,8b,9,10,11,12-hexadecahydropicene-4a-carboxylic acid",
+  "formula": "C19H22O6",
+  "molecularWeight": 346.37,
+  "phase": "solid",
+  "deliveryMethods": [
+    "liquid",
+    "foliar_spray",
+    "root_drench"
+  ],
+  "color": "#4ADE80",
+  "category": "plant_hormone",
+  "subCategory": "growth_regulator",
+  "boilingPoint": "Decomposes above 223 °C",
+  "vaporPressure": null,
+  "waterSolubility": "~5 g/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "Low — degraded by soil microbes within days; photolabile",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "stems",
+    "leaves"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.1–10 µM",
+      "description": "Promotes stem elongation, breaks seed dormancy, stimulates germination, promotes fruit set. Dramatically increases internode length and plant height. Used commercially to produce larger seedless grapes.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0.05,
+        "chlorosis": 0.05,
+        "defenseProteins": 0,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">100 µM",
+      "description": "Excessive elongation produces weak, spindly stems prone to lodging. Leaf chlorosis from diluted chlorophyll in rapidly expanded cells. Reduced root development from shoot-biased growth. Reduced defense gene expression.",
+      "simulationVector": {
+        "heightSuppress": 0.3,
+        "necrosis": 0.2,
+        "curl": 0.15,
+        "stomatalClose": 0.1,
+        "pigmentation": 0.1,
+        "chlorosis": 0.45,
+        "defenseProteins": 0.05,
+        "wilting": 0.25
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.3,
+    "necrosis": 0.2,
+    "curl": 0.15,
+    "stomatalClose": 0.1,
+    "pigmentation": 0.1,
+    "chlorosis": 0.45,
+    "defenseProteins": 0.05,
+    "wilting": 0.25
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 347,
+      "label": "GA3 [M+H]+",
+      "base": 100,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 329,
+      "label": "GA3 fragment (-H2O)",
+      "base": 70,
+      "weekFactor": 0.55
+    },
+    {
+      "mz": 365,
+      "label": "GA3-glucosyl conjugate",
+      "base": 55,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor (low dose)",
+      "base": 60,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 233,
+      "label": "GA8 (inactive GA3 metabolite)",
+      "base": 45,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strongly negative (promotes height) at low dose; weak suppression at high dose via structural weakness",
+    "leafSize": "Increased at low dose; diluted/chlorotic at high dose",
+    "leafCurl": "Mild at high dose — weak tissue",
+    "wilting": "Mild at high dose — spindly stems cannot support water transport efficiently",
+    "chlorosis": "Absent at low dose; dilution chlorosis at high dose — rapidly expanded cells have less chlorophyll per unit area",
+    "necrosis": "Mild at high dose — structural failure of weak tissue",
+    "pigmentation": "Mild reduction — GA suppresses anthocyanin biosynthesis (antagonizes JA/SA pigmentation)",
+    "rootGrowth": "Mildly reduced — GA biases growth toward shoots at expense of roots",
+    "stemThickness": "Reduced — longer but thinner internodes at high dose",
+    "newVsOldLeaves": "High dose effects most visible on newly formed, over-elongated tissue"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Absent at low dose; moderate at high dose (dilution effect, not degradation)",
+    "photosyntheticRate": "Enhanced per plant at low dose (more leaf area); reduced per unit area at high dose",
+    "stomatalConductance": "Mildly increased at low dose; near-normal at high dose",
+    "transpiration": "Increased proportionally at low dose",
+    "waterUptake": "Enhanced at low dose; mildly impaired at high dose"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "Minimal — only at extreme high doses",
+    "antioxidantEnzymes": [
+      "SOD"
+    ],
+    "lipidPeroxidation": "Minimal",
+    "anthocyaninInduction": "Reduced — GA suppresses anthocyanin pathway",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "GA-responsive GRAS transcription factors",
+      "alpha-amylase (germination)"
+    ],
+    "metabolitesIncreasing": [
+      "GA3 conjugates",
+      "xyloglucan (cell wall expansion)",
+      "amylase"
+    ],
+    "metabolitesDecreasing": [
+      "DELLA proteins (GA degraded)",
+      "anthocyanins",
+      "abscisic acid"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Minimal",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Near-normal — GA does not strongly alter rhizosphere chemistry",
+    "fungalEffect": "Near-normal",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Near-normal"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–72 hours — elongation visible within days",
+    "firstSymptoms": [
+      "rapid stem elongation",
+      "internode lengthening"
+    ],
+    "lateSymptoms": [
+      "dilution chlorosis",
+      "stem weakness",
+      "root underdevelopment"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–3 weeks — GA degrades rapidly; elongated internodes don't shrink but new growth normalizes",
+    "acclimation": true,
+    "sensitization": "None — DELLA re-accumulation restores sensitivity after exposure ends"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: taller, slightly lighter green. High dose: pale green/chlorotic, tall spindly stems",
+    "firstAffectedRegion": "Internodes — elongation is the primary visual signal",
+    "damageSpread": "Upward through new growth",
+    "damagePattern": "Uniformly elongated — plants look like etiolated seedlings; less pigmented",
+    "heatmapGlow": "Low glow — GA3 conjugate signature; lower than all stress chemicals",
+    "microbiomeParticles": "Near-normal",
+    "leafAppearance": [
+      "elongated",
+      "pale_green_at_high_dose",
+      "translucent_at_extreme_dose"
+    ],
+    "recoveryVisual": "Moderate — elongated internodes persist; new growth normalizes; color recovers"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "auxin"
+    ],
+    "synergyNote": "GA + auxin is the classical elongation synergy — together they produce maximum cell elongation via complementary mechanisms (GA degrades DELLA; auxin activates expansins)",
+    "antagonizesWith": [
+      "meja",
+      "abscisic_acid"
+    ],
+    "antagonismNote": "GA antagonizes JA-mediated growth suppression — the DELLA-JAZ crosstalk. GA also opposes ABA-mediated dormancy and stress responses.",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Endogenous plant hormone — present in all vascular plants; commercial GA3 from Fusarium fungal fermentation; used on grapes, cherries, citrus",
+    "classification": "Plant hormone / growth regulator",
+    "agriculturalUse": "Commercially applied to seedless grapes (makes them larger), malting barley (uniform germination), citrus (delays rind aging), dwarf cereal crop development",
+    "humanToxicity": "Very low — no significant human health risk",
+    "climateLink": "GA signaling integrates temperature signals — flowering time and germination responses to climate are partly GA-mediated",
+    "indoorOutdoor": "Both — commercial horticultural use; available for home gardening",
+    "whyStudentsCare": "Why seedless grapes are so large — GA₃ is sprayed on them commercially. The story of how plant hormones are used as agricultural tools (and what happens when you over-apply).",
+    "realWorldIssue": "Food production technology, dwarf crop varieties (Green Revolution), plant-temperature interactions"
+  },
+  "sources": [
+    "Hedden P, Sponsel V (2015). A century of gibberellin research. Journal of Plant Growth Regulation, 34(4), 740–760.",
+    "Davière JM, Achard P (2013). Gibberellin action in plants. Plant Journal, 74(1), 11–20.",
+    "Olszewski N, Sun TP, Gubler F (2002). Gibberellin signaling: biosynthesis, catabolism and responses. Plant Cell, 14, S61–S80."
+  ]
+}

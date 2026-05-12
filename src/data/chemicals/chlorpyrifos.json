@@ -1,0 +1,187 @@
+{
+  "id": "chlorpyrifos",
+  "commonName": "Chlorpyrifos",
+  "iupacName": "O,O-diethyl O-(3,5,6-trichloropyridin-2-yl) phosphorothioate",
+  "formula": "C9H11Cl3NO3PS",
+  "molecularWeight": 350.59,
+  "phase": "solid",
+  "deliveryMethods": [
+    "foliar_spray",
+    "soil"
+  ],
+  "color": "#A16207",
+  "category": "pesticide",
+  "subCategory": "organophosphate_insecticide",
+  "boilingPoint": "Decomposes; melting point ~42 °C",
+  "vaporPressure": "~2.03 × 10⁻⁵ mmHg at 25 °C",
+  "waterSolubility": "~2 mg/L at 25 °C",
+  "odor": "Mild mercaptan-like odor",
+  "environmentalPersistence": "Moderate — soil half-life 60–120 days; volatilizes from plant surfaces; persists longer in cold soils",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "stomata",
+    "roots"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "roots"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.4,
+    "curl": 0.45,
+    "stomatalClose": 0.4,
+    "pigmentation": 0.15,
+    "chlorosis": 0.45,
+    "defenseProteins": 0.25,
+    "wilting": 0.35
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 351,
+      "label": "Chlorpyrifos [M+H]+",
+      "base": 100,
+      "weekFactor": 0.4
+    },
+    {
+      "mz": 199,
+      "label": "TCP (3,5,6-trichloropyridinol)",
+      "base": 85,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 169,
+      "label": "Diethyl phosphate fragment",
+      "base": 60,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 75,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 55,
+      "weekFactor": 0.75
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — phytotoxic effects on cell membranes reduce growth",
+    "leafSize": "Mildly to moderately reduced",
+    "leafCurl": "Moderate — contact phytotoxicity causes leaf margin curl and burn",
+    "wilting": "Moderate",
+    "chlorosis": "Moderate — disruption of chloroplast membrane function",
+    "necrosis": "Moderate — contact necrosis at application points; spreads to adjacent tissue",
+    "pigmentation": "Mild",
+    "rootGrowth": "Moderately inhibited — soil residues affect root tips",
+    "newVsOldLeaves": "Both affected; contact spray affects sprayed surfaces regardless of age"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 30–50%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Moderately reduced — organophosphate effects on guard cell metabolism",
+    "transpiration": "Reduced",
+    "waterUptake": "Mildly to moderately impaired",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — organophosphate metabolism generates ROS",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "GST (detoxification)",
+      "cytochrome P450 enzymes"
+    ],
+    "metabolitesIncreasing": [
+      "TCP (diagnostic metabolite)",
+      "MDA",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "acetylcholinesterase activity (plants have AChE too)",
+      "chlorophyll a"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — chlorpyrifos is broadly antimicrobial",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — AChE-inhibiting effects on microbial enzyme systems",
+    "fungalEffect": "Mycorrhizal associations disrupted",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "contact necrosis at spray points",
+      "stomatal disruption"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "moderate wilting",
+      "growth arrest"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor — persistent in tissue; partial recovery on new growth after ~4 weeks",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Discrete necrotic spots at contact points; background chlorosis; mild yellowing",
+    "firstAffectedRegion": "Contact spray points on leaf surface",
+    "damageSpread": "Outward from contact points",
+    "damagePattern": "Discrete contact necrosis spots distinguishes chlorpyrifos from systemic herbicides",
+    "heatmapGlow": "Moderate — TCP metabolite and MDA signature",
+    "microbiomeParticles": "Strongly reduced; high pathogen fraction; resistome elevated",
+    "leafAppearance": [
+      "spotted",
+      "yellowing",
+      "mild_curl"
+    ],
+    "recoveryVisual": "Minimal — spots remain; new growth healthier after 4+ weeks"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "ddt"
+    ],
+    "synergyNote": "Organochlorine + organophosphate combination represents the historical progression of pesticide classes — used together they provide overlapping resistance coverage; both disrupt microbiome severely",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "benzene",
+      "atrazine"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Agricultural insecticide on fruits, vegetables, soybeans, corn; residential use banned in US 2001; agricultural use pending EPA review since 2015",
+    "classification": "Organophosphate insecticide / neurotoxin",
+    "agriculturalUse": "One of the most widely used agricultural insecticides in the US — ~10 million lbs/year on food crops",
+    "humanToxicity": "High — acetylcholinesterase inhibitor; causes neurodevelopmental damage in children; IARC Group 2A; linked to autism spectrum disorder and reduced IQ at prenatal exposure levels. Banned in EU, under review in US.",
+    "climateLink": "Warmer temperatures increase volatilization and atmospheric transport of chlorpyrifos — expanding exposure zones beyond application areas",
+    "indoorOutdoor": "Primarily outdoor agricultural; residential use banned",
+    "whyStudentsCare": "On fruits and vegetables in US grocery stores — direct food exposure. The child neurodevelopment story (EPA's own science found harm but reversed the ban under Trump administration then reinstated under Biden) is a textbook example of science-policy interaction.",
+    "realWorldIssue": "Children's neurodevelopment, food safety, science-policy interaction, EU vs US regulatory differences"
+  },
+  "sources": [
+    "Eskenazi B, et al. (2007). Organophosphate pesticide exposure and neurodevelopment in young Mexican-American children. Environmental Health Perspectives, 115(5), 792–798.",
+    "Giesy JP, Solomon KR, Mackay D (2014). Ecological risk assessment of chlorpyrifos in North America. Reviews of Environmental Contamination and Toxicology, 231.",
+    "EFSA (2019). Peer review of the pesticide risk assessment of the active substance chlorpyrifos. EFSA Journal, 17(3), e05564."
+  ]
+}

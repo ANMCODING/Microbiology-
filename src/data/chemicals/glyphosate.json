@@ -1,0 +1,192 @@
+{
+  "id": "glyphosate",
+  "commonName": "Glyphosate",
+  "iupacName": "N-(phosphonomethyl)glycine",
+  "formula": "C3H8NO5P",
+  "molecularWeight": 169.07,
+  "phase": "solid",
+  "deliveryMethods": [
+    "foliar_spray",
+    "root_drench",
+    "soil"
+  ],
+  "color": "#7C2D12",
+  "category": "pesticide",
+  "subCategory": "herbicide",
+  "boilingPoint": "Decomposes before boiling; melting point ~184 °C",
+  "vaporPressure": "~0.0000131 mmHg at 25 °C",
+  "waterSolubility": "~11.6 g/L at 20 °C",
+  "odor": "Faint amine-like odor",
+  "environmentalPersistence": "Moderate — half-life ~47 days in soil; binds tightly to soil particles; metabolized to AMPA",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "vascular",
+    "roots"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems",
+    "roots"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.8,
+    "necrosis": 0.7,
+    "curl": 0.5,
+    "stomatalClose": 0.4,
+    "pigmentation": 0.2,
+    "chlorosis": 0.75,
+    "defenseProteins": 0.2,
+    "wilting": 0.6
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 170,
+      "label": "Glyphosate [M+H]+",
+      "base": 100,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 110,
+      "label": "AMPA (primary metabolite)",
+      "base": 85,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 76,
+      "label": "Phosphonate fragment",
+      "base": 60,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 75,
+      "weekFactor": 1
+    },
+    {
+      "mz": 214,
+      "label": "Shikimate (EPSPS block)",
+      "base": 90,
+      "weekFactor": 0.95
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Very strong — EPSPS inhibition blocks aromatic amino acid synthesis; growth ceases completely at effective doses",
+    "leafSize": "Severely reduced on new growth",
+    "leafCurl": "Moderate — distorted new growth is most visible symptom",
+    "wilting": "Strong — tissue death from amino acid starvation",
+    "chlorosis": "Strong — chloroplast development blocked without Phe/Tyr/Trp supply",
+    "necrosis": "Strong — complete tissue death at effective doses; characteristic browning from meristematic tissue outward",
+    "pigmentation": "Mild — insufficient biochemical capacity for anthocyanin without aromatic amino acids",
+    "rootGrowth": "Severely inhibited — systemic herbicide reaches roots",
+    "newVsOldLeaves": "New growth most affected (requires active amino acid synthesis); old leaves yellowing follows"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 60–90% at effective doses",
+    "photosyntheticRate": "Severely reduced and then eliminated",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Severely impaired as plant dies",
+    "nutrientTransport": "Completely disrupted at lethal doses"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — EPSPS inhibition secondary effects include ROS accumulation",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Minimal — aromatic amino acid pathway (shikimate) is the exact target; anthocyanin synthesis requires this pathway",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "minimal — aromatic AA pathway for PR proteins is blocked"
+    ],
+    "metabolitesIncreasing": [
+      "shikimate (accumulates due to EPSPS block)",
+      "AMPA",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "phenylalanine",
+      "tyrosine",
+      "tryptophan",
+      "lignin",
+      "flavonoids",
+      "anthocyanins",
+      "chlorophyll"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — glyphosate has significant broad-spectrum antimicrobial properties",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — PGPR containing EPSPS are sensitive; only glyphosate-resistant strains survive",
+    "fungalEffect": "Disrupted — beneficial fungi suppressed; Fusarium (pathogen) reportedly increases",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "yellowing and distortion of newest leaves",
+      "growth cessation"
+    ],
+    "lateSymptoms": [
+      "complete chlorosis",
+      "necrosis progressing from apex downward",
+      "plant death"
+    ],
+    "reversible": false,
+    "recoveryTime": "None at effective herbicide doses — designed for complete plant kill",
+    "acclimation": false,
+    "sensitization": "None — irreversible enzyme inhibition"
+  },
+  "visualSimulation": {
+    "colorChanges": "New growth yellows first → pale white/yellow → brown necrosis spreading from apex downward",
+    "firstAffectedRegion": "Apical meristem and newest leaves — most metabolically active tissue",
+    "damageSpread": "Apex downward — opposite of senescence (which goes old-to-young)",
+    "damagePattern": "Apex-to-base progression is diagnostic for glyphosate vs other herbicides",
+    "heatmapGlow": "Strong amber — shikimate accumulation and AMPA metabolite are diagnostic; shikimate peak is pathognomonic for EPSPS inhibition",
+    "microbiomeParticles": "Strongly reduced; high pathogen fraction; resistome elevated",
+    "leafAppearance": [
+      "yellowing_apex_first",
+      "distorted_new_growth",
+      "necrotic_browning"
+    ],
+    "recoveryVisual": "No recovery — designed to kill"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "atrazine"
+    ],
+    "synergyNote": "Glyphosate + atrazine combination herbicide use is common and produces complete multi-mechanism knockdown — EPSPS inhibition + photosystem II inhibition together are more effective than either alone",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "atrazine",
+      "formaldehyde"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Roundup (Monsanto/Bayer) and hundreds of generic formulations — most widely used herbicide globally; ~800,000 tonnes applied per year",
+    "classification": "Systemic non-selective herbicide",
+    "agriculturalUse": "GMO Roundup-Ready crop systems; weed control in no-till agriculture; pre-harvest desiccation of wheat and oats",
+    "humanToxicity": "Highly contested — IARC classified as Group 2A (probable carcinogen) 2015; EPA maintains it is not carcinogenic. Major ongoing legal and scientific controversy.",
+    "climateLink": "No-till agriculture using glyphosate stores more carbon in soil — complex tradeoff between herbicide use and carbon sequestration",
+    "indoorOutdoor": "Outdoor — residential lawns, roadsides, agriculture; residues in food",
+    "whyStudentsCare": "The most controversial pesticide in the world — GMO crops, cancer lawsuits ($10B+ in settlements), weed resistance, food safety debates. One of the most fertile topics for scientific evidence evaluation.",
+    "realWorldIssue": "GMO agriculture, weed resistance crisis, cancer controversy, food residue safety"
+  },
+  "sources": [
+    "Steinrücken HC, Amrhein N (1980). The herbicide glyphosate is a potent inhibitor of 5-enolpyruvyl-shikimic acid-3-phosphate synthase. Biochemical and Biophysical Research Communications, 94(4), 1207–1212.",
+    "Kremer RJ, Means NE (2009). Glyphosate and glyphosate-resistant crop interactions with rhizosphere microorganisms. European Journal of Agronomy, 31(3), 153–161.",
+    "IARC (2015). Evaluation of five organophosphate insecticides and herbicides. IARC Monographs Vol. 112. Lyon: WHO."
+  ]
+}

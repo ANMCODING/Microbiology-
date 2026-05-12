@@ -1,0 +1,149 @@
+{
+  "id": "meja",
+  "commonName": "Methyl Jasmonate",
+  "iupacName": "methyl (1R,2S)-3-oxo-2-(pent-2-en-1-yl)cyclopentane-1-carboxylate",
+  "formula": "C13H20O3",
+  "molecularWeight": 224.3,
+  "phase": "liquid",
+  "deliveryMethods": ["liquid", "gas", "foliar_spray", "fumigation"],
+  "color": "#7C3AED",
+  "category": "voc",
+  "subCategory": "signaling_voc",
+  "boilingPoint": "88 °C at 0.08 mmHg",
+  "vaporPressure": "~0.001 mmHg at 20 °C",
+  "waterSolubility": "~50 mg/L at 25 °C",
+  "odor": "Sweet, floral-herbal, jasmine-like",
+  "environmentalPersistence": "Low — degrades via photolysis and microbial activity within days",
+  "bioaccumulates": true,
+  "absorptionRoutes": ["stomata", "leaf_surface", "vascular"],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": ["leaves", "stems", "roots"],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.1–10 µM",
+      "description": "Mild defense priming, slight anthocyanin increase, no visible growth suppression. Hormetic — can mildly enhance antioxidant capacity.",
+      "simulationVector": {
+        "heightSuppress": 0.05,
+        "necrosis": 0.0,
+        "curl": 0.05,
+        "stomatalClose": 0.1,
+        "pigmentation": 0.4,
+        "chlorosis": 0.0,
+        "defenseProteins": 0.3,
+        "wilting": 0.0
+      }
+    },
+    "highDose": {
+      "range": "300–500+ µM",
+      "description": "Severe growth arrest, strong necrosis at leaf tips and margins, heavy stomatal closure, maximum anthocyanin expression.",
+      "simulationVector": {
+        "heightSuppress": 0.7,
+        "necrosis": 0.6,
+        "curl": 0.7,
+        "stomatalClose": 0.6,
+        "pigmentation": 1.8,
+        "chlorosis": 0.4,
+        "defenseProteins": 0.9,
+        "wilting": 0.3
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.4,
+    "curl": 0.6,
+    "stomatalClose": 0.5,
+    "pigmentation": 1.6,
+    "chlorosis": 0.3,
+    "defenseProteins": 0.85,
+    "wilting": 0.2
+  },
+  "lcMsPeaks": [
+    { "mz": 224, "label": "Methyl Jasmonate [M+H]+", "base": 100, "weekFactor": 0.7 },
+    { "mz": 209, "label": "MeJA fragment (-CH3)", "base": 65, "weekFactor": 0.6 },
+    { "mz": 287, "label": "Anthocyanin aglycone", "base": 90, "weekFactor": 1.0 },
+    { "mz": 449, "label": "Cyanidin-3-glucoside", "base": 80, "weekFactor": 0.95 },
+    { "mz": 153, "label": "Jasmonic acid fragment", "base": 55, "weekFactor": 0.8 },
+    { "mz": 319, "label": "PR-protein marker peptide", "base": 40, "weekFactor": 0.9 }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — internodal elongation reduced via GA antagonism",
+    "leafSize": "Reduced at moderate-to-high doses",
+    "leafCurl": "Downward epinasty, especially apical leaves",
+    "wilting": "Mild at high doses",
+    "chlorosis": "Mild to moderate — partial chlorophyll degradation",
+    "necrosis": "Leaf tip and margin necrosis at high doses; stem base darkening",
+    "pigmentation": "Strong purple/red anthocyanin accumulation — most visually distinctive effect",
+    "rootGrowth": "Moderately reduced; lateral roots mildly stimulated at low doses",
+    "newVsOldLeaves": "New apical leaves most sensitive — curl and pigment first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "15–40% at moderate-to-high doses",
+    "photosyntheticRate": "Reduced via chlorophyll loss and stomatal closure",
+    "stomatalConductance": "Decreased — ABA-mediated closure",
+    "transpiration": "Reduced proportionally",
+    "membranePermeability": "Increased at high doses"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — managed by upregulated antioxidants",
+    "antioxidantEnzymes": ["CAT", "SOD", "POD"],
+    "lipidPeroxidation": "Mild to moderate",
+    "anthocyaninInduction": "Strong — well-documented in Coleus specifically",
+    "flavonoidInduction": true,
+    "defenseProteins": ["PR-1", "PR-2", "PR-4", "proteinase inhibitors", "LOX enzymes"],
+    "metabolitesIncreasing": ["anthocyanins", "jasmonates", "proteinase inhibitors", "LOX products"],
+    "metabolitesDecreasing": ["chlorophyll a", "chlorophyll b", "gibberellins"]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild",
+    "pathogenSuppression": true,
+    "beneficialBacteriaEffect": "Mixed — some PGPR suppressed",
+    "fungalEffect": "Beneficial mycorrhizae mildly suppressed at high doses",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly destabilized at high doses"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–72 hours",
+    "firstSymptoms": ["pigmentation increase", "mild leaf curl"],
+    "lateSymptoms": ["necrosis", "height suppression"],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks",
+    "acclimation": true,
+    "sensitization": "Priming — faster response on second exposure"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → deep purple/red (anthocyanin); tips yellow-brown at necrosis",
+    "firstAffectedRegion": "Young apical leaves",
+    "damageSpread": "Outward from tips, downward from apex over time",
+    "damagePattern": "Patchy early, more uniform at high doses",
+    "heatmapGlow": "Strong — among the highest-signal chemicals",
+    "microbiomeParticles": "Slightly slower, mild root clustering",
+    "leafAppearance": ["curled", "purple", "tip_brown_at_high_dose"],
+    "recoveryVisual": "Gradual fade toward green; necrotic tip scarring remains"
+  },
+  "synergies": {
+    "synergizesWith": ["mesa"],
+    "synergyNote": "MeJA + MeSA pushes both pigmentation and defense axes simultaneously — strongest anthocyanin response in Coleus",
+    "antagonizesWith": ["gibberellin"],
+    "antagonismNote": "GA partially reverses JA-mediated height suppression",
+    "amplifiesOxidativeStressOf": ["benzene", "formaldehyde"],
+    "protectsAgainst": ["pathogen_attack"]
+  },
+  "educationalContext": {
+    "realWorldSources": "Jasmine flowers, rosemary, lavender — emitted naturally under herbivore attack",
+    "classification": "Signaling molecule / plant hormone analog",
+    "agriculturalUse": "Experimental crop protection; stress resistance induction",
+    "humanToxicity": "Low — no significant risk at typical concentrations",
+    "climateLink": "Plants under climate stress upregulate JA signaling; relevant to climate adaptation research",
+    "indoorOutdoor": "Both",
+    "whyStudentsCare": "The plant's alarm chemical — released when insects attack, triggers whole-plant defense. Makes abstract plant immunity tangible.",
+    "realWorldIssue": "Biological pest control, sustainable agriculture, plant communication"
+  },
+  "sources": [
+    "Wasternack C, Hause B (2013). Jasmonates: biosynthesis, perception, signal transduction and action in plant stress response, growth and development. Annals of Botany, 111(6), 1021–1058.",
+    "Peng J, et al. (2004). MeJA-induced anthocyanin accumulation in Coleus blumei. Plant Science, 167(2), 383–389.",
+    "Creelman RA, Mullet JE (1997). Biosynthesis and action of jasmonates in plants. Annual Review of Plant Physiology, 48, 355–381."
+  ]
+}

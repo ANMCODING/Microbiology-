@@ -1,0 +1,151 @@
+{
+  "id": "ethylene",
+  "commonName": "Ethylene",
+  "iupacName": "ethene",
+  "formula": "C2H4",
+  "molecularWeight": 28.05,
+  "phase": "gas",
+  "deliveryMethods": ["gas", "fumigation"],
+  "color": "#F59E0B",
+  "category": "voc",
+  "subCategory": "gaseous_hormone",
+  "boilingPoint": "-103.7 °C at 1 atm",
+  "vaporPressure": "~40,600 mmHg at 20 °C (exists as gas)",
+  "waterSolubility": "~130 mg/L at 25 °C",
+  "odor": "Faintly sweet at high concentrations; generally odorless at ambient levels",
+  "environmentalPersistence": "Low — atmospheric lifetime ~1.5 months via OH radical oxidation; near source disperses within hours",
+  "bioaccumulates": false,
+  "absorptionRoutes": ["stomata", "leaf_surface"],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": ["leaves", "stems", "roots"],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.01–0.1 ppm",
+      "description": "Accelerated ripening/maturation, adventitious root promotion, mild epinasty. Hormetic — can be beneficial for controlled ripening.",
+      "simulationVector": {
+        "heightSuppress": 0.1,
+        "necrosis": 0.0,
+        "curl": 0.2,
+        "stomatalClose": 0.0,
+        "pigmentation": 0.1,
+        "chlorosis": 0.15,
+        "defenseProteins": 0.2,
+        "wilting": 0.05
+      }
+    },
+    "highDose": {
+      "range": "20–50+ ppm",
+      "description": "Rapid senescence, widespread chlorosis, abscission, stem softening, membrane degradation.",
+      "simulationVector": {
+        "heightSuppress": 0.7,
+        "necrosis": 0.6,
+        "curl": 0.8,
+        "stomatalClose": 0.4,
+        "pigmentation": 0.3,
+        "chlorosis": 0.9,
+        "defenseProteins": 0.4,
+        "wilting": 0.75
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.55,
+    "necrosis": 0.45,
+    "curl": 0.75,
+    "stomatalClose": 0.3,
+    "pigmentation": 0.2,
+    "chlorosis": 0.8,
+    "defenseProteins": 0.35,
+    "wilting": 0.6
+  },
+  "lcMsPeaks": [
+    { "mz": 28, "label": "Ethylene [M]+", "base": 100, "weekFactor": 0.5 },
+    { "mz": 102, "label": "ACC (ethylene precursor)", "base": 85, "weekFactor": 0.9 },
+    { "mz": 615, "label": "Chlorophyllide a", "base": 70, "weekFactor": 1.0 },
+    { "mz": 253, "label": "Pheophytin fragment", "base": 60, "weekFactor": 0.95 },
+    { "mz": 146, "label": "SAM-derived fragment", "base": 40, "weekFactor": 0.7 }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate-strong — triple response inhibits elongation",
+    "leafSize": "Reduced on new growth; existing leaves age faster",
+    "leafCurl": "Strong downward epinasty — most distinctive morphological effect",
+    "wilting": "Yes — senescing tissue loses turgor",
+    "chlorosis": "Strong — chlorophyllase upregulation causes rapid yellowing",
+    "necrosis": "Yes at high doses — abscission zone tissue",
+    "pigmentation": "Mild — yellow-brown tones dominate over anthocyanin",
+    "rootGrowth": "Inhibited at high doses; adventitious roots stimulated at low doses",
+    "stemThickness": "Radial swelling at nodes — classic triple response",
+    "newVsOldLeaves": "Old basal leaves most sensitive — senescence proceeds base upward"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — direct upregulation of chlorophyllase and SGR",
+    "photosyntheticRate": "Significantly reduced",
+    "stomatalConductance": "Opens at low dose, closes as senescence advances",
+    "transpiration": "Initially increased then sharply reduced",
+    "respiratoryBurst": "Climacteric respiratory burst — elevated then crashes",
+    "membranePermeability": "Strongly increased — lipid degradation central to senescence"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate to high in senescing tissue",
+    "antioxidantEnzymes": ["SOD", "CAT"],
+    "lipidPeroxidation": "Strong — membrane degradation defining feature",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": true,
+    "defenseProteins": ["PR proteins (ET/JA pathway)", "chlorophyllase", "SGR"],
+    "metabolitesIncreasing": ["ACC", "chlorophyllase products", "recycled amino acids", "sugars"],
+    "metabolitesDecreasing": ["chlorophyll a", "chlorophyll b", "auxin", "intact membrane lipids"]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — altered rhizosphere exudates",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Reduced — PGPR disrupted",
+    "fungalEffect": "Opportunistic fungi increase on senescing surfaces",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Moderately destabilized during active senescence"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "6–12 hours",
+    "firstSymptoms": ["epinasty", "yellowing of oldest leaves"],
+    "lateSymptoms": ["widespread chlorosis", "abscission zone necrosis", "stem softening"],
+    "reversible": true,
+    "recoveryTime": "2–3 weeks if brief exposure; chronic exposure causes permanent senescence",
+    "acclimation": false,
+    "sensitization": "Autocatalytic — ethylene induces its own synthesis; accelerates over time"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow (strong) → brown at necrosis zones; minimal purple",
+    "firstAffectedRegion": "Oldest basal leaves, spreading upward",
+    "damageSpread": "Upward through canopy — base to tip",
+    "damagePattern": "Uniform on old leaves, patchy on mid-canopy",
+    "heatmapGlow": "Moderate — yellow-toned ACC and chlorophyllase metabolite signature",
+    "microbiomeParticles": "Slower, dispersed; slight pathogen fraction increase",
+    "leafAppearance": ["curled", "yellowing", "browning_at_abscission_zones"],
+    "recoveryVisual": "Re-greening possible on young leaves if caught early; basal leaves remain scarred"
+  },
+  "synergies": {
+    "synergizesWith": ["meja", "abscisic_acid"],
+    "synergyNote": "ET/JA cooperation accelerates senescence and defense simultaneously. ABA + ethylene is the canonical senescence-acceleration pathway.",
+    "antagonizesWith": ["cytokinin", "auxin"],
+    "antagonismNote": "Cytokinins directly oppose ethylene-driven chlorophyll degradation. Auxin suppresses ethylene sensitivity in young tissue.",
+    "amplifiesOxidativeStressOf": ["ozone", "so2"],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Ripening fruit, aging flowers, car exhaust, gas stoves, stressed plant tissue",
+    "classification": "Gaseous plant hormone",
+    "agriculturalUse": "Commercial fruit ripening (bananas, tomatoes); pineapple flowering synchronization",
+    "humanToxicity": "Not toxic at normal concentrations; simple asphyxiant only at very high levels",
+    "climateLink": "Ethylene production increases under heat and drought stress — relevant to crop losses under climate change",
+    "indoorOutdoor": "Both — near ripening fruit indoors; vehicle exhaust outdoors",
+    "whyStudentsCare": "The molecular reason a banana ripens faster in a bag and why one bad apple spoils the barrel — something every student has observed",
+    "realWorldIssue": "Food waste, post-harvest crop losses, stress biology under climate change"
+  },
+  "sources": [
+    "Abeles FB, Morgan PW, Saltveit ME (1992). Ethylene in Plant Biology, 2nd ed. Academic Press.",
+    "Bleecker AB, Kende H (2000). Ethylene: a gaseous signal molecule in plants. Annual Review of Cell and Developmental Biology, 16, 1–18.",
+    "Iqbal N, et al. (2017). Ethylene role in plant growth, development and senescence. Frontiers in Plant Science, 8, 937."
+  ]
+}

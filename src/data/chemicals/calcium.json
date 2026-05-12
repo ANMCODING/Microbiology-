@@ -1,0 +1,218 @@
+{
+  "id": "calcium",
+  "commonName": "Calcium (Fertilizer)",
+  "iupacName": "calcium ion",
+  "formula": "Ca2+",
+  "molecularWeight": 40.08,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench",
+    "foliar_spray"
+  ],
+  "color": "#14532D",
+  "category": "fertilizer",
+  "subCategory": "macronutrient",
+  "boilingPoint": "1484 °C at 1 atm (elemental Ca)",
+  "vaporPressure": null,
+  "waterSolubility": "CaCl₂: ~745 g/L at 20 °C; CaSO₄ (gypsum): ~2 g/L",
+  "odor": null,
+  "environmentalPersistence": "High — Ca²⁺ binds to soil cation exchange sites and accumulates in alkaline soils",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "leaf_surface"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems",
+    "roots"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "200–800 mg Ca/kg soil",
+      "description": "Optimal — structural cell wall integrity, normal cell division, proper membrane function, reduced blossom-end rot and tip burn. Plants appear healthy with firm leaf texture.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0,
+        "chlorosis": 0,
+        "defenseProteins": 0.05,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">3000 mg Ca/kg soil (induces alkalinity)",
+      "description": "Excess calcium raises soil pH, inducing deficiencies of Fe, Mn, Zn, and B through pH-mediated precipitation. Leaves show interveinal chlorosis. Paradoxically mimics nutrient deficiency symptoms.",
+      "simulationVector": {
+        "heightSuppress": 0.25,
+        "necrosis": 0.25,
+        "curl": 0.15,
+        "stomatalClose": 0.1,
+        "pigmentation": 0.2,
+        "chlorosis": 0.5,
+        "defenseProteins": 0.1,
+        "wilting": 0.15
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.25,
+    "necrosis": 0.25,
+    "curl": 0.15,
+    "stomatalClose": 0.1,
+    "pigmentation": 0.2,
+    "chlorosis": 0.5,
+    "defenseProteins": 0.1,
+    "wilting": 0.15
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor (low dose)",
+      "base": 80,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 203,
+      "label": "Fe-deficiency chlorosis marker",
+      "base": 70,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 179,
+      "label": "MDA (high dose oxidative stress)",
+      "base": 40,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 121,
+      "label": "Calmodulin-Ca fragment",
+      "base": 65,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 132,
+      "label": "Proline (stress marker)",
+      "base": 35,
+      "weekFactor": 0.75
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Mild at high dose — growth slowed by induced micronutrient deficiencies",
+    "leafSize": "Normal at low dose; mottled/small at high dose",
+    "leafCurl": "Mild at high dose",
+    "wilting": "Mild at high dose",
+    "chlorosis": "Absent at low dose; strong interveinal chlorosis at high dose (Fe/Mn deficiency from high pH)",
+    "necrosis": "Tip burn at extreme high dose; blossom-end-rot type lesions at Ca deficiency (opposite scenario)",
+    "pigmentation": "Mild anthocyanin at high dose",
+    "rootGrowth": "Enhanced at low dose (Ca strengthens root cell walls); reduced at high dose (alkaline pH toxicity)",
+    "newVsOldLeaves": "Young leaves show Fe/Mn deficiency interveinal chlorosis first at high dose"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Absent at low dose; moderate at high dose via pH-induced Fe precipitation",
+    "photosyntheticRate": "Optimal at low dose; reduced at high dose",
+    "stomatalConductance": "Normal at low dose (Ca signals stomatal closure appropriately via calmodulin); disrupted at high dose",
+    "transpiration": "Normal at low dose",
+    "waterUptake": "Normal to enhanced at low dose; mildly impaired at very high dose"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "Only at high dose via induced micronutrient deficiencies",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD"
+    ],
+    "lipidPeroxidation": "Mild at high dose",
+    "anthocyaninInduction": "Mild at high dose",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "calmodulin (Ca²⁺ sensor)",
+      "calcium-dependent protein kinases (CDPKs)"
+    ],
+    "metabolitesIncreasing": [
+      "calmodulin-Ca complexes (low dose)",
+      "Fe-deficiency markers (high dose)",
+      "proline (stress)"
+    ],
+    "metabolitesDecreasing": [
+      "Fe-containing enzymes at high dose",
+      "Mn-dependent enzymes at high dose"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild at optimal; moderate at high dose (alkaline pH shift changes community composition)",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Generally positive at low dose — Ca stabilizes soil structure benefiting aerobic microbes",
+    "fungalEffect": "Mycorrhizal associations maintained at low dose; pH effects at high dose",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Stabilized at low dose; destabilized at very high dose"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "Slow — >120 hours for toxicity; structural benefits at low dose accumulate over weeks",
+    "firstSymptoms": [
+      "improved leaf firmness at low dose",
+      "interveinal chlorosis at high dose"
+    ],
+    "lateSymptoms": [
+      "pH-induced multi-nutrient deficiency pattern at high dose"
+    ],
+    "reversible": true,
+    "recoveryTime": "3–4 weeks — soil pH adjustment is slow",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: healthy firm green. High dose: interveinal chlorosis (young leaves) — similar to P toxicity but from different mechanism",
+    "firstAffectedRegion": "Young leaves at high dose (Fe/Mn deficiency pattern)",
+    "damageSpread": "Young leaves first, spreading to older leaves",
+    "damagePattern": "Young-leaf interveinal chlorosis — similar to high-P but triggered by alkaline pH rather than direct Fe/Zn antagonism",
+    "heatmapGlow": "Low glow at optimal; moderate Fe-deficiency marker signal at high dose",
+    "microbiomeParticles": "Near-normal",
+    "leafAppearance": [
+      "healthy_firm_at_low_dose",
+      "interveinal_chlorosis_at_high_dose"
+    ],
+    "recoveryVisual": "Moderate — chlorosis can reverse as pH normalizes; slow process"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "nitrogen",
+      "phosphorus",
+      "potassium"
+    ],
+    "synergyNote": "Calcium is the macro-structural partner in NPK+Ca programs. Ca also directly antagonizes Cd and Pb at root uptake sites — one of the best natural protective mechanisms against heavy metal contamination.",
+    "antagonizesWith": [
+      "lead",
+      "cadmium",
+      "sodium_chloride"
+    ],
+    "antagonismNote": "Ca²⁺ competes with Pb²⁺ and Cd²⁺ at divalent cation transporters — high Ca reduces heavy metal uptake. Ca also partially counteracts Na⁺ toxicity from salt stress.",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": [
+      "lead",
+      "cadmium",
+      "sodium_chloride"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Limestone, gypsum, bone meal, eggshells — calcium is one of the most abundant soil nutrients",
+    "classification": "Essential macronutrient / fertilizer / soil amendment",
+    "agriculturalUse": "Used as lime (CaCO₃) to raise soil pH; gypsum for soil structure; calcium nitrate fertilizer for vegetable crops",
+    "humanToxicity": "Low — essential mineral; hypercalcemia from extreme supplementation is the only risk",
+    "climateLink": "Liming (Ca application) to counter soil acidification from acid rain — a direct climate/pollution remediation story",
+    "indoorOutdoor": "Both — houseplant fertilizers; major agricultural amendment",
+    "whyStudentsCare": "Eggshells are calcium carbonate — the same compound used to correct soil pH. Students can make their own soil amendment. Also: why tomatoes get blossom-end rot (Ca deficiency) in the school garden.",
+    "realWorldIssue": "Soil acidification remediation, acid rain recovery, food quality (blossom-end rot)"
+  },
+  "sources": [
+    "White PJ, Broadley MR (2003). Calcium in plants. Annals of Botany, 92(4), 487–511.",
+    "Marschner H (1995). Mineral Nutrition of Higher Plants, 2nd ed. Academic Press, London.",
+    "Tretyn A, Kendrick RE (1991). Calcium in signal transduction of plant cells. Botanical Review, 57(1), 32–61."
+  ]
+}

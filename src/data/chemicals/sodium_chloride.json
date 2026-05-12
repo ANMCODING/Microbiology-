@@ -1,0 +1,199 @@
+{
+  "id": "sodium_chloride",
+  "commonName": "Sodium Chloride (Salt Stress)",
+  "iupacName": "sodium chloride",
+  "formula": "NaCl",
+  "molecularWeight": 58.44,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench",
+    "foliar_spray"
+  ],
+  "color": "#0EA5E9",
+  "category": "salinity",
+  "subCategory": "ionic_salt",
+  "boilingPoint": "1413 °C at 1 atm",
+  "vaporPressure": null,
+  "waterSolubility": "~360 g/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "Very high — does not degrade; accumulates in soil with repeated irrigation in arid regions",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.65,
+    "necrosis": 0.5,
+    "curl": 0.6,
+    "stomatalClose": 0.55,
+    "pigmentation": 0.35,
+    "chlorosis": 0.55,
+    "defenseProteins": 0.4,
+    "wilting": 0.75
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 100,
+      "weekFactor": 1
+    },
+    {
+      "mz": 119,
+      "label": "Glycine betaine (osmolyte)",
+      "base": 85,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 80,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 65,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 121,
+      "label": "ABA fragment (stress response)",
+      "base": 75,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strong — osmotic stress reduces cell elongation and division",
+    "leafSize": "Significantly reduced",
+    "leafCurl": "Strong — osmotic stress and ion toxicity cause curling and rolling",
+    "wilting": "Very strong — wilting is the most prominent and rapid NaCl symptom; osmotic stress prevents water uptake",
+    "chlorosis": "Moderate — Na⁺ and Cl⁻ ion toxicity in chloroplasts; also K⁺ and Ca²⁺ displacement",
+    "necrosis": "Moderate — Na⁺ accumulation in vacuoles eventually causes cell death; leaf tip and margin burn",
+    "pigmentation": "Moderate — salt stress induces anthocyanin as osmotic adjustment component",
+    "rootGrowth": "Strongly inhibited — root tips most sensitive to ionic toxicity",
+    "newVsOldLeaves": "Old leaves accumulate more Na⁺ and Cl⁻ — necrosis appears first on older leaves; new leaves show wilting first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 25–45%",
+    "photosyntheticRate": "Significantly reduced — stomatal closure and ion toxicity on PSII",
+    "stomatalConductance": "Moderately reduced — ABA-mediated closure in response to osmotic stress",
+    "transpiration": "Significantly reduced",
+    "waterUptake": "Severely impaired — osmotic gradient reversal at high salt concentrations prevents water entry",
+    "nutrientTransport": "Strongly disrupted — Na⁺ competes with K⁺, Ca²⁺, and Mg²⁺",
+    "membranePermeability": "Increased at high ion concentrations"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate to strong — osmotic and ionic stress both generate ROS",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate to strong",
+    "anthocyaninInduction": "Moderate — salt stress anthocyanin is well documented as osmotic adjustment",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "SOS pathway proteins (Na⁺ extrusion)",
+      "dehydrins",
+      "LEA proteins",
+      "P5CS (proline synthesis)"
+    ],
+    "metabolitesIncreasing": [
+      "proline",
+      "glycine betaine",
+      "ABA",
+      "MDA",
+      "anthocyanins"
+    ],
+    "metabolitesDecreasing": [
+      "K⁺-dependent enzymes",
+      "chlorophyll a",
+      "chlorophyll b",
+      "Ca²⁺-dependent signaling"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — high salinity dramatically reduces soil microbial diversity",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — most PGPR are salt-sensitive; halotolerant species replace them",
+    "fungalEffect": "Mycorrhizal associations disrupted; halotolerant fungi may persist",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "12–48 hours — wilting is very rapid",
+    "firstSymptoms": [
+      "rapid wilting",
+      "leaf rolling/curling"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "tip and margin necrosis",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–3 weeks if salt source removed and soil flushed; irreversible if salt accumulates",
+    "acclimation": true,
+    "sensitization": "Mild priming — salt stress memory via epigenetic mechanisms documented"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → wilted (first, rapid) → yellow-green (chlorosis) → brown tip/margin burn",
+    "firstAffectedRegion": "Whole plant wilting first — then old leaf margins and tips",
+    "damageSpread": "Tip and margin inward on older leaves; simultaneous whole-plant wilting",
+    "damagePattern": "Wilting + margin burn combination is diagnostic for salt stress",
+    "heatmapGlow": "Strong proline/betaine glow — osmolyte accumulation is distinctive; ABA peak co-occurs",
+    "microbiomeParticles": "Strongly reduced; halotolerant cluster formation visible",
+    "leafAppearance": [
+      "wilted",
+      "curled",
+      "margin_burn",
+      "yellowing"
+    ],
+    "recoveryVisual": "Moderate — wilting reverses quickly if salt removed; margin scars remain"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "magnesium_chloride",
+      "calcium_chloride",
+      "potassium_salt"
+    ],
+    "synergyNote": "Multi-salt combinations create more complex osmotic stress — realistic of agricultural saline soil which contains multiple ionic species simultaneously",
+    "antagonizesWith": [
+      "potassium",
+      "calcium"
+    ],
+    "antagonismNote": "Adequate K⁺ and Ca²⁺ supply partially counteracts NaCl stress by maintaining ionic balance at membrane transporters",
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "arsenic"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Irrigation with saline water, road salt runoff, sea water intrusion in coastal farmland, arid region agriculture — affects >20% of irrigated agricultural land globally",
+    "classification": "Abiotic stress agent / soil salinization",
+    "agriculturalUse": "Not intentionally applied — environmental stressor from irrigation practices and road deicing",
+    "humanToxicity": "Very low — table salt; but soil salinization destroys agricultural productivity affecting food security",
+    "climateLink": "Sea level rise increases saltwater intrusion into coastal farmland; changing precipitation patterns accelerate soil salinization in arid regions — major climate agriculture crisis",
+    "indoorOutdoor": "Outdoor — agricultural and roadside",
+    "whyStudentsCare": "Why you shouldn't water plants with saltwater — immediately testable at home or in school. The Mesopotamia civilization collapse from soil salinization 4,000 years ago connects to current threats in the same region (Iraq, Iran).",
+    "realWorldIssue": "Soil salinization, irrigated agriculture sustainability, coastal farmland loss, climate-driven sea level rise"
+  },
+  "sources": [
+    "Munns R, Tester M (2008). Mechanisms of salinity tolerance. Annual Review of Plant Biology, 59, 651–681.",
+    "Zhu JK (2001). Plant salt tolerance. Trends in Plant Science, 6(2), 66–71.",
+    "FAO (2021). Global assessment of soil salinization. FAO Land and Water Division, Rome."
+  ]
+}

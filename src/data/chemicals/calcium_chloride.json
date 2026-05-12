@@ -1,0 +1,193 @@
+{
+  "id": "calcium_chloride",
+  "commonName": "Calcium Chloride",
+  "iupacName": "calcium chloride",
+  "formula": "CaCl2",
+  "molecularWeight": 110.98,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench",
+    "foliar_spray"
+  ],
+  "color": "#0369A1",
+  "category": "salinity",
+  "subCategory": "ionic_salt",
+  "boilingPoint": "1935 °C at 1 atm",
+  "vaporPressure": null,
+  "waterSolubility": "~745 g/L at 20 °C (highly hygroscopic)",
+  "odor": null,
+  "environmentalPersistence": "Very high — does not degrade; Ca²⁺ binds to soil; Cl⁻ leaches",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "leaf_surface",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.4,
+    "necrosis": 0.3,
+    "curl": 0.4,
+    "stomatalClose": 0.35,
+    "pigmentation": 0.2,
+    "chlorosis": 0.35,
+    "defenseProteins": 0.25,
+    "wilting": 0.5
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 90,
+      "weekFactor": 1
+    },
+    {
+      "mz": 119,
+      "label": "Glycine betaine",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 65,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 121,
+      "label": "ABA fragment",
+      "base": 60,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 50,
+      "weekFactor": 0.75
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — osmotic stress at high concentrations; Ca²⁺ is beneficial at low concentrations",
+    "leafSize": "Mildly reduced at high doses",
+    "leafCurl": "Moderate — osmotic and Cl⁻ effects",
+    "wilting": "Moderate — osmotic stress; less than NaCl due to Ca²⁺ beneficial effects on membrane integrity",
+    "chlorosis": "Mild to moderate — primarily from Cl⁻ toxicity and osmotic stress",
+    "necrosis": "Mild to moderate — Cl⁻ tip burn",
+    "pigmentation": "Mild",
+    "rootGrowth": "Mildly to moderately inhibited at high doses",
+    "newVsOldLeaves": "Old leaves show Cl⁻ burn first; Ca²⁺ partially protects young leaves"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Mild to moderate — less than NaCl at equivalent osmolarity",
+    "photosyntheticRate": "Mildly to moderately reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Impaired at high concentrations",
+    "nutrientTransport": "Mildly disrupted; Ca²⁺ excess antagonizes Mg²⁺ and K⁺"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Mild to moderate",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Mild to moderate",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "dehydrins",
+      "calmodulin (Ca signal)"
+    ],
+    "metabolitesIncreasing": [
+      "proline",
+      "glycine betaine",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "Mg²⁺-dependent enzymes",
+      "K⁺-dependent processes"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild to moderate — less disruptive than NaCl due to Ca²⁺ soil stabilizing effects",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Mildly suppressed — Ca²⁺ can actually be beneficial to some microbes",
+    "fungalEffect": "Near-normal to mildly disrupted",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–72 hours",
+    "firstSymptoms": [
+      "mild wilting",
+      "leaf curl"
+    ],
+    "lateSymptoms": [
+      "Cl⁻ tip burn",
+      "chlorosis",
+      "growth suppression"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks",
+    "acclimation": true,
+    "sensitization": "Mild"
+  },
+  "visualSimulation": {
+    "colorChanges": "Mild wilting → mild chlorosis → Cl⁻ tip burn — least severe of the 4 salinity chemicals",
+    "firstAffectedRegion": "Leaf tips (Cl⁻ burn) and root tips",
+    "damageSpread": "Tip-inward",
+    "damagePattern": "Tip burn with mild chlorosis — lighter than NaCl; more similar to K fertilizer toxicity",
+    "heatmapGlow": "Mild — proline and betaine signature; weaker than NaCl",
+    "microbiomeParticles": "Near-normal to mildly reduced",
+    "leafAppearance": [
+      "mild_wilting",
+      "tip_burn",
+      "mild_curl"
+    ],
+    "recoveryVisual": "Good — best recovery of salinity group"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "sodium_chloride",
+      "magnesium_chloride",
+      "potassium_salt"
+    ],
+    "synergyNote": "Road salt mixture component — CaCl₂ is actually the most effective deicing salt but its combined osmotic load with NaCl creates additive stress on roadside vegetation",
+    "antagonizesWith": [
+      "lead",
+      "cadmium"
+    ],
+    "antagonismNote": "Ca²⁺ competes with heavy metal cations at uptake sites — CaCl₂ applied to heavy metal contaminated soil can reduce Pb and Cd bioavailability",
+    "amplifiesOxidativeStressOf": [
+      "sodium_chloride"
+    ],
+    "protectsAgainst": [
+      "lead",
+      "cadmium"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Road deicing (used where NaCl is less effective at very low temperatures), food additive (E509), industrial desiccant",
+    "classification": "Ionic salt / road deicing agent",
+    "agriculturalUse": "Small amounts as Ca fertilizer; not intentionally applied at stressful concentrations",
+    "humanToxicity": "Low — food additive; irritating in concentrated form",
+    "climateLink": "CaCl₂ road use increases with more variable winter precipitation — relevant to urban ecology and roadside plant health",
+    "indoorOutdoor": "Primarily outdoor — road runoff; found in packaged foods",
+    "whyStudentsCare": "The salt that keeps roads safe in winter is the same thing harming street trees — a direct trade-off between human safety and urban ecosystem health.",
+    "realWorldIssue": "Road salt ecology, urban tree health, winter road management alternatives"
+  },
+  "sources": [
+    "Munns R, Tester M (2008). Mechanisms of salinity tolerance. Annual Review of Plant Biology, 59, 651–681.",
+    "Cekstere G, Nikodemus O, Osvalde A (2008). Toxic impact of the de-icing material to street greenery in Riga, Latvia. Urban Forestry & Urban Greening, 7(3), 207–217.",
+    "Marosz A (2004). Effect of soil salinity on nutrient uptake, growth, and decorative value of four ground cover shrubs. Journal of Plant Nutrition, 27(6), 977–989."
+  ]
+}

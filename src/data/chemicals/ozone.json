@@ -1,0 +1,196 @@
+{
+  "id": "ozone",
+  "commonName": "Ozone",
+  "iupacName": "ozone",
+  "formula": "O3",
+  "molecularWeight": 48,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation"
+  ],
+  "color": "#84CC16",
+  "category": "greenhouse_gas",
+  "subCategory": "atmospheric_oxidant",
+  "boilingPoint": "-112 °C at 1 atm",
+  "vaporPressure": "~2,000,000 mmHg at 20 °C (exists as gas)",
+  "waterSolubility": "~570 mg/L at 0 °C",
+  "odor": "Sharp, clean, electrical smell",
+  "environmentalPersistence": "Low — tropospheric half-life ~22 days; highly reactive; formed continuously from NOₓ + VOC + sunlight",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.55,
+    "necrosis": 0.6,
+    "curl": 0.4,
+    "stomatalClose": 0.5,
+    "pigmentation": 0.3,
+    "chlorosis": 0.65,
+    "defenseProteins": 0.6,
+    "wilting": 0.35
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 100,
+      "weekFactor": 1
+    },
+    {
+      "mz": 338,
+      "label": "Ozonide-GSH adduct",
+      "base": 80,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 65,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 153,
+      "label": "Salicylic acid (defense response)",
+      "base": 75,
+      "weekFactor": 0.85
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — chronic ozone reduces carbon assimilation and allocates resources to detox",
+    "leafSize": "Reduced",
+    "leafCurl": "Moderate",
+    "wilting": "Mild to moderate",
+    "chlorosis": "Strong — ozone-induced chloroplast damage; characteristic stippled or flecked chlorosis pattern",
+    "necrosis": "Strong — surface necrosis with distinctive tan/bronze flecking pattern",
+    "pigmentation": "Moderate — ozone induces anthocyanin as part of oxidative stress response",
+    "rootGrowth": "Moderately inhibited — carbon starvation from reduced photosynthesis",
+    "newVsOldLeaves": "Older mature leaves most affected — more open stomata and longer exposure history"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 40–65% at typical elevated ozone concentrations",
+    "photosyntheticRate": "Significantly reduced — direct damage to photosynthetic apparatus",
+    "stomatalConductance": "Complex — ozone induces stomatal opening (allowing more ozone entry) then closure as damage accumulates",
+    "transpiration": "Variable — initial increase then decrease",
+    "waterUptake": "Mildly impaired",
+    "membranePermeability": "Strongly increased — ozone is one of the most powerful oxidants to interact with plasma membrane"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Extremely strong — ozone itself is a reactive oxygen species; generates apoplastic ROS burst immediately upon stomatal entry",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "APX",
+      "POD"
+    ],
+    "lipidPeroxidation": "Very strong — MDA accumulation is among the highest of all 40 chemicals",
+    "anthocyaninInduction": "Moderate — ozone stress anthocyanin well documented",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "PR-1 (SA pathway activated)",
+      "LOX (JA pathway)",
+      "ethylene-responsive factors"
+    ],
+    "metabolitesIncreasing": [
+      "MDA",
+      "ozonide-GSH adducts",
+      "salicylic acid",
+      "anthocyanins",
+      "ethylene"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "ascorbate",
+      "chlorophyll a",
+      "chlorophyll b",
+      "RUBISCO"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — ozone affects foliar microbiome significantly; rhizosphere less so",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed",
+    "fungalEffect": "Foliar fungal pathogens may increase on ozone-weakened tissue",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly to moderately destabilized via altered root exudates"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "6–24 hours",
+    "firstSymptoms": [
+      "surface stippling/flecking on older leaves",
+      "slight chlorosis"
+    ],
+    "lateSymptoms": [
+      "confluent necrosis",
+      "bronze/tan leaf discoloration",
+      "widespread chlorosis"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor — ozone damage is cumulative; necrotic stippling is permanent",
+    "acclimation": "Partial — antioxidant enzyme upregulation provides partial adaptation",
+    "sensitization": "Mild — prior ozone exposure primes antioxidant response"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → tan/bronze stippling (characteristic) → chlorosis → confluent necrosis",
+    "firstAffectedRegion": "Adaxial (upper) leaf surface of older leaves — most distinctive",
+    "damageSpread": "Upper surface stippling spreading to whole leaf",
+    "damagePattern": "Adaxial stippling/flecking — THE diagnostic visual signature of ozone damage in field conditions; unlike any other chemical in this simulator",
+    "heatmapGlow": "Very strong — among highest MDA signal in the simulator; SA peak secondary indicator",
+    "microbiomeParticles": "Moderately reduced",
+    "leafAppearance": [
+      "stippled",
+      "bronzed",
+      "chlorotic"
+    ],
+    "recoveryVisual": "Stippling is permanent; new leaves are healthy if source removed"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "no2",
+      "so2",
+      "ethylene"
+    ],
+    "synergyNote": "O₃ + NO₂ creates photochemical smog cycle. O₃ + SO₂ creates the most damaging acid rain + oxidant combination. O₃ + ethylene accelerates senescence dramatically (senescent tissue more vulnerable to oxidative attack).",
+    "antagonizesWith": [
+      "co2"
+    ],
+    "antagonismNote": "Elevated CO₂ reduces stomatal aperture, reducing ozone uptake — partial protection. But ozone damage reduces CO₂ assimilation, partially canceling CO₂ benefit.",
+    "amplifiesOxidativeStressOf": [
+      "so2",
+      "no2",
+      "formaldehyde",
+      "benzene",
+      "cadmium"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Tropospheric ozone formed from NOₓ + VOC + sunlight — summer smog days, downwind of cities. NOT the same as stratospheric ozone (ozone layer). One of the most important air pollutants for agriculture globally.",
+    "classification": "Secondary atmospheric pollutant / oxidant",
+    "agriculturalUse": "Not applied intentionally — major agricultural pollutant; costs ~$11 billion/year in US crop losses alone",
+    "humanToxicity": "High — lung irritant; triggers asthma; EPA standard: 70 ppb 8-hour average",
+    "climateLink": "Climate change increases ozone formation — hotter temperatures and more sunlight accelerate photochemical reactions. Food security impact of rising ozone is projected to worsen with climate change.",
+    "indoorOutdoor": "Primarily outdoor — formed in atmosphere; low indoor (reacts with surfaces quickly)",
+    "whyStudentsCare": "Air quality alerts that say 'Sensitive groups should avoid outdoor activities' — that's ozone. The brown haze visible over cities in summer. Directly relevant to outdoor exercise and asthma.",
+    "realWorldIssue": "Urban smog, crop yield losses, respiratory disease, climate-ozone feedback"
+  },
+  "sources": [
+    "Fiscus EL, Booker FL, Burkey KO (2005). Crop responses to ozone: uptake, modes of action, carbon assimilation and partitioning. Plant, Cell & Environment, 28(8), 997–1011.",
+    "Wittig VE, Ainsworth EA, Naidu SL, Karnosky DF, Long SP (2009). Quantitative impacts of elevated ozone on crop yields. Global Change Biology, 15(11), 2809–2823.",
+    "Darrall NM (1989). The effect of air pollutants on physiological processes in plants. Plant, Cell & Environment, 12(1), 1–30."
+  ]
+}

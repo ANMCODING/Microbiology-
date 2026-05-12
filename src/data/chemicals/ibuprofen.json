@@ -1,0 +1,191 @@
+{
+  "id": "ibuprofen",
+  "commonName": "Ibuprofen",
+  "iupacName": "(RS)-2-(4-(2-methylpropyl)phenyl)propanoic acid",
+  "formula": "C13H18O2",
+  "molecularWeight": 206.28,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#7C3AED",
+  "category": "pharmaceutical",
+  "subCategory": "nsaid_analgesic",
+  "boilingPoint": "157 °C at 1 atm",
+  "vaporPressure": "~0.000025 mmHg at 25 °C",
+  "waterSolubility": "~21 mg/L at 25 °C",
+  "odor": "Faint characteristic medicinal odor",
+  "environmentalPersistence": "Moderate — soil half-life ~7–100 days depending on conditions; detected in treated wastewater effluent and surface waters globally",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.45,
+    "necrosis": 0.3,
+    "curl": 0.35,
+    "stomatalClose": 0.35,
+    "pigmentation": 0.4,
+    "chlorosis": 0.4,
+    "defenseProteins": 0.45,
+    "wilting": 0.3
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 207,
+      "label": "Ibuprofen [M+H]+",
+      "base": 100,
+      "weekFactor": 0.55
+    },
+    {
+      "mz": 161,
+      "label": "Ibuprofen carboxylate fragment",
+      "base": 70,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 223,
+      "label": "Hydroxy-ibuprofen (metabolite)",
+      "base": 75,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 65,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (oxidative stress)",
+      "base": 60,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — ibuprofen inhibits plant COX-like enzymes affecting growth signaling",
+    "leafSize": "Mildly to moderately reduced",
+    "leafCurl": "Mild to moderate",
+    "wilting": "Moderate — root dysfunction impairs water uptake",
+    "chlorosis": "Moderate — disruption of chloroplast metabolism",
+    "necrosis": "Mild to moderate — root tip necrosis at high doses",
+    "pigmentation": "Moderate — ibuprofen-induced anthocyanin response in Coleus reported in emerging literature",
+    "rootGrowth": "Moderately to strongly inhibited — primary site of ibuprofen phytotoxicity",
+    "newVsOldLeaves": "Old leaves show chlorosis; root effects cause wilting across canopy"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 25–45%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired — root damage",
+    "membranePermeability": "Increased — NSAID membrane interactions"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — ibuprofen inhibits COX-like enzymes affecting lipid signaling and generates oxidative stress",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Moderate — one of the more interesting pharmaceutical effects on plant secondary metabolism",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "COX-like enzyme stress responses",
+      "stress-responsive PR proteins"
+    ],
+    "metabolitesIncreasing": [
+      "hydroxy-ibuprofen metabolite",
+      "anthocyanins",
+      "MDA",
+      "flavonoids"
+    ],
+    "metabolitesDecreasing": [
+      "jasmonate precursors (COX-like inhibition)",
+      "chlorophyll a",
+      "chlorophyll b",
+      "root growth regulators"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — ibuprofen has antimicrobial properties at environmental concentrations",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed — PGPR including nitrogen-fixers sensitive to ibuprofen",
+    "fungalEffect": "Mycorrhizal associations mildly disrupted",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–120 hours",
+    "firstSymptoms": [
+      "root growth inhibition",
+      "mild chlorosis"
+    ],
+    "lateSymptoms": [
+      "moderate wilting",
+      "anthocyanin pigmentation increase",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "2–3 weeks — ibuprofen degrades in soil; partial recovery expected",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → mild purple tint (anthocyanin) + background chlorosis — distinctive pharmaceutical signature",
+    "firstAffectedRegion": "Root zone; then chlorosis spreading upward",
+    "damageSpread": "Root-to-shoot via water stress + systemic movement",
+    "damagePattern": "Purple tint + chlorosis combination — unusual and distinctive; different from pure signaling VOC pigmentation",
+    "heatmapGlow": "Moderate purple-amber glow — anthocyanin + hydroxy-ibuprofen metabolite signature",
+    "microbiomeParticles": "Moderately reduced; resistome elevated",
+    "leafAppearance": [
+      "mild_purple",
+      "yellowing",
+      "wilted"
+    ],
+    "recoveryVisual": "Moderate — new growth healthy after 2–3 weeks; original leaves partially recover"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "caffeine",
+      "acetaminophen",
+      "antibiotics"
+    ],
+    "synergyNote": "Pharmaceutical pollutant mixtures in wastewater effluent — ibuprofen, caffeine, and acetaminophen are the three most commonly co-detected pharmaceuticals in sewage-irrigated soils; combined microbiome disruption likely additive",
+    "antagonizesWith": [
+      "meja"
+    ],
+    "antagonismNote": "Ibuprofen inhibits COX-like enzymes involved in jasmonate synthesis — may partially antagonize MeJA-driven defense responses. Interesting crosstalk worth exploring.",
+    "amplifiesOxidativeStressOf": [
+      "caffeine",
+      "acetaminophen"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Wastewater treatment plant effluent, hospital wastewater, sewage-irrigated agricultural fields, pharmaceutical manufacturing discharge — one of the most commonly detected pharmaceuticals in the environment globally",
+    "classification": "NSAID / pharmaceutical pollutant / emerging contaminant",
+    "agriculturalUse": "Not intentionally applied — environmental contaminant from wastewater irrigation and sewage sludge application",
+    "humanToxicity": "Low at therapeutic doses; ibuprofen toxicity at therapeutic doses is the concern for humans; environmental concentrations are far below therapeutic levels",
+    "climateLink": "Climate-driven water scarcity is increasing use of treated wastewater for irrigation — increasing pharmaceutical exposure of agricultural soils globally",
+    "indoorOutdoor": "Primarily environmental via water contamination",
+    "whyStudentsCare": "Advil and Motrin — the most common painkiller in US homes — ends up in rivers and agricultural soil. Something every student has taken, now found in drinking water sources. Connects personal medicine use to environmental impact.",
+    "realWorldIssue": "Pharmaceutical water pollution, emerging contaminants, wastewater irrigation, personal medicine and environment"
+  },
+  "sources": [
+    "Verlicchi P, Al Aukidy M, Zambello E (2012). Occurrence of pharmaceutical compounds in urban wastewater: removal, mass load and environmental risk after a secondary treatment. Science of the Total Environment, 429, 123–155.",
+    "Christou A, et al. (2017). The potential implications of reclaimed wastewater reuse for irrigation on the agricultural environment. Environment International, 104, 37–53.",
+    "Riemenschneider C, et al. (2016). Occurrence of emerging contaminants in wastewater and their effects on agricultural plants. Environmental Science and Pollution Research, 23(2), 1274–1283."
+  ]
+}

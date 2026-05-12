@@ -1,0 +1,198 @@
+{
+  "id": "sulfuric_acid",
+  "commonName": "Sulfuric Acid",
+  "iupacName": "sulfuric acid",
+  "formula": "H2SO4",
+  "molecularWeight": 98.08,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "foliar_spray",
+    "root_drench",
+    "soil"
+  ],
+  "color": "#DC2626",
+  "category": "acid_rain",
+  "subCategory": "strong_acid",
+  "boilingPoint": "337 °C at 1 atm (concentrated); forms aerosol in atmosphere",
+  "vaporPressure": "~0.001 mmHg at 20 °C (concentrated form)",
+  "waterSolubility": "Miscible in all proportions",
+  "odor": "Pungent, acrid at high concentrations; odorless when dilute",
+  "environmentalPersistence": "Low as free acid — rapidly neutralized by soil buffers; but sulfate ion persists and acidifies over time",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "stomata",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "roots",
+    "stems"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.55,
+    "necrosis": 0.75,
+    "curl": 0.6,
+    "stomatalClose": 0.7,
+    "pigmentation": 0.15,
+    "chlorosis": 0.6,
+    "defenseProteins": 0.3,
+    "wilting": 0.5
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 97,
+      "label": "Sulfate ion [SO4-H]-",
+      "base": 100,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 85,
+      "weekFactor": 1
+    },
+    {
+      "mz": 195,
+      "label": "Glucosinolate fragment",
+      "base": 60,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 70,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 133,
+      "label": "Malate (pH stress marker)",
+      "base": 55,
+      "weekFactor": 0.8
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — acid-induced nutrient lockout and root damage reduces growth",
+    "leafSize": "Reduced at moderate-high doses",
+    "leafCurl": "Moderate to strong — cuticle damage causes loss of structural integrity",
+    "wilting": "Moderate — membrane damage and root acid injury impair water uptake",
+    "chlorosis": "Moderate-strong — H⁺ displaces Mg²⁺ from chlorophyll; nutrient lockout",
+    "necrosis": "Strong — acid burn causes immediate tissue death on contact; characteristic interveinal necrotic lesions",
+    "pigmentation": "Minimal — acid damage overwhelms defense pigmentation",
+    "rootGrowth": "Moderately to severely inhibited — soil acidification disrupts mineral nutrition",
+    "newVsOldLeaves": "Both affected by foliar spray; old leaves show pH-induced chlorosis first from soil route"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — Mg²⁺ displacement from chlorophyll porphyrin ring",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Strongly reduced — cuticle and guard cell damage",
+    "transpiration": "Reduced",
+    "waterUptake": "Impaired by root damage in acidified soil",
+    "nutrientTransport": "Strongly disrupted — soil acidification immobilizes Ca, Mg, K; mobilizes toxic Al and Mn",
+    "membranePermeability": "Strongly increased — acid directly denatures membrane proteins"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — acid-induced membrane damage generates ROS cascade",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Minimal — acid damage is too rapid for defense induction",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "PR proteins (mild)",
+      "acid phosphatase",
+      "cell wall repair proteins"
+    ],
+    "metabolitesIncreasing": [
+      "sulfate",
+      "MDA",
+      "malate (pH buffering)",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "chlorophyll a",
+      "chlorophyll b",
+      "Mg-containing enzymes",
+      "membrane lipids",
+      "GSH"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — soil acidification is one of the most powerful microbiome disruptors",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — acid-sensitive PGPR and nitrogen-fixers most affected",
+    "fungalEffect": "Acid-tolerant fungi (e.g. some Aspergillus) may increase; mycorrhizal associations disrupted",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "2–12 hours — among the fastest-acting",
+    "firstSymptoms": [
+      "leaf surface bleaching at contact points",
+      "cuticle damage visible",
+      "rapid stomatal closure"
+    ],
+    "lateSymptoms": [
+      "interveinal necrosis",
+      "widespread chlorosis",
+      "root damage from soil acidification"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor for contact damage; soil pH recovery possible over weeks if liming applied",
+    "acclimation": false,
+    "sensitization": "None — direct chemical damage"
+  },
+  "visualSimulation": {
+    "colorChanges": "Immediate bleaching/whitening at contact → necrotic brown; background chlorosis",
+    "firstAffectedRegion": "Leaf surface (contact points) for foliar; roots for soil delivery",
+    "damageSpread": "Contact zones first; then interveinal spread",
+    "damagePattern": "Irregular bleached patches (acid burn) with interveinal chlorosis — distinctive acid rain pattern",
+    "heatmapGlow": "Moderate — sulfate and malate pH stress signature",
+    "microbiomeParticles": "Strongly reduced; acid-tolerant pathogen fraction rises",
+    "leafAppearance": [
+      "spotted",
+      "bleached",
+      "curled",
+      "brittle"
+    ],
+    "recoveryVisual": "Bleached contact zones remain; new growth may be healthy if soil pH recovers"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "nitric_acid",
+      "so2",
+      "no2"
+    ],
+    "synergyNote": "The actual acid rain mixture — H₂SO₄ + HNO₃ + SO₂ + NO₂ together create the real-world acid rain scenario; sulfate and nitrate together acidify soil faster than either alone and compound cuticle damage",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "lead",
+      "arsenic"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Coal and oil combustion SO₂ → atmospheric oxidation to H₂SO₄; industrial emissions; volcanic eruptions",
+    "classification": "Acid rain component / industrial pollutant",
+    "agriculturalUse": "Dilute sulfuric acid used in soil pH adjustment; concentrated form — industrial only",
+    "humanToxicity": "High — severe burns to skin/eyes/respiratory tract; concentrated form is one of the most dangerous industrial chemicals",
+    "climateLink": "Acid rain directly caused by fossil fuel combustion — one of the most direct links between industrial activity and ecosystem damage",
+    "indoorOutdoor": "Outdoor — atmospheric deposition",
+    "whyStudentsCare": "Acid rain killing forests in 1970s–80s was one of the first major environmental crises to generate public awareness and policy change — the Clean Air Act story is directly teachable",
+    "realWorldIssue": "Acid rain, forest die-off, lake acidification, Clean Air Act history"
+  },
+  "sources": [
+    "Kozlowski TT, Constantinidou HA (1986). Responses of woody plants to environmental pollution. The Botanical Review, 52(4), 311–382.",
+    "Likens GE, Bormann FH (1974). Acid rain: a serious regional environmental problem. Science, 184(4142), 1176–1179.",
+    "Cape JN (1993). Direct damage to vegetation caused by acid rain and polluted cloud: definition of critical levels for forest trees. Environmental Pollution, 82(2), 167–180."
+  ]
+}

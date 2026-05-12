@@ -1,0 +1,233 @@
+{
+  "id": "linalool",
+  "commonName": "Linalool",
+  "iupacName": "(3RS)-3,7-dimethylocta-1,6-dien-3-ol",
+  "formula": "C10H18O",
+  "molecularWeight": 154.25,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "liquid",
+    "gas",
+    "foliar_spray",
+    "fumigation"
+  ],
+  "color": "#6D28D9",
+  "category": "voc",
+  "subCategory": "monoterpene",
+  "boilingPoint": "198–199 °C at 1 atm",
+  "vaporPressure": "~0.16 mmHg at 25 °C",
+  "waterSolubility": "~1.6 g/L at 25 °C",
+  "odor": "Floral, lavender-like, slightly spicy",
+  "environmentalPersistence": "Low — oxidizes in air within hours to days; photodegradation rapid",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.01–0.1 µL/L air",
+      "description": "Mild defense priming, slight stomatal modulation, no visible morphological effects. Some evidence of insect repellence signaling at these concentrations.",
+      "simulationVector": {
+        "heightSuppress": 0.05,
+        "necrosis": 0,
+        "curl": 0.05,
+        "stomatalClose": 0.1,
+        "pigmentation": 0.2,
+        "chlorosis": 0.05,
+        "defenseProteins": 0.25,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": "1–10+ µL/L air",
+      "description": "Membrane disruption, oxidative stress, chlorosis, mild necrosis at prolonged high exposure, stomatal closure.",
+      "simulationVector": {
+        "heightSuppress": 0.5,
+        "necrosis": 0.3,
+        "curl": 0.4,
+        "stomatalClose": 0.55,
+        "pigmentation": 0.8,
+        "chlorosis": 0.45,
+        "defenseProteins": 0.6,
+        "wilting": 0.25
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.35,
+    "necrosis": 0.2,
+    "curl": 0.3,
+    "stomatalClose": 0.45,
+    "pigmentation": 0.65,
+    "chlorosis": 0.35,
+    "defenseProteins": 0.55,
+    "wilting": 0.15
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 155,
+      "label": "Linalool [M+H]+",
+      "base": 100,
+      "weekFactor": 0.65
+    },
+    {
+      "mz": 137,
+      "label": "Linalool fragment (-H2O)",
+      "base": 75,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 171,
+      "label": "Linalool oxide",
+      "base": 70,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 287,
+      "label": "Anthocyanin aglycone",
+      "base": 60,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 203,
+      "label": "Linalool-8-hydroxylase product",
+      "base": 45,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 449,
+      "label": "Cyanidin-3-glucoside",
+      "base": 50,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Mild to moderate — terpenoid membrane effects slow cell division",
+    "leafSize": "Mildly reduced at moderate-high doses",
+    "leafCurl": "Mild downward curl — less pronounced than MeJA or ethylene",
+    "wilting": "Mild — some membrane disruption affects turgor",
+    "chlorosis": "Moderate — chloroplast membrane sensitivity to terpenoids",
+    "necrosis": "Mild — only at prolonged high doses; primarily leaf margin browning",
+    "pigmentation": "Moderate anthocyanin induction — terpene-triggered defense response in Coleus",
+    "rootGrowth": "Mildly inhibited at high doses — linalool is allelopathic",
+    "newVsOldLeaves": "Young leaves slightly more sensitive; effects relatively uniform"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 20–35% at moderate-high doses",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Decreased — terpene-induced closure well documented",
+    "transpiration": "Reduced",
+    "waterUptake": "Mildly impaired",
+    "nutrientTransport": "Slightly disrupted",
+    "membranePermeability": "Increased — terpenoids are lipophilic and disrupt bilayer integrity"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — lipophilic membrane disruption generates ROS",
+    "antioxidantEnzymes": [
+      "SOD",
+      "POD",
+      "CAT"
+    ],
+    "lipidPeroxidation": "Moderate — membrane disruption is primary mechanism",
+    "anthocyaninInduction": "Moderate — terpene-triggered defense pathway",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "terpene synthases",
+      "PR-4",
+      "lipid transfer proteins"
+    ],
+    "metabolitesIncreasing": [
+      "linalool oxide",
+      "anthocyanins",
+      "flavonoids",
+      "terpene defense compounds"
+    ],
+    "metabolitesDecreasing": [
+      "chlorophyll a",
+      "chlorophyll b",
+      "membrane phospholipids"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — linalool has well-documented antimicrobial properties",
+    "pathogenSuppression": true,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Mixed — antimicrobial action affects both beneficial and pathogenic bacteria",
+    "fungalEffect": "Antifungal activity — reduces both pathogenic and mycorrhizal fungi",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Moderately disrupted via allelopathic root effects"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–96 hours",
+    "firstSymptoms": [
+      "mild stomatal closure",
+      "slight pigmentation increase"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "leaf margin browning",
+      "growth suppression"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks — linalool degrades quickly; good recovery expected",
+    "acclimation": true,
+    "sensitization": "Mild priming — prior linalool exposure upregulates terpene response pathways"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → slightly deeper purple-green (anthocyanin); mild yellowing at high doses; leaf margins brown at prolonged exposure",
+    "firstAffectedRegion": "Leaf surfaces (stomata), spreading to mesophyll",
+    "damageSpread": "Uniform across leaf surface, margins last",
+    "damagePattern": "Relatively uniform; slight margin accentuation",
+    "heatmapGlow": "Moderate purple glow — anthocyanin and linalool oxide metabolite signature",
+    "microbiomeParticles": "Moderately reduced, slower; slight clustering — antimicrobial effect visible",
+    "leafAppearance": [
+      "slightly_curled",
+      "purple_tinted",
+      "margin_browning_at_high_dose"
+    ],
+    "recoveryVisual": "Good — fades back toward green within 1–2 weeks; minimal scarring"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "meja",
+      "mesa"
+    ],
+    "synergyNote": "Linalool + MeJA or MeSA creates a strong terpene-jasmonate defense synergy — all three push pigmentation and defenseProteins axes simultaneously; observed in plant volatile blends under herbivore attack",
+    "antagonizesWith": [
+      "ethylene"
+    ],
+    "antagonismNote": "Linalool's mild defense priming can partially delay ethylene-driven senescence at low concentrations",
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "benzene"
+    ],
+    "protectsAgainst": [
+      "pathogen_attack",
+      "insect_herbivory"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Lavender, coriander, basil, many flowering plants; major component of over 200 plant species' volatile blends",
+    "classification": "Naturally occurring monoterpene / plant volatile",
+    "agriculturalUse": "Biopesticide research; natural insect repellent; flavor and fragrance industry",
+    "humanToxicity": "Low — GRAS (Generally Recognized As Safe) for food use; mild skin sensitizer at high concentrations",
+    "climateLink": "Terpene emissions from plants increase with temperature — linalool flux is a significant component of biogenic VOC emissions affecting atmospheric chemistry",
+    "indoorOutdoor": "Both — major component of lavender essential oil widely used indoors; significant outdoor emission from flowering plants",
+    "whyStudentsCare": "The smell of lavender is linalool — students can connect a chemical they encounter daily to real plant defense biology and atmospheric chemistry",
+    "realWorldIssue": "Biogenic VOC emissions, atmospheric ozone formation, natural pesticide development"
+  },
+  "sources": [
+    "Shao M, et al. (2001). Emission of monoterpenes and other volatile compounds from Citrus and Lavandula. Atmospheric Environment, 35(11), 1977–1993.",
+    "Sousa AC, et al. (2011). Linalool and linalool oxide from Lavandula luisieri: assessment of antimicrobial and antifungal effects. Natural Product Research, 25(12), 1181–1187.",
+    "Dudareva N, Negre F, Nagegowda DA, Orlova I (2006). Plant volatiles: recent advances and future perspectives. Critical Reviews in Plant Sciences, 25(5), 417–440."
+  ]
+}

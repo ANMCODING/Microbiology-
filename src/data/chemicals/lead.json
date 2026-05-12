@@ -1,0 +1,197 @@
+{
+  "id": "lead",
+  "commonName": "Lead (Pb)",
+  "iupacName": "lead(II) ion",
+  "formula": "Pb",
+  "molecularWeight": 207.2,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#44403C",
+  "category": "heavy_metal",
+  "subCategory": "post_transition_metal",
+  "boilingPoint": "1749 °C at 1 atm",
+  "vaporPressure": null,
+  "waterSolubility": "Low as Pb²⁺ carbonate; highly soluble as Pb(NO₃)₂ ~560 g/L",
+  "odor": null,
+  "environmentalPersistence": "Extremely high — does not degrade; persists indefinitely in soil",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "stems",
+    "leaves"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.7,
+    "necrosis": 0.6,
+    "curl": 0.2,
+    "stomatalClose": 0.45,
+    "pigmentation": 0.25,
+    "chlorosis": 0.7,
+    "defenseProteins": 0.4,
+    "wilting": 0.6
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 305,
+      "label": "Phytochelatin PC2",
+      "base": 85,
+      "weekFactor": 1
+    },
+    {
+      "mz": 272,
+      "label": "Metallothionein fragment",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 90,
+      "weekFactor": 0.95
+    },
+    {
+      "mz": 132,
+      "label": "Proline (osmotic stress)",
+      "base": 60,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 146,
+      "label": "δ-ALA (heme synthesis marker)",
+      "base": 75,
+      "weekFactor": 0.85
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strong — root architecture destroyed reduces nutrient/water supply to shoot",
+    "leafSize": "Significantly reduced",
+    "leafCurl": "Mild",
+    "wilting": "Strong — root damage severely impairs water uptake",
+    "chlorosis": "Strong — Pb inhibits δ-aminolevulinic acid dehydratase (ALAD), blocking heme/chlorophyll synthesis",
+    "necrosis": "Strong — root tip necrosis; dark spots on older leaves",
+    "pigmentation": "Mild anthocyanin increase",
+    "rootGrowth": "Severely inhibited — primary toxicity site; roots turn brown-black",
+    "newVsOldLeaves": "Older leaves show chlorosis/spotting first; young leaves stunted"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — ALAD inhibition blocks chlorophyll biosynthesis directly",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Reduced — guard cell dysfunction",
+    "transpiration": "Reduced",
+    "waterUptake": "Severely impaired — root structural damage",
+    "nutrientTransport": "Strongly disrupted — Pb competes with Ca²⁺ and K⁺",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "phytochelatins",
+      "metallothioneins",
+      "ALAD stress markers"
+    ],
+    "metabolitesIncreasing": [
+      "phytochelatins",
+      "δ-ALA",
+      "MDA",
+      "proline"
+    ],
+    "metabolitesDecreasing": [
+      "chlorophyll a",
+      "chlorophyll b",
+      "heme-containing enzymes",
+      "Ca-dependent enzymes"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed",
+    "fungalEffect": "Mycorrhizal associations disrupted",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "96–120 hours",
+    "firstSymptoms": [
+      "root browning",
+      "chlorosis on oldest leaves"
+    ],
+    "lateSymptoms": [
+      "dark leaf spotting",
+      "wilting",
+      "growth arrest",
+      "root necrosis"
+    ],
+    "reversible": false,
+    "recoveryTime": "None — Pb is not metabolized; permanent accumulation",
+    "acclimation": false,
+    "sensitization": "Accumulative"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow (chlorosis); dark brown-black spots; roots turn dark",
+    "firstAffectedRegion": "Root tips, then old leaves",
+    "damageSpread": "Upward from roots",
+    "damagePattern": "Patchy dark spots on chlorotic background",
+    "heatmapGlow": "Strong dark amber glow in roots and vascular tissue — phytochelatin and δ-ALA signature",
+    "microbiomeParticles": "Sparse; high pathogen fraction; resistome particles increase",
+    "leafAppearance": [
+      "spotted",
+      "yellowing",
+      "brittle"
+    ],
+    "recoveryVisual": "No recovery"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "cadmium",
+      "arsenic",
+      "mercury"
+    ],
+    "synergyNote": "Lead + cadmium is an especially common co-contamination in industrial soils — shared phytochelatin competition mechanism; combined exposure overwhelms detox capacity",
+    "antagonizesWith": [
+      "phosphorus",
+      "calcium"
+    ],
+    "antagonismNote": "Phosphate precipitates Pb²⁺ as insoluble lead phosphate, reducing bioavailability; Ca²⁺ competes at uptake sites",
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "arsenic",
+      "ozone"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Lead paint (pre-1978 buildings), leaded gasoline legacy contamination, industrial smelting, car batteries, contaminated soil near highways",
+    "classification": "Heavy metal pollutant",
+    "agriculturalUse": "None — legacy contaminant in urban soils and near roadsides",
+    "humanToxicity": "Extremely high — neurotoxin especially in children; no safe exposure level; causes IQ reduction, behavioral problems, organ damage",
+    "climateLink": "Increased flooding events mobilize lead from contaminated soils into agricultural areas",
+    "indoorOutdoor": "Both — lead paint dust indoors; soil contamination outdoors",
+    "whyStudentsCare": "Lead paint in older school buildings and homes — directly personal. The IQ/neurotoxicity angle is one of the most compelling environmental justice stories in science.",
+    "realWorldIssue": "Environmental justice, urban soil contamination, childhood neurotoxicity, Flint Michigan water crisis connection"
+  },
+  "sources": [
+    "Sharma P, Dubey RS (2005). Lead toxicity in plants. Brazilian Journal of Plant Physiology, 17(1), 35–52.",
+    "Clemens S (2006). Toxic metal accumulation, responses to exposure and mechanisms of tolerance in plants. Biochimie, 88(11), 1707–1719.",
+    "Pourrut B, et al. (2011). Lead uptake, toxicity, and detoxification in plants. Reviews of Environmental Contamination and Toxicology, 213, 113–136."
+  ]
+}

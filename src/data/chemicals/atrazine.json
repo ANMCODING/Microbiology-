@@ -1,0 +1,191 @@
+{
+  "id": "atrazine",
+  "commonName": "Atrazine",
+  "iupacName": "6-chloro-N-ethyl-N'-(propan-2-yl)-1,3,5-triazine-2,4-diamine",
+  "formula": "C8H14ClN5",
+  "molecularWeight": 215.68,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench",
+    "foliar_spray"
+  ],
+  "color": "#92400E",
+  "category": "pesticide",
+  "subCategory": "herbicide",
+  "boilingPoint": "Decomposes; melting point ~173 °C",
+  "vaporPressure": "~0.0000281 mmHg at 25 °C",
+  "waterSolubility": "~35 mg/L at 22 °C",
+  "odor": "Faint",
+  "environmentalPersistence": "High — soil half-life 60–100 days; persists in groundwater; one of the most detected pesticides in US water supplies",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "leaf_surface",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.65,
+    "necrosis": 0.55,
+    "curl": 0.35,
+    "stomatalClose": 0.45,
+    "pigmentation": 0.1,
+    "chlorosis": 0.85,
+    "defenseProteins": 0.15,
+    "wilting": 0.45
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 216,
+      "label": "Atrazine [M+H]+",
+      "base": 100,
+      "weekFactor": 0.45
+    },
+    {
+      "mz": 174,
+      "label": "Deethylatrazine (DEA)",
+      "base": 80,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 160,
+      "label": "Deisopropylatrazine (DIA)",
+      "base": 65,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 85,
+      "weekFactor": 1
+    },
+    {
+      "mz": 615,
+      "label": "Chlorophyllide a fragment",
+      "base": 90,
+      "weekFactor": 0.95
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strong — photosynthesis inhibition starves plant of energy for growth",
+    "leafSize": "Severely reduced",
+    "leafCurl": "Moderate",
+    "wilting": "Moderate-strong — energy deprivation from photosynthesis block",
+    "chlorosis": "Very strong — PSII inhibition causes bleaching; most prominent visual symptom. Characteristic interveinal chlorosis progressing to uniform bleaching.",
+    "necrosis": "Moderate-strong — chlorotic tissue dies as energy starvation progresses",
+    "pigmentation": "Minimal — photosynthetic energy needed for anthocyanin synthesis is cut off",
+    "rootGrowth": "Severely inhibited",
+    "newVsOldLeaves": "Chlorosis appears uniformly across all leaves; new growth most affected"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Very strong — direct PSII inhibition causes chlorophyll bleaching; 70–95% at effective doses",
+    "photosyntheticRate": "Near-zero at effective doses — atrazine's primary mechanism is photosystem II electron transport block",
+    "stomatalConductance": "Moderately reduced — secondary to photosynthesis block",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "nutrientTransport": "Disrupted as energy supply fails"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — blocked electron transport in PSII causes electron leakage and ROS generation",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong — particularly thylakoid membrane lipid peroxidation",
+    "anthocyaninInduction": "Minimal — insufficient photosynthetic energy",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "D1 protein stress markers",
+      "HSP70 (photo-oxidative stress)"
+    ],
+    "metabolitesIncreasing": [
+      "atrazine metabolites DEA/DIA",
+      "MDA",
+      "photo-oxidation products",
+      "chlorophyll degradation products"
+    ],
+    "metabolitesDecreasing": [
+      "chlorophyll a",
+      "chlorophyll b",
+      "ATP",
+      "NADPH",
+      "starch"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — atrazine is broadly antimicrobial",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed; atrazine-degrading Pseudomonas strains may persist",
+    "fungalEffect": "Mycorrhizal associations disrupted; some atrazine-degrading fungi increase",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–120 hours",
+    "firstSymptoms": [
+      "interveinal yellowing",
+      "growth slowing"
+    ],
+    "lateSymptoms": [
+      "uniform bleaching",
+      "necrosis",
+      "plant death"
+    ],
+    "reversible": false,
+    "recoveryTime": "None at effective doses; sub-lethal doses may allow slow recovery",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → interveinal yellow-green → uniform yellow → white bleaching → brown necrosis",
+    "firstAffectedRegion": "Interveinal mesophyll — PSII is located in mesophyll chloroplasts",
+    "damageSpread": "Uniform across leaf surface — PSII block is ubiquitous",
+    "damagePattern": "Progressive bleaching — from yellow to white to brown — is the most visually distinctive herbicide pattern in the simulator",
+    "heatmapGlow": "Strong bleached signal — chlorophyllide degradation products give distinctive signature; near-zero anthocyanin",
+    "microbiomeParticles": "Strongly reduced; elevated pathogen fraction; resistome elevated",
+    "leafAppearance": [
+      "bleaching",
+      "yellowing",
+      "brittle"
+    ],
+    "recoveryVisual": "None at effective doses"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "glyphosate"
+    ],
+    "synergyNote": "Glyphosate + atrazine combination addresses both amino acid synthesis and photosynthesis simultaneously — used in combination weed control programs",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "benzene",
+      "so2"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Agricultural runoff — most commonly detected pesticide in US groundwater and surface water; applied to ~70% of US corn acres annually",
+    "classification": "Photosystem II inhibiting herbicide / endocrine disruptor",
+    "agriculturalUse": "Pre-emergent and post-emergent weed control in corn, sorghum, sugarcane — ~80 million lbs/year applied in US alone",
+    "humanToxicity": "Moderate — banned in EU since 2004; endocrine disruption concerns; linked to Parkinson's disease in agricultural workers; frogs show sex reversal at extremely low concentrations",
+    "climateLink": "Atrazine in water bodies disrupts aquatic endocrine systems — climate-driven altered water cycles may concentrate atrazine in drought-reduced waterways",
+    "indoorOutdoor": "Outdoor — agricultural; detected in tap water in agricultural regions",
+    "whyStudentsCare": "Banned in Europe but legal and widely used in the US — a direct example of different risk standards across countries. The frog sex reversal story (Tyrone Hayes/UC Berkeley research) is one of the most compelling science-policy stories in modern environmental science.",
+    "realWorldIssue": "Groundwater contamination, EU vs US pesticide policy, endocrine disruption, frog population collapse"
+  },
+  "sources": [
+    "Graymore M, Stagnitti F, Allinson G (2001). Impacts of atrazine in aquatic ecosystems. Environment International, 26(7–8), 483–495.",
+    "Hayes TB, et al. (2010). Atrazine induces complete feminization and chemical castration in male African clawed frogs. PNAS, 107(10), 4612–4617.",
+    "Sass JB, Colangelo A (2006). European Union bans atrazine, while the United States negotiates continued use. International Journal of Occupational and Environmental Health, 12(3), 260–267."
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "so2",
+  "commonName": "Sulfur Dioxide",
+  "iupacName": "sulfur dioxide",
+  "formula": "SO2",
+  "molecularWeight": 64.07,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation"
+  ],
+  "color": "#D97706",
+  "category": "acid_rain",
+  "subCategory": "atmospheric_pollutant_gas",
+  "boilingPoint": "-10 °C at 1 atm",
+  "vaporPressure": "~2520 mmHg at 20 °C",
+  "waterSolubility": "~113 g/L at 20 °C (dissolves to form sulfurous acid H₂SO₃)",
+  "odor": "Pungent, suffocating, matchstick-like",
+  "environmentalPersistence": "Low to moderate — atmospheric half-life ~1–2 weeks via oxidation to SO₃/H₂SO₄",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": false,
+  "simulationVector": {
+    "heightSuppress": 0.5,
+    "necrosis": 0.6,
+    "curl": 0.55,
+    "stomatalClose": 0.75,
+    "pigmentation": 0.2,
+    "chlorosis": 0.65,
+    "defenseProteins": 0.35,
+    "wilting": 0.4
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 97,
+      "label": "Sulfate [SO4-H]-",
+      "base": 100,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 88,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 65,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 338,
+      "label": "S-sulfonated glutathione",
+      "base": 75,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 133,
+      "label": "Malate (pH buffering)",
+      "base": 50,
+      "weekFactor": 0.75
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate",
+    "leafSize": "Reduced",
+    "leafCurl": "Moderate to strong — SO₂ entry via stomata causes immediate mesophyll damage and structural collapse",
+    "wilting": "Moderate",
+    "chlorosis": "Strong — SO₂ dissolves to sulfurous acid in mesophyll; H⁺ bleaches chlorophyll",
+    "necrosis": "Moderate-strong — interveinal necrosis characteristic; bleached interveinal zones progressing to brown",
+    "pigmentation": "Mild",
+    "rootGrowth": "Minimally affected — primarily a foliar gas",
+    "newVsOldLeaves": "Older mature leaves most sensitive; very young leaves partially protected by closed stomata"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — acid dissolution of mesophyll and direct chlorophyll bleaching",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Strongly reduced — SO₂ is one of the strongest abiotic stomatal closure inducers known",
+    "transpiration": "Strongly reduced",
+    "waterUptake": "Indirectly impaired",
+    "nutrientTransport": "Moderately disrupted",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — sulfite radical (SO₃•⁻) is highly reactive; direct DNA and protein damage",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "sulfite oxidase (SO₂ detoxification)",
+      "APX",
+      "GST"
+    ],
+    "metabolitesIncreasing": [
+      "sulfate",
+      "sulfite",
+      "S-sulfonated glutathione",
+      "MDA"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b",
+      "RUBISCO activity"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — primarily foliar effects; some rhizosphere impact via acid leachate",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed",
+    "fungalEffect": "Disrupted — sulfur-oxidizing bacteria may increase",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly to moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "6–24 hours",
+    "firstSymptoms": [
+      "stomatal closure",
+      "interveinal chlorosis/bleaching"
+    ],
+    "lateSymptoms": [
+      "interveinal necrosis",
+      "widespread chlorosis",
+      "growth suppression"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor for necrotic tissue; stomatal function can partially recover if exposure stops",
+    "acclimation": "Partial — sulfite oxidase activity can increase with sub-lethal exposure",
+    "sensitization": "Mild sensitization"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → pale interveinal bleaching → brown interveinal necrosis; veins remain green longer",
+    "firstAffectedRegion": "Interveinal mesophyll of older leaves",
+    "damageSpread": "Interveinal zones first, veins last — distinctive acid rain visual signature",
+    "damagePattern": "Interveinal necrosis/bleaching with green veins — most diagnostically distinctive pattern of the acid rain group",
+    "heatmapGlow": "Moderate — S-sulfonated glutathione and sulfate signature",
+    "microbiomeParticles": "Moderately reduced",
+    "leafAppearance": [
+      "interveinal_bleaching",
+      "curled",
+      "brittle"
+    ],
+    "recoveryVisual": "Interveinal zones remain scarred; vein-delimited recovery if exposure stops"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "no2",
+      "sulfuric_acid",
+      "nitric_acid",
+      "ozone"
+    ],
+    "synergyNote": "SO₂ + NO₂ is the core acid rain precursor pair — together they produce both H₂SO₄ and HNO₃ atmospheric deposition. SO₂ + ozone is especially damaging: ozone opens stomata while SO₂ enters through them.",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "formaldehyde",
+      "cadmium"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Coal combustion, oil refining, smelting of sulfide ores, volcanic eruptions — largest anthropogenic source is coal power plants",
+    "classification": "Atmospheric pollutant / acid rain precursor",
+    "agriculturalUse": "Used as preservative in dried fruits and wine (E220); also soil fumigant historically",
+    "humanToxicity": "High — severe respiratory irritant; triggers asthma attacks; WHO standard: 20 µg/m³ 24-hour mean",
+    "climateLink": "SO₂ emissions create sulfate aerosols that actually cool climate (masking warming from CO₂) — the 'sulfate aerosol masking' problem means reducing coal burning could temporarily accelerate warming",
+    "indoorOutdoor": "Primarily outdoor; indoor near volcanic areas",
+    "whyStudentsCare": "The sulfate aerosol paradox — cleaning up SO₂ pollution actually makes climate change temporarily worse. One of the most counterintuitive climate science facts.",
+    "realWorldIssue": "Acid rain, respiratory health, sulfate aerosol climate masking, coal power"
+  },
+  "sources": [
+    "Wellburn AR (1990). Why are atmospheric oxides of nitrogen usually phytotoxic and not alternative fertilizers? New Phytologist, 115(3), 395–429.",
+    "Darrall NM (1989). The effect of air pollutants on physiological processes in plants. Plant, Cell & Environment, 12(1), 1–30.",
+    "Rao MV, De Kok LJ (1994). Interactive effects of high CO₂ and SO₂ on growth and antioxidant levels in wheat plants. Phytochemistry, 35(6), 1449–1456."
+  ]
+}

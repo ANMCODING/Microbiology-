@@ -1,0 +1,219 @@
+{
+  "id": "phosphorus",
+  "commonName": "Phosphorus (Fertilizer)",
+  "iupacName": "dihydrogen phosphate / phosphate ion",
+  "formula": "H2PO4-",
+  "molecularWeight": 97.99,
+  "phase": "solid",
+  "deliveryMethods": [
+    "soil",
+    "root_drench"
+  ],
+  "color": "#15803D",
+  "category": "fertilizer",
+  "subCategory": "macronutrient",
+  "boilingPoint": null,
+  "vaporPressure": null,
+  "waterSolubility": "Highly variable by form; soluble phosphate salts ~500 g/L",
+  "odor": null,
+  "environmentalPersistence": "High — phosphate binds tightly to soil particles (especially clay and Fe/Al oxides); does not leach easily but persists long-term",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "roots",
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "10–50 mg P/kg soil",
+      "description": "Optimal — enhanced root development, improved energy metabolism (ATP), accelerated flowering, increased seed set, deeper root branching. Plants appear darker green with well-developed root systems.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0.05,
+        "chlorosis": 0,
+        "defenseProteins": 0.05,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">200 mg P/kg soil",
+      "description": "Phosphorus toxicity — induces zinc and iron deficiency through antagonism, causes leaf chlorosis, tip burn, and reduced root branching. Paradoxically makes plants look nutrient-deficient despite high nutrient application.",
+      "simulationVector": {
+        "heightSuppress": 0.3,
+        "necrosis": 0.35,
+        "curl": 0.2,
+        "stomatalClose": 0.15,
+        "pigmentation": 0.25,
+        "chlorosis": 0.5,
+        "defenseProteins": 0.15,
+        "wilting": 0.2
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.3,
+    "necrosis": 0.35,
+    "curl": 0.2,
+    "stomatalClose": 0.15,
+    "pigmentation": 0.25,
+    "chlorosis": 0.5,
+    "defenseProteins": 0.15,
+    "wilting": 0.2
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 97,
+      "label": "Phosphate [H2PO4]-",
+      "base": 100,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 348,
+      "label": "ATP fragment (adenosine-P)",
+      "base": 85,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 507,
+      "label": "Phytic acid (P storage)",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (high-dose toxicity)",
+      "base": 35,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 152,
+      "label": "Zinc deficiency marker",
+      "base": 50,
+      "weekFactor": 0.95
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Negative at low dose (promotes height); moderate at high dose via Zn/Fe antagonism",
+    "leafSize": "Increased at low dose; mottled and reduced at high dose",
+    "leafCurl": "Mild at high dose",
+    "wilting": "Mild at high dose",
+    "chlorosis": "Absent at low dose; prominent at high dose — Fe/Zn deficiency-induced interveinal chlorosis",
+    "necrosis": "Leaf tip burn at high dose",
+    "pigmentation": "Mild purple tinting at deficiency (P deficiency also causes anthocyanin) — paradoxically, both excess and deficiency can cause this",
+    "rootGrowth": "Strongly stimulated at low dose (primary P effect); reduced branching at very high dose",
+    "newVsOldLeaves": "Interveinal chlorosis at high dose appears on young leaves first (Fe/Zn deficiency pattern)"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Absent at low dose; moderate at high dose (Fe/Zn antagonism)",
+    "photosyntheticRate": "Increased at low dose; reduced at high dose",
+    "stomatalConductance": "Increased at low dose; mildly reduced at high dose",
+    "transpiration": "Increased at low dose",
+    "waterUptake": "Enhanced at low dose via root development; mildly impaired at high dose",
+    "nutrientTransport": "Enhanced at low dose; Zn and Fe transport disrupted at high dose"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "Only at high dose via Fe/Zn deficiency-induced ROS",
+    "antioxidantEnzymes": [
+      "APX",
+      "SOD"
+    ],
+    "lipidPeroxidation": "Mild at high dose",
+    "anthocyaninInduction": "Mild — both P deficiency and P excess can induce mild anthocyanin",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "purple acid phosphatases (P sensing)",
+      "phosphate transporters"
+    ],
+    "metabolitesIncreasing": [
+      "ATP",
+      "phytic acid",
+      "phospholipids (low dose)",
+      "phosphate"
+    ],
+    "metabolitesDecreasing": [
+      "zinc-dependent enzymes (high dose)",
+      "iron-containing proteins (high dose)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild at high dose — P excess reduces mycorrhizal dependence",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Phosphate-solubilizing bacteria may decrease (less needed); mycorrhizal associations suppressed at high P",
+    "fungalEffect": "Mycorrhizal colonization strongly reduced at high P — plant no longer invests in symbiosis when P is abundant",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Near-normal at optimal; mildly disrupted at high dose"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–120 hours for low-dose benefits; 96–168 hours for high-dose toxicity",
+    "firstSymptoms": [
+      "improved root appearance at low dose",
+      "interveinal chlorosis at high dose"
+    ],
+    "lateSymptoms": [
+      "tip burn",
+      "Zn-deficiency mottling",
+      "reduced root branching at high dose"
+    ],
+    "reversible": true,
+    "recoveryTime": "2–4 weeks — phosphate binds to soil; recovery slower than nitrate",
+    "acclimation": false,
+    "sensitization": "No sensitization"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: darker green, larger leaves. High dose: interveinal chlorosis (young leaves), tip burn",
+    "firstAffectedRegion": "Roots (benefit) at low dose; young leaf interveinal zones at high dose",
+    "damageSpread": "Interveinal spread on young leaves at high dose",
+    "damagePattern": "Young-leaf interveinal chlorosis at high dose — distinguishes P toxicity from N toxicity (which shows tip burn on OLD leaves)",
+    "heatmapGlow": "Strong green-blue glow at low dose (ATP/phytic acid); amber at high dose (Zn-deficiency markers)",
+    "microbiomeParticles": "Mycorrhizal particle fraction decreases at high P — visually distinctive",
+    "leafAppearance": [
+      "dark_green_at_low_dose",
+      "interveinal_chlorosis_at_high_dose",
+      "tip_burn_at_high_dose"
+    ],
+    "recoveryVisual": "Moderate — new growth healthy; tip burn scars remain"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "nitrogen",
+      "potassium"
+    ],
+    "synergyNote": "NPK synergy — P is the energy and root specialist; optimal N:P:K ratio produces maximum growth. P also reduces Cd and As bioavailability (protective antagonism against heavy metals).",
+    "antagonizesWith": [
+      "cadmium",
+      "arsenic",
+      "zinc"
+    ],
+    "antagonismNote": "P reduces Cd and As uptake at the phosphate transporter — high P in soil is actually protective against heavy metal contamination. Excess P also competes with Zn and Fe.",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": [
+      "cadmium",
+      "arsenic"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Phosphate rock mining (primarily Morocco, China), superphosphate fertilizers, manure, bone meal",
+    "classification": "Essential macronutrient / fertilizer",
+    "agriculturalUse": "Second most used fertilizer globally after nitrogen; critical for root development and energy transfer (ATP)",
+    "humanToxicity": "Low — phosphate is essential for human biology; excess dietary phosphate linked to cardiovascular disease in kidney patients",
+    "climateLink": "Phosphate rock is a finite, non-renewable resource — peak phosphorus is a genuine food security concern analogous to peak oil",
+    "indoorOutdoor": "Outdoor — agricultural/horticultural use",
+    "whyStudentsCare": "Peak phosphorus is one of the least-known but most serious resource sustainability issues — and phosphate from fertilizers is a primary cause of algal blooms and dead zones in oceans.",
+    "realWorldIssue": "Eutrophication, algal blooms, Gulf of Mexico dead zone, phosphate resource depletion"
+  },
+  "sources": [
+    "Vance CP, Uhde-Stone C, Allan DL (2003). Phosphorus acquisition and use: critical adaptations by plants for securing a nonrenewable resource. New Phytologist, 157(3), 423–447.",
+    "Hawkesford M, et al. (2012). Functions of macronutrients. In: Marschner's Mineral Nutrition of Higher Plants, 3rd ed., Academic Press, 135–189.",
+    "Cordell D, Drangert JO, White S (2009). The story of phosphorus: Global food security and food for thought. Global Environmental Change, 19(2), 292–305."
+  ]
+}

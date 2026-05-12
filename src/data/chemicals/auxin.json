@@ -1,0 +1,222 @@
+{
+  "id": "auxin",
+  "commonName": "Auxin (IAA)",
+  "iupacName": "1H-indole-3-acetic acid",
+  "formula": "C10H9NO2",
+  "molecularWeight": 175.18,
+  "phase": "solid",
+  "deliveryMethods": [
+    "liquid",
+    "foliar_spray",
+    "root_drench"
+  ],
+  "color": "#059669",
+  "category": "plant_hormone",
+  "subCategory": "growth_regulator",
+  "boilingPoint": "Decomposes before boiling; ~134 °C melting point",
+  "vaporPressure": null,
+  "waterSolubility": "~1.5 g/L at 25 °C",
+  "odor": null,
+  "environmentalPersistence": "Low — rapidly degraded by light (photolysis) and soil microbes; half-life hours to days",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "roots",
+    "leaf_surface",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "stems",
+    "roots",
+    "leaves"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.01–1 µM",
+      "description": "Promotes cell elongation in stems, stimulates lateral root initiation, enhances apical dominance. Positive growth effects — taller stems, more developed root system, healthy leaf expansion.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0,
+        "pigmentation": 0.05,
+        "chlorosis": 0,
+        "defenseProteins": 0.1,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": "100–1000+ µM",
+      "description": "Epinasty, ethylene induction, growth inhibition, root necrosis at extreme doses, leaf abscission, oxidative stress.",
+      "simulationVector": {
+        "heightSuppress": 0.65,
+        "necrosis": 0.45,
+        "curl": 0.6,
+        "stomatalClose": 0.35,
+        "pigmentation": 0.3,
+        "chlorosis": 0.5,
+        "defenseProteins": 0.3,
+        "wilting": 0.5
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.65,
+    "necrosis": 0.45,
+    "curl": 0.6,
+    "stomatalClose": 0.35,
+    "pigmentation": 0.3,
+    "chlorosis": 0.5,
+    "defenseProteins": 0.3,
+    "wilting": 0.5
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 176,
+      "label": "IAA [M+H]+",
+      "base": 100,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 130,
+      "label": "IAA fragment (indole)",
+      "base": 70,
+      "weekFactor": 0.5
+    },
+    {
+      "mz": 194,
+      "label": "IAAsp conjugate",
+      "base": 60,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 209,
+      "label": "IAA-glucose ester",
+      "base": 50,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 261,
+      "label": "Oxindole-3-acetic acid",
+      "base": 45,
+      "weekFactor": 0.9
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Biphasic — low dose promotes elongation; high dose strongly suppresses via ethylene induction",
+    "leafSize": "Increased at low dose; reduced at high dose",
+    "leafCurl": "Strong downward epinasty at high doses — mediated through ethylene induction",
+    "wilting": "Moderate at high doses — ethylene-driven turgor loss",
+    "chlorosis": "Moderate at high doses — ethylene-mediated chlorophyll degradation",
+    "necrosis": "Moderate at high doses — root tip necrosis most prominent",
+    "pigmentation": "Mild anthocyanin increase under stress doses",
+    "rootGrowth": "Strongly stimulated at low dose (lateral root initiation); inhibited at high dose",
+    "stemThickness": "Increased at low dose; reduced at high dose",
+    "branching": "Inhibited at low dose (apical dominance); released at high dose as apical tissue damaged",
+    "newVsOldLeaves": "Apical young leaves most sensitive to epinasty; old leaves show chlorosis first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate at high doses — secondary to ethylene induction",
+    "photosyntheticRate": "Maintained at low dose; reduced at high dose",
+    "stomatalConductance": "Mildly increased at low dose; reduced at high dose",
+    "transpiration": "Follows stomatal pattern",
+    "waterUptake": "Enhanced at low dose; impaired at high dose",
+    "nutrientTransport": "Enhanced at low dose via improved vascular development; disrupted at high dose",
+    "membranePermeability": "Increased at high doses"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Mild at low dose; moderate at high dose — partly via induced ethylene",
+    "antioxidantEnzymes": [
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Mild to moderate at high doses",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "auxin-responsive GH3 proteins",
+      "AXR proteins"
+    ],
+    "metabolitesIncreasing": [
+      "IAAsp conjugates",
+      "oxindole-3-acetic acid",
+      "ethylene (at high dose)"
+    ],
+    "metabolitesDecreasing": [
+      "cytokinins (apical dominance)",
+      "gibberellins (at high dose)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild — auxin alters root exudate composition",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Mixed — some PGPR produce IAA themselves; exogenous IAA can suppress or stimulate depending on strain",
+    "fungalEffect": "Mycorrhizal associations generally maintained",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly altered"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–48 hours at high dose",
+    "firstSymptoms": [
+      "epinasty",
+      "stem elongation at low dose"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "root necrosis",
+      "growth arrest"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks — IAA degrades quickly; recovery faster than most chemicals",
+    "acclimation": true,
+    "sensitization": "Auxin signaling involves receptor degradation; repeated high-dose exposure can desensitize"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: deeper green, taller plants. High dose: yellowing, curled epinastic leaves",
+    "firstAffectedRegion": "Apical meristem and young leaves (epinasty); roots (inhibition)",
+    "damageSpread": "Downward from apex at high dose",
+    "damagePattern": "Uniform epinasty; patchy chlorosis",
+    "heatmapGlow": "Moderate — IAA conjugate and oxindole metabolite signature; strongest in stem tissue",
+    "microbiomeParticles": "Near-normal at low dose; mildly disrupted at high dose",
+    "leafAppearance": [
+      "curled",
+      "yellowing_at_high_dose",
+      "elongated_at_low_dose"
+    ],
+    "recoveryVisual": "Good recovery — re-greening and straightening within 1–2 weeks of removal"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "gibberellin"
+    ],
+    "synergyNote": "Auxin + GA3 produces the strongest elongation response — synergistic on heightSuppress axis in reverse (growth promotion); combined high dose accelerates ethylene induction",
+    "antagonizesWith": [
+      "cytokinin",
+      "ethylene"
+    ],
+    "antagonismNote": "Cytokinins antagonize apical dominance maintained by auxin. Ethylene reduces auxin sensitivity in roots.",
+    "amplifiesOxidativeStressOf": [
+      "cadmium",
+      "lead"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Endogenous plant hormone — present in all vascular plants; synthetic analogs (2,4-D) used as herbicides",
+    "classification": "Plant hormone / growth regulator",
+    "agriculturalUse": "Rooting powders for cuttings, fruit thinning, synthetic analog 2,4-D as selective herbicide",
+    "humanToxicity": "IAA itself — low toxicity. Synthetic auxin herbicides (2,4-D) — moderate concern; possible carcinogen",
+    "climateLink": "Auxin distribution altered by temperature changes — relevant to understanding growth responses under warming",
+    "indoorOutdoor": "Both — used in home horticulture rooting powders",
+    "whyStudentsCare": "Why plants grow toward light (phototropism) — auxin is the molecule behind it. One of the most fundamental concepts in plant biology.",
+    "realWorldIssue": "Herbicide development, crop yield optimization, understanding tropisms"
+  },
+  "sources": [
+    "Woodward AW, Bartel B (2005). Auxin: regulation, action, and interaction. Annals of Botany, 95(5), 707–735.",
+    "Overvoorde P, Fukaki H, Beeckman T (2010). Auxin control of root development. Cold Spring Harbor Perspectives in Biology, 2(6), a001537.",
+    "Ljung K (2013). Auxin metabolism and homeostasis during plant development. Development, 140(5), 943–950."
+  ]
+}

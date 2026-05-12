@@ -1,0 +1,190 @@
+{
+  "id": "xylene",
+  "commonName": "Xylene",
+  "iupacName": "1,2-dimethylbenzene (o-xylene); mixture of ortho, meta, para isomers",
+  "formula": "C8H10",
+  "molecularWeight": 106.17,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "gas",
+    "fumigation",
+    "liquid"
+  ],
+  "color": "#CA8A04",
+  "category": "voc",
+  "subCategory": "pollutant_voc",
+  "boilingPoint": "138–144 °C at 1 atm (isomer-dependent)",
+  "vaporPressure": "~8–10 mmHg at 20 °C",
+  "waterSolubility": "~180 mg/L at 25 °C",
+  "odor": "Sweet, aromatic, solvent-like",
+  "environmentalPersistence": "Moderate — atmospheric half-life ~1–2 days; soil persistence moderate",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.45,
+    "necrosis": 0.4,
+    "curl": 0.35,
+    "stomatalClose": 0.5,
+    "pigmentation": 0.2,
+    "chlorosis": 0.5,
+    "defenseProteins": 0.25,
+    "wilting": 0.35
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 107,
+      "label": "Xylene [M+H]+",
+      "base": 100,
+      "weekFactor": 0.4
+    },
+    {
+      "mz": 123,
+      "label": "Methylbenzyl alcohol",
+      "base": 75,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 139,
+      "label": "Toluic acid (xylene metabolite)",
+      "base": 70,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 80,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 50,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — slightly less than toluene due to lower volatility and bioavailability",
+    "leafSize": "Reduced at moderate-high doses",
+    "leafCurl": "Mild to moderate",
+    "wilting": "Mild to moderate",
+    "chlorosis": "Moderate — chloroplast membrane disruption similar to benzene/toluene but less acute",
+    "necrosis": "Moderate — margin necrosis; less severe than benzene",
+    "pigmentation": "Mild",
+    "rootGrowth": "Mildly inhibited",
+    "newVsOldLeaves": "Older leaves show symptoms first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate — 30–50%",
+    "photosyntheticRate": "Moderately reduced",
+    "stomatalConductance": "Moderately reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Mildly impaired",
+    "membranePermeability": "Increased"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "cytochrome P450 detox enzymes",
+      "glutathione S-transferase"
+    ],
+    "metabolitesIncreasing": [
+      "toluic acid",
+      "methylbenzyl alcohol",
+      "MDA",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Moderately suppressed",
+    "fungalEffect": "Moderately disrupted",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Moderately destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "48–72 hours",
+    "firstSymptoms": [
+      "mild stomatal closure",
+      "early chlorosis"
+    ],
+    "lateSymptoms": [
+      "margin necrosis",
+      "wilting",
+      "growth arrest"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor",
+    "acclimation": false,
+    "sensitization": "Cumulative"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow-green → brown margins; nearly identical to toluene visually",
+    "firstAffectedRegion": "Leaf margins and older leaves",
+    "damageSpread": "Inward from margins",
+    "damagePattern": "Marginal necrosis with chlorotic background",
+    "heatmapGlow": "Moderate orange — toluic acid and MDA signature",
+    "microbiomeParticles": "Moderately reduced; elevated pathogen fraction",
+    "leafAppearance": [
+      "yellowing",
+      "margin_necrosis",
+      "brittle"
+    ],
+    "recoveryVisual": "Minimal"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "benzene",
+      "toluene",
+      "formaldehyde"
+    ],
+    "synergyNote": "Part of the BTEX indoor VOC cluster — xylene contributes to the combined GSH depletion load; slightly less reactive than benzene/toluene individually",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Paints, varnishes, adhesives, gasoline, printing inks — common in art classrooms and workshops",
+    "classification": "Aromatic hydrocarbon pollutant",
+    "agriculturalUse": "None",
+    "humanToxicity": "Moderate-high — CNS depressant; irritant; reproductive concerns at chronic exposure",
+    "climateLink": "Component of urban VOC emissions contributing to tropospheric ozone formation",
+    "indoorOutdoor": "Both — art supplies indoors; traffic outdoors",
+    "whyStudentsCare": "In art supplies and markers used in school — highly relevant to classroom air quality discussion",
+    "realWorldIssue": "Art room air quality, urban smog, VOC regulation"
+  },
+  "sources": [
+    "Heiden AC, et al. (1999). Emission of volatile organic compounds from ozone-exposed plants. Ecological Applications, 9(4), 1160–1167.",
+    "EPA (2012). Xylenes: Integrated Risk Information System (IRIS). US Environmental Protection Agency.",
+    "Ugrekhelidze D, et al. (1997). Uptake and detoxification of o-xylene by Pelargonium hortorum plants. Plant Science, 123, 163–169."
+  ]
+}

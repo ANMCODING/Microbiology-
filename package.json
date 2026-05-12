@@ -1,0 +1,21 @@
+{
+  "name": "bio-sim-matrix",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "verify-data": "node scripts/verify-data.mjs"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.169.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

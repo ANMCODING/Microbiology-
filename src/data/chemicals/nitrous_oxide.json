@@ -1,0 +1,206 @@
+{
+  "id": "nitrous_oxide",
+  "commonName": "Nitrous Oxide",
+  "iupacName": "dinitrogen monoxide",
+  "formula": "N2O",
+  "molecularWeight": 44.01,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation"
+  ],
+  "color": "#A3E635",
+  "category": "greenhouse_gas",
+  "subCategory": "atmospheric_gas",
+  "boilingPoint": "-88.5 °C at 1 atm",
+  "vaporPressure": "~39,700 mmHg at 20 °C",
+  "waterSolubility": "~1.5 g/L at 20 °C",
+  "odor": "Slightly sweet",
+  "environmentalPersistence": "High — atmospheric half-life ~114 years; 265× more potent as GHG than CO₂ over 100 years; depletes stratospheric ozone",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata",
+    "roots"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "roots"
+  ],
+  "systemicMovement": false,
+  "doseResponse": {
+    "lowDose": {
+      "range": "Atmospheric background ~330 ppb; experimental up to 100 ppm",
+      "description": "At near-atmospheric levels, N₂O has no direct plant effects. At mildly elevated concentrations, some studies report mild stimulation of nitrification in rhizosphere. No visible morphological effects.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0.05,
+        "pigmentation": 0,
+        "chlorosis": 0.05,
+        "defenseProteins": 0.05,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">10,000 ppm (experimental fumigation)",
+      "description": "Nitrous oxide at very high concentrations causes mild oxidative stress, can reduce oxygen availability in soil (displacement), and disrupts nitrification/denitrification balance in rhizosphere.",
+      "simulationVector": {
+        "heightSuppress": 0.2,
+        "necrosis": 0.15,
+        "curl": 0.1,
+        "stomatalClose": 0.25,
+        "pigmentation": 0.1,
+        "chlorosis": 0.25,
+        "defenseProteins": 0.15,
+        "wilting": 0.15
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.2,
+    "necrosis": 0.15,
+    "curl": 0.1,
+    "stomatalClose": 0.25,
+    "pigmentation": 0.1,
+    "chlorosis": 0.25,
+    "defenseProteins": 0.15,
+    "wilting": 0.15
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 44,
+      "label": "N2O [M]+",
+      "base": 100,
+      "weekFactor": 0.3
+    },
+    {
+      "mz": 62,
+      "label": "Nitrate [NO3]- (N2O oxidation product)",
+      "base": 65,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 179,
+      "label": "MDA (mild oxidative stress)",
+      "base": 40,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 132,
+      "label": "Proline (mild stress)",
+      "base": 35,
+      "weekFactor": 0.65
+    },
+    {
+      "mz": 146,
+      "label": "Nitrosylated peptide fragment",
+      "base": 30,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Mild — only at very high experimental concentrations",
+    "leafSize": "Near-normal",
+    "leafCurl": "Minimal",
+    "wilting": "Mild at high dose",
+    "chlorosis": "Mild at high dose — indirect via soil N cycle disruption",
+    "necrosis": "Minimal",
+    "pigmentation": "Minimal",
+    "rootGrowth": "Mildly affected at high dose via altered soil microbial N cycling",
+    "newVsOldLeaves": "Effects minimal; old leaves may show mild chlorosis from N cycle disruption"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Minimal to mild",
+    "photosyntheticRate": "Near-normal",
+    "stomatalConductance": "Mildly reduced at high dose",
+    "transpiration": "Near-normal",
+    "waterUptake": "Near-normal",
+    "nutrientTransport": "Mildly disrupted via soil N cycling effects"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "Minimal",
+    "antioxidantEnzymes": [
+      "SOD"
+    ],
+    "lipidPeroxidation": "Minimal",
+    "anthocyaninInduction": "Minimal",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "minimal direct induction"
+    ],
+    "metabolitesIncreasing": [
+      "nitrate (via N₂O oxidation)",
+      "mild proline"
+    ],
+    "metabolitesDecreasing": [
+      "minimal"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Moderate — N₂O disrupts the nitrification/denitrification cycle which is central to soil microbiome function",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Nitrifying and denitrifying bacteria disrupted — these are some of the most important soil microbes for plant nutrition",
+    "fungalEffect": "Near-normal",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Moderately destabilized via N cycle disruption even at near-atmospheric concentrations"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "Very slow — 1–2 weeks for indirect effects via soil N cycle",
+    "firstSymptoms": [
+      "subtle chlorosis from N cycle disruption"
+    ],
+    "lateSymptoms": [
+      "mild growth reduction",
+      "N deficiency-like chlorosis"
+    ],
+    "reversible": true,
+    "recoveryTime": "2–4 weeks",
+    "acclimation": false,
+    "sensitization": "None"
+  },
+  "visualSimulation": {
+    "colorChanges": "Near-normal — most subtle visual effect in entire simulator; slight chlorosis only",
+    "firstAffectedRegion": "Old leaves (N deficiency-like chlorosis)",
+    "damageSpread": "Minimal",
+    "damagePattern": "Near-normal — N₂O is one of the least visually impactful chemicals; educational value is in atmospheric chemistry and climate, not plant symptoms",
+    "heatmapGlow": "Very low — near-zero glow; useful contrast to show how different GHGs have very different plant impacts",
+    "microbiomeParticles": "N cycle disruption visible — nitrifier particle cluster disrupted",
+    "leafAppearance": [
+      "near_normal",
+      "very_mild_chlorosis"
+    ],
+    "recoveryVisual": "Complete recovery"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "co2",
+      "methane"
+    ],
+    "synergyNote": "The three major greenhouse gases — CO₂, CH₄, N₂O — together constitute the anthropogenic greenhouse forcing. In the simulator, their co-application illustrates why agriculture (fertilizer N₂O + livestock CH₄) is a major climate driver.",
+    "antagonizesWith": [
+      "ozone"
+    ],
+    "antagonismNote": "N₂O depletes stratospheric ozone through catalytic reactions — indirect atmospheric interaction rather than direct plant interaction",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Agricultural fertilizer application (primary anthropogenic source), livestock manure, wastewater treatment, combustion",
+    "classification": "Greenhouse gas / anesthetic (laughing gas)",
+    "agriculturalUse": "Produced as byproduct of fertilizer N₂O emissions — not intentionally applied",
+    "humanToxicity": "Low at atmospheric levels; used medically as anesthetic (laughing gas); depletes vitamin B12 with repeated exposure",
+    "climateLink": "Third most important anthropogenic greenhouse gas; 265× CO₂ potency; agricultural N₂O from fertilizers is the primary reason why agriculture is difficult to decarbonize",
+    "indoorOutdoor": "Primarily outdoor/atmospheric; medical/dental use indoors",
+    "whyStudentsCare": "Laughing gas at the dentist is the same molecule that's a greenhouse gas from fertilizer. The connection between food production and climate change through N₂O is one of the least-known but most important emissions pathways.",
+    "realWorldIssue": "Agricultural greenhouse gas emissions, fertilizer-climate link, stratospheric ozone depletion, decarbonizing food production"
+  },
+  "sources": [
+    "Ravishankara AR, Daniel JS, Portmann RW (2009). Nitrous oxide (N₂O): the dominant ozone-depleting substance emitted in the 21st century. Science, 326(5949), 123–125.",
+    "Butterbach-Bahl K, et al. (2013). Nitrous oxide emissions from soils. Philosophical Transactions of the Royal Society B, 368(1621), 20130122.",
+    "Smith P, et al. (2008). Greenhouse gas mitigation in agriculture. Philosophical Transactions of the Royal Society B, 363(1492), 789–813."
+  ]
+}

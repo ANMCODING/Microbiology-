@@ -1,0 +1,227 @@
+{
+  "id": "abscisic_acid",
+  "commonName": "Abscisic Acid (ABA)",
+  "iupacName": "(2Z,4E)-5-[(1S)-1-hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl]-3-methylpenta-2,4-dienoic acid",
+  "formula": "C15H20O4",
+  "molecularWeight": 264.32,
+  "phase": "solid",
+  "deliveryMethods": [
+    "liquid",
+    "foliar_spray",
+    "root_drench"
+  ],
+  "color": "#78350F",
+  "category": "plant_hormone",
+  "subCategory": "stress_hormone",
+  "boilingPoint": "Decomposes; melting point ~160 °C",
+  "vaporPressure": null,
+  "waterSolubility": "~3 g/L at 20 °C",
+  "odor": null,
+  "environmentalPersistence": "Low — rapidly degraded by light and soil microbes; half-life hours to days",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "leaf_surface",
+    "roots",
+    "vascular"
+  ],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": [
+    "leaves",
+    "stems",
+    "roots"
+  ],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.1–5 µM",
+      "description": "Adaptive stress response — stomatal closure conserves water, seed dormancy maintained, appropriate senescence induction. Protective under drought. Mild defense priming.",
+      "simulationVector": {
+        "heightSuppress": 0.1,
+        "necrosis": 0,
+        "curl": 0.05,
+        "stomatalClose": 0.6,
+        "pigmentation": 0.15,
+        "chlorosis": 0.1,
+        "defenseProteins": 0.3,
+        "wilting": 0.05
+      }
+    },
+    "highDose": {
+      "range": ">50 µM",
+      "description": "Forced premature senescence, strong stomatal closure blocking photosynthesis, accelerated chlorophyll degradation, leaf abscission, growth arrest, enhanced ethylene production.",
+      "simulationVector": {
+        "heightSuppress": 0.6,
+        "necrosis": 0.4,
+        "curl": 0.5,
+        "stomatalClose": 0.9,
+        "pigmentation": 0.3,
+        "chlorosis": 0.65,
+        "defenseProteins": 0.4,
+        "wilting": 0.55
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.6,
+    "necrosis": 0.4,
+    "curl": 0.5,
+    "stomatalClose": 0.9,
+    "pigmentation": 0.3,
+    "chlorosis": 0.65,
+    "defenseProteins": 0.4,
+    "wilting": 0.55
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 265,
+      "label": "ABA [M+H]+",
+      "base": 100,
+      "weekFactor": 0.6
+    },
+    {
+      "mz": 247,
+      "label": "ABA fragment (-H2O)",
+      "base": 75,
+      "weekFactor": 0.55
+    },
+    {
+      "mz": 281,
+      "label": "ABA-glucose ester (ABA-GE)",
+      "base": 65,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 263,
+      "label": "Phaseic acid (ABA catabolite)",
+      "base": 55,
+      "weekFactor": 0.85
+    },
+    {
+      "mz": 179,
+      "label": "MDA (senescence marker)",
+      "base": 50,
+      "weekFactor": 0.95
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate-strong — ABA inhibits cell elongation and division broadly",
+    "leafSize": "Reduced",
+    "leafCurl": "Moderate — stomatal closure combined with early senescence causes structural changes",
+    "wilting": "Paradoxical — ABA closes stomata to PREVENT wilting under drought; exogenous ABA causes apparent wilting at high dose by disrupting normal water balance",
+    "chlorosis": "Moderate-strong at high dose — premature chlorophyll degradation",
+    "necrosis": "Moderate — premature senescence progresses to necrosis",
+    "pigmentation": "Mild anthocyanin increase",
+    "rootGrowth": "Mildly reduced — ABA inhibits root cell elongation",
+    "newVsOldLeaves": "Old leaves most affected — ABA-driven senescence proceeds oldest-first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Moderate-strong at high dose",
+    "photosyntheticRate": "Strongly reduced — stomatal closure blocks CO₂ entry",
+    "stomatalConductance": "Very strongly reduced — ABA is THE primary stomatal closure signal",
+    "transpiration": "Very strongly reduced",
+    "waterUptake": "Maintained or improved at low dose (drought response); impaired at high dose",
+    "nutrientTransport": "Disrupted at high dose via reduced transpiration stream"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Moderate — ABA induces ROS burst as signaling molecule (intentional)",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Moderate at high dose",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": true,
+    "defenseProteins": [
+      "LEA proteins (drought)",
+      "dehydrins",
+      "RAB proteins",
+      "proteinase inhibitors"
+    ],
+    "metabolitesIncreasing": [
+      "ABA-GE conjugate",
+      "phaseic acid",
+      "proline",
+      "LEA proteins",
+      "dehydrins"
+    ],
+    "metabolitesDecreasing": [
+      "GA (antagonized)",
+      "cytokinin (antagonized)",
+      "chlorophyll (high dose)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild — ABA alters root exudate composition moderately",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Near-normal — ABA modulates rhizosphere but doesn't strongly suppress PGPR",
+    "fungalEffect": "Mycorrhizal associations maintained — ABA promotes mycorrhizal colonization under stress",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Mildly altered"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "1–6 hours for stomatal closure (fastest stomatal response of all hormones); 24–72 hours for visible morphological changes",
+    "firstSymptoms": [
+      "rapid stomatal closure",
+      "mild leaf curl"
+    ],
+    "lateSymptoms": [
+      "chlorosis",
+      "premature senescence",
+      "height suppression"
+    ],
+    "reversible": true,
+    "recoveryTime": "1–2 weeks — ABA degrades quickly; stomata reopen within hours of removal",
+    "acclimation": true,
+    "sensitization": "Moderate — ABA can prime stress memory via epigenetic mechanisms"
+  },
+  "visualSimulation": {
+    "colorChanges": "Surface dullness (stomatal closure visible as matte surface); then yellowing; mild purple at high dose",
+    "firstAffectedRegion": "Stomatal surface (dullness/closure) — first visible change. Then old leaves yellow.",
+    "damageSpread": "Old-to-young progression — senescence proceeds from base upward",
+    "damagePattern": "Uniform stomatal surface change; patchy senescence on older leaves",
+    "heatmapGlow": "Moderate — ABA-GE and dehydrin signature; moderate compared to stress chemicals",
+    "microbiomeParticles": "Near-normal to mildly reduced",
+    "leafAppearance": [
+      "matte_surface_closure",
+      "yellowing_old_leaves",
+      "mild_curl"
+    ],
+    "recoveryVisual": "Good — stomata reopen quickly; yellowing partially reversible; new growth healthy"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "ethylene"
+    ],
+    "synergyNote": "ABA + ethylene is the canonical senescence acceleration combination — ABA initiates and ethylene amplifies; together they produce the fastest chlorophyll degradation in the simulator",
+    "antagonizesWith": [
+      "gibberellin",
+      "cytokinin"
+    ],
+    "antagonismNote": "ABA opposes GA-mediated growth and seed germination; ABA opposes CK-mediated anti-senescence. The ABA/CK ratio determines leaf age and stress response intensity.",
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2"
+    ],
+    "protectsAgainst": [
+      "mild_drought_stress"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Endogenous stress hormone — produced in roots and leaves under drought, cold, salinity, and pathogen stress; found universally in land plants",
+    "classification": "Plant stress hormone",
+    "agriculturalUse": "Experimental drought-priming treatments; seed dormancy regulation; post-harvest delay (inhibits premature germination)",
+    "humanToxicity": "Very low — no significant risk",
+    "climateLink": "ABA is the primary hormone mediating plant drought responses — as climate change increases drought frequency and intensity, ABA biology becomes central to crop improvement",
+    "indoorOutdoor": "Both — produced naturally in all plants under stress",
+    "whyStudentsCare": "Why plants wilt and then recover when watered — ABA is the signal that says 'close your stomata, conserve water.' The fastest-acting hormone signal in the plant kingdom at just 1–6 hours.",
+    "realWorldIssue": "Drought-tolerant crop development, climate adaptation, water use efficiency in agriculture"
+  },
+  "sources": [
+    "Cutler SR, Rodriguez PL, Finkelstein RR, Abrams SR (2010). Abscisic acid: emergence of a core signaling network. Annual Review of Plant Biology, 61, 651–679.",
+    "Raghavendra AS, et al. (2010). ABA perception and signalling. Trends in Plant Science, 15(7), 395–401.",
+    "Fujita Y, et al. (2011). Pivotal role of the AREB/ABF-SnRK2 pathway in ABRE-mediated transcription in response to osmotic stress. Plant Journal, 68(4), 1–11."
+  ]
+}

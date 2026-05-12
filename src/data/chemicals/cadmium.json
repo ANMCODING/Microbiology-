@@ -1,0 +1,152 @@
+{
+  "id": "cadmium",
+  "commonName": "Cadmium",
+  "iupacName": "cadmium(II) ion",
+  "formula": "Cd",
+  "molecularWeight": 112.41,
+  "phase": "solid",
+  "deliveryMethods": ["soil", "root_drench"],
+  "color": "#78350F",
+  "category": "heavy_metal",
+  "subCategory": "transition_metal",
+  "boilingPoint": "767 °C at 1 atm",
+  "vaporPressure": "~0.00013 mmHg at 20 °C",
+  "waterSolubility": "Cd²⁺ highly soluble in acidic soils; ~1000 mg/L as CdCl₂",
+  "odor": null,
+  "environmentalPersistence": "Very high — does not degrade; persists in soil for decades",
+  "bioaccumulates": true,
+  "absorptionRoutes": ["roots", "vascular"],
+  "primaryUptakeMedium": "soil",
+  "tissuesAffected": ["roots", "leaves", "stems"],
+  "systemicMovement": true,
+  "doseResponse": {
+    "lowDose": {
+      "range": "0.1–1 mg/kg soil",
+      "description": "Subclinical — mild oxidative stress detectable biochemically but no visible morphological symptoms. Some studies show marginal growth stimulation in hyperaccumulator species but not in Coleus.",
+      "simulationVector": {
+        "heightSuppress": 0.1,
+        "necrosis": 0.05,
+        "curl": 0.05,
+        "stomatalClose": 0.1,
+        "pigmentation": 0.1,
+        "chlorosis": 0.15,
+        "defenseProteins": 0.2,
+        "wilting": 0.05
+      }
+    },
+    "highDose": {
+      "range": "50–100+ mg/kg soil",
+      "description": "Severe root necrosis, dark leaf spotting, strong chlorosis, wilting, near-complete growth arrest. Metal accumulation visible as dark deposits in root and stem tissue.",
+      "simulationVector": {
+        "heightSuppress": 0.85,
+        "necrosis": 0.8,
+        "curl": 0.3,
+        "stomatalClose": 0.6,
+        "pigmentation": 0.4,
+        "chlorosis": 0.85,
+        "defenseProteins": 0.5,
+        "wilting": 0.75
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.75,
+    "necrosis": 0.7,
+    "curl": 0.25,
+    "stomatalClose": 0.5,
+    "pigmentation": 0.3,
+    "chlorosis": 0.75,
+    "defenseProteins": 0.45,
+    "wilting": 0.65
+  },
+  "lcMsPeaks": [
+    { "mz": 305, "label": "Phytochelatin PC2", "base": 90, "weekFactor": 1.0 },
+    { "mz": 610, "label": "Phytochelatin PC4", "base": 65, "weekFactor": 0.95 },
+    { "mz": 272, "label": "Metallothionein fragment", "base": 75, "weekFactor": 0.9 },
+    { "mz": 179, "label": "Malondialdehyde adduct", "base": 80, "weekFactor": 0.85 },
+    { "mz": 132, "label": "Proline (osmotic stress)", "base": 55, "weekFactor": 0.8 }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Strong — root uptake inhibition starves shoot of water and nutrients",
+    "leafSize": "Significantly reduced",
+    "leafCurl": "Mild — not a primary Cd symptom",
+    "wilting": "Strong — water uptake severely impaired by root damage",
+    "chlorosis": "Strong — Cd displaces Fe and Zn from chlorophyll synthesis pathway",
+    "necrosis": "Strong — dark brown-black spotting on leaves and root tips; stem base darkening",
+    "pigmentation": "Mild anthocyanin increase as oxidative stress response",
+    "rootGrowth": "Severely inhibited — primary site of Cd toxicity; root tips blacken",
+    "stemThickness": "Reduced",
+    "newVsOldLeaves": "Both affected; chlorosis appears first on older leaves, spotting on all"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 40–70% reduction at moderate-high doses",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Decreased — both ABA-mediated and direct damage to guard cells",
+    "transpiration": "Reduced",
+    "waterUptake": "Severely impaired — root structural damage",
+    "nutrientTransport": "Strongly disrupted — Cd competes with Ca, Fe, Zn, Mn",
+    "membranePermeability": "Increased — lipid peroxidation damages membranes"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — one of Cd's primary mechanisms of toxicity",
+    "antioxidantEnzymes": ["CAT", "SOD", "POD"],
+    "lipidPeroxidation": "Strong — MDA accumulation is a key biomarker",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": true,
+    "defenseProteins": ["phytochelatins", "metallothioneins", "heat shock proteins"],
+    "metabolitesIncreasing": ["phytochelatins", "metallothioneins", "proline", "MDA", "H2O2"],
+    "metabolitesDecreasing": ["chlorophyll a", "chlorophyll b", "carotenoids", "Fe-containing enzymes"]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — Cd is broadly toxic to soil microbiome",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed — PGPR highly sensitive to Cd",
+    "fungalEffect": "Mycorrhizal fungi disrupted; Cd-tolerant fungal species may increase",
+    "resistomeIncrease": true,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "72–120 hours",
+    "firstSymptoms": ["root tip browning", "mild chlorosis on older leaves"],
+    "lateSymptoms": ["dark leaf spotting", "widespread necrosis", "growth arrest", "wilting"],
+    "reversible": false,
+    "recoveryTime": "Minimal — Cd is not metabolized; phytoremediation possible only over very long timescales",
+    "acclimation": false,
+    "sensitization": "Accumulative — symptoms worsen continuously as Cd builds up in tissue"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow (chlorosis) with dark brown-black spots; roots turn brown-black",
+    "firstAffectedRegion": "Root tips, then older leaves",
+    "damageSpread": "Upward from roots through vascular tissue",
+    "damagePattern": "Patchy dark spotting on leaves; uniform chlorosis background",
+    "heatmapGlow": "Dark amber glow — phytochelatin and MDA accumulation signature; roots show strongest signal",
+    "microbiomeParticles": "Sparse, slow; high pathogen fraction; resistome particles increase",
+    "leafAppearance": ["spotted", "yellowing", "brittle"],
+    "recoveryVisual": "No recovery — damage is permanent and progressive"
+  },
+  "synergies": {
+    "synergizesWith": ["lead", "arsenic", "mercury"],
+    "synergyNote": "Heavy metal combinations are additive to synergistic — shared ROS mechanism and phytochelatin competition means combined exposure overwhelms detox capacity faster",
+    "antagonizesWith": ["phosphorus", "calcium"],
+    "antagonismNote": "Phosphorus and calcium compete with Cd for uptake sites; adequate P and Ca in soil reduces Cd bioavailability",
+    "amplifiesOxidativeStressOf": ["ozone", "so2", "formaldehyde"],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Phosphate fertilizers, industrial smelting, battery manufacturing, cigarette smoke, contaminated irrigation water",
+    "classification": "Heavy metal pollutant",
+    "agriculturalUse": "Not intentionally used — a contaminant in phosphate fertilizers",
+    "humanToxicity": "High — IARC Group 1 carcinogen; causes kidney damage, Itai-itai disease (bone softening); accumulates in food crops",
+    "climateLink": "Increased soil acidification from climate change increases Cd mobility and bioavailability",
+    "indoorOutdoor": "Primarily outdoor/soil; indoor via cigarette smoke",
+    "whyStudentsCare": "Enters the food chain through crops grown in contaminated soil — rice and leafy vegetables are major vectors. Direct link between industrial pollution and food safety.",
+    "realWorldIssue": "Soil contamination, food safety, industrial pollution legacy sites"
+  },
+  "sources": [
+    "Sandalio LM, et al. (2001). Cadmium-induced changes in the growth and oxidative metabolism of pea plants. Journal of Experimental Botany, 52(364), 2115–2126.",
+    "Clemens S (2006). Toxic metal accumulation, responses to exposure and mechanisms of tolerance in plants. Biochimie, 88(11), 1707–1719.",
+    "Gill SS, Tuteja N (2011). Cadmium stress tolerance in crop plants: probing the role of sulfur. Plant Signaling & Behavior, 6(2), 215–222."
+  ]
+}

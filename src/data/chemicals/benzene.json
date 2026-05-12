@@ -1,0 +1,195 @@
+{
+  "id": "benzene",
+  "commonName": "Benzene",
+  "iupacName": "benzene",
+  "formula": "C6H6",
+  "molecularWeight": 78.11,
+  "phase": "liquid",
+  "deliveryMethods": [
+    "gas",
+    "fumigation",
+    "liquid"
+  ],
+  "color": "#92400E",
+  "category": "voc",
+  "subCategory": "pollutant_voc",
+  "boilingPoint": "80.1 °C at 1 atm",
+  "vaporPressure": "~95.2 mmHg at 25 °C",
+  "waterSolubility": "~1.8 g/L at 25 °C",
+  "odor": "Sweet, aromatic, gasoline-like",
+  "environmentalPersistence": "Moderate — atmospheric half-life ~2 weeks via OH radical; persists longer in soil and groundwater",
+  "bioaccumulates": true,
+  "absorptionRoutes": [
+    "stomata",
+    "leaf_surface",
+    "roots"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves",
+    "stems",
+    "roots"
+  ],
+  "systemicMovement": true,
+  "simulationVector": {
+    "heightSuppress": 0.55,
+    "necrosis": 0.5,
+    "curl": 0.4,
+    "stomatalClose": 0.6,
+    "pigmentation": 0.25,
+    "chlorosis": 0.6,
+    "defenseProteins": 0.35,
+    "wilting": 0.45
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 79,
+      "label": "Benzene [M+H]+",
+      "base": 100,
+      "weekFactor": 0.45
+    },
+    {
+      "mz": 95,
+      "label": "Benzene oxide (epoxide)",
+      "base": 85,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 111,
+      "label": "Catechol derivative",
+      "base": 70,
+      "weekFactor": 0.9
+    },
+    {
+      "mz": 179,
+      "label": "MDA (lipid peroxidation)",
+      "base": 80,
+      "weekFactor": 1
+    },
+    {
+      "mz": 308,
+      "label": "Glutathione (GSH)",
+      "base": 60,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Moderate — cell division inhibited by benzene epoxide metabolites",
+    "leafSize": "Reduced",
+    "leafCurl": "Moderate — membrane disruption and stomatal dysfunction",
+    "wilting": "Moderate — vascular tissue damage",
+    "chlorosis": "Strong — benzene disrupts chloroplast membrane integrity",
+    "necrosis": "Moderate to strong — initially at leaf margins, spreading inward",
+    "pigmentation": "Mild — stress anthocyanin partially masked by chlorosis",
+    "rootGrowth": "Moderately inhibited — benzene is phytotoxic via roots at high soil concentrations",
+    "newVsOldLeaves": "Both affected; older leaves show chlorosis first"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "Strong — 40–65% at moderate-high doses",
+    "photosyntheticRate": "Severely reduced",
+    "stomatalConductance": "Strongly reduced",
+    "transpiration": "Reduced",
+    "waterUptake": "Moderately impaired",
+    "membranePermeability": "Strongly increased — lipophilic benzene disrupts bilayer"
+  },
+  "molecularEffects": {
+    "rosIncrease": true,
+    "oxidativeStress": "Strong — benzene epoxide metabolites are highly reactive",
+    "antioxidantEnzymes": [
+      "CAT",
+      "SOD",
+      "POD"
+    ],
+    "lipidPeroxidation": "Strong — MDA accumulation significant",
+    "anthocyaninInduction": "Mild",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "cytochrome P450 detox enzymes",
+      "glutathione S-transferase",
+      "peroxidases"
+    ],
+    "metabolitesIncreasing": [
+      "benzene oxide",
+      "catechol derivatives",
+      "MDA",
+      "GSSG"
+    ],
+    "metabolitesDecreasing": [
+      "GSH",
+      "chlorophyll a",
+      "chlorophyll b",
+      "membrane phospholipids"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Strong — benzene is broadly toxic to microbiome",
+    "pathogenSuppression": false,
+    "pathogenIncrease": true,
+    "beneficialBacteriaEffect": "Strongly suppressed",
+    "fungalEffect": "Disrupted — benzene-tolerant taxa may persist",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Strongly destabilized"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–48 hours",
+    "firstSymptoms": [
+      "stomatal closure",
+      "leaf margin chlorosis"
+    ],
+    "lateSymptoms": [
+      "necrosis",
+      "wilting",
+      "growth arrest"
+    ],
+    "reversible": false,
+    "recoveryTime": "Poor — benzene metabolite damage is largely irreversible",
+    "acclimation": false,
+    "sensitization": "Cumulative — no acclimation; damage accumulates linearly"
+  },
+  "visualSimulation": {
+    "colorChanges": "Green → yellow (chlorosis) with brown necrotic margins; minimal purple",
+    "firstAffectedRegion": "Leaf margins, then spreading inward",
+    "damageSpread": "Inward from margins",
+    "damagePattern": "Marginal necrosis with uniform background chlorosis",
+    "heatmapGlow": "Moderate orange — MDA and GSH depletion signature",
+    "microbiomeParticles": "Strongly reduced; high pathogen fraction",
+    "leafAppearance": [
+      "yellowing",
+      "margin_necrosis",
+      "brittle"
+    ],
+    "recoveryVisual": "Minimal — marginal scarring and chlorosis persist"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "formaldehyde",
+      "toluene",
+      "xylene"
+    ],
+    "synergyNote": "Indoor VOC mixture — benzene + toluene + xylene + formaldehyde overwhelms GSH-based detoxification synergistically; realistic scenario for plants in poorly ventilated indoor spaces",
+    "antagonizesWith": [],
+    "antagonismNote": null,
+    "amplifiesOxidativeStressOf": [
+      "ozone",
+      "so2",
+      "cadmium",
+      "lead"
+    ],
+    "protectsAgainst": []
+  },
+  "educationalContext": {
+    "realWorldSources": "Gasoline, vehicle exhaust, cigarette smoke, industrial solvents, paint, glue — major outdoor and indoor pollutant",
+    "classification": "Aromatic hydrocarbon pollutant",
+    "agriculturalUse": "None — environmental contaminant",
+    "humanToxicity": "Very high — IARC Group 1 carcinogen; causes leukemia; bone marrow toxin",
+    "climateLink": "Benzene emissions from wildfires increasing under climate change — directly links deforestation and climate to air quality",
+    "indoorOutdoor": "Both — gasoline storage indoors; major outdoor traffic pollutant",
+    "whyStudentsCare": "In gasoline and cigarette smoke — students encounter it daily without knowing. Its leukemia link makes the toxicology immediately personal.",
+    "realWorldIssue": "Urban air quality, cancer risk from traffic pollution, industrial contamination"
+  },
+  "sources": [
+    "Ugrekhelidze D, Kvesitadze G (2009). Uptake and transformation of benzene and toluene by plant leaves. Ecotoxicology and Environmental Safety, 72(2), 496–501.",
+    "IARC (2012). Benzene. IARC Monographs on the Evaluation of Carcinogenic Risks to Humans, Vol. 100F.",
+    "Kondo T, et al. (2005). Benzene phytotoxicity and detoxification mechanisms in higher plants. Environmental and Experimental Botany, 54, 10–18."
+  ]
+}

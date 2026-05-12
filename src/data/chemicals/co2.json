@@ -1,0 +1,210 @@
+{
+  "id": "co2",
+  "commonName": "Carbon Dioxide",
+  "iupacName": "carbon dioxide",
+  "formula": "CO2",
+  "molecularWeight": 44.01,
+  "phase": "gas",
+  "deliveryMethods": [
+    "gas",
+    "fumigation"
+  ],
+  "color": "#4ADE80",
+  "category": "greenhouse_gas",
+  "subCategory": "atmospheric_gas",
+  "boilingPoint": "-78.5 °C (sublimation) at 1 atm",
+  "vaporPressure": "~56,500 mmHg at 20 °C",
+  "waterSolubility": "~1.45 g/L at 25 °C",
+  "odor": "Odorless at ambient concentrations; slightly acidic taste",
+  "environmentalPersistence": "Very high as atmospheric gas — atmospheric half-life ~100–300 years; absorbed by oceans and plants",
+  "bioaccumulates": false,
+  "absorptionRoutes": [
+    "stomata"
+  ],
+  "primaryUptakeMedium": "air",
+  "tissuesAffected": [
+    "leaves"
+  ],
+  "systemicMovement": false,
+  "doseResponse": {
+    "lowDose": {
+      "range": "400–800 ppm (ambient to 2× ambient)",
+      "description": "Enhanced photosynthesis (CO₂ fertilization effect) — increased growth, larger leaves, reduced stomatal aperture for equivalent CO₂ uptake (improved water use efficiency). Positive effect well documented in controlled conditions.",
+      "simulationVector": {
+        "heightSuppress": 0,
+        "necrosis": 0,
+        "curl": 0,
+        "stomatalClose": 0.15,
+        "pigmentation": 0,
+        "chlorosis": 0,
+        "defenseProteins": 0,
+        "wilting": 0
+      }
+    },
+    "highDose": {
+      "range": ">5000 ppm",
+      "description": "Excess CO₂ causes stomatal closure, reduced transpiration, impaired nutrient uptake via transpiration stream, and at extreme levels (>10,000 ppm) direct acidosis in mesophyll cells. Also reduces protein and nutrient concentration per unit biomass (dilution effect).",
+      "simulationVector": {
+        "heightSuppress": 0.25,
+        "necrosis": 0.1,
+        "curl": 0.1,
+        "stomatalClose": 0.55,
+        "pigmentation": 0.05,
+        "chlorosis": 0.2,
+        "defenseProteins": 0.05,
+        "wilting": 0.1
+      }
+    }
+  },
+  "simulationVector": {
+    "heightSuppress": 0.25,
+    "necrosis": 0.1,
+    "curl": 0.1,
+    "stomatalClose": 0.55,
+    "pigmentation": 0.05,
+    "chlorosis": 0.2,
+    "defenseProteins": 0.05,
+    "wilting": 0.1
+  },
+  "lcMsPeaks": [
+    {
+      "mz": 287,
+      "label": "Chlorophyll precursor (elevated)",
+      "base": 90,
+      "weekFactor": 0.75
+    },
+    {
+      "mz": 369,
+      "label": "RuBP (Calvin cycle substrate)",
+      "base": 80,
+      "weekFactor": 0.7
+    },
+    {
+      "mz": 339,
+      "label": "Sucrose (enhanced photosynthesis)",
+      "base": 85,
+      "weekFactor": 0.8
+    },
+    {
+      "mz": 133,
+      "label": "Malate (stomatal marker)",
+      "base": 60,
+      "weekFactor": 0.65
+    },
+    {
+      "mz": 179,
+      "label": "MDA (high dose only)",
+      "base": 20,
+      "weekFactor": 0.7
+    }
+  ],
+  "morphologicalEffects": {
+    "heightSuppression": "Negative at low dose (promotes growth — CO₂ fertilization); mild at high dose via stomatal closure and nutrient dilution",
+    "leafSize": "Increased at low dose; slightly pale and larger at very high dose",
+    "leafCurl": "Minimal — not a primary CO₂ effect",
+    "wilting": "Minimal at low dose (improved WUE); mild at very high dose",
+    "chlorosis": "Absent at low dose; mild at high dose — nutrient dilution in rapidly grown tissue",
+    "necrosis": "Only at extreme doses (>10,000 ppm) — acidosis in mesophyll",
+    "pigmentation": "Minimal — CO₂ does not induce anthocyanin",
+    "rootGrowth": "Mildly stimulated at low dose (more carbohydrates for root growth); maintained",
+    "newVsOldLeaves": "New growth benefits most at low dose; dilution chlorosis may appear on rapidly formed leaves at high dose"
+  },
+  "physiologyEffects": {
+    "chlorophyllReduction": "None at low dose; mild at high dose (nutrient dilution)",
+    "photosyntheticRate": "Strongly increased at low dose; diminishing returns then mild decrease at very high dose",
+    "stomatalConductance": "Decreased even at low dose — partial closure to maintain CO₂/H₂O tradeoff",
+    "transpiration": "Reduced (improved WUE is key low-dose benefit)",
+    "waterUptake": "Near-normal; mildly reduced at high dose via stomatal closure reducing transpiration pull",
+    "nutrientTransport": "Mildly reduced at high dose — reduced transpiration stream reduces mass flow of nutrients"
+  },
+  "molecularEffects": {
+    "rosIncrease": false,
+    "oxidativeStress": "None at low dose; mild at very high dose",
+    "antioxidantEnzymes": [
+      "RuBisCO (upregulated at low dose)"
+    ],
+    "lipidPeroxidation": "None to minimal",
+    "anthocyaninInduction": "None",
+    "flavonoidInduction": false,
+    "defenseProteins": [
+      "minimal — CO₂ actually reduces jasmonate defense signaling (growth-defense tradeoff)"
+    ],
+    "metabolitesIncreasing": [
+      "sucrose",
+      "starch",
+      "RuBP",
+      "Calvin cycle intermediates (low dose)"
+    ],
+    "metabolitesDecreasing": [
+      "protein per unit biomass (dilution)",
+      "defense metabolites (growth-defense tradeoff)"
+    ]
+  },
+  "microbiomeEffects": {
+    "diversityReduction": "Mild — elevated CO₂ alters root exudate composition and rhizosphere chemistry",
+    "pathogenSuppression": false,
+    "pathogenIncrease": false,
+    "beneficialBacteriaEffect": "Mixed — some PGPR benefit from increased root exudate carbohydrates; mycorrhizal associations may increase",
+    "fungalEffect": "Mycorrhizal colonization can increase under elevated CO₂ (more carbohydrate available for fungal partner)",
+    "resistomeIncrease": false,
+    "rhizosphereStability": "Near-normal to mildly improved at low dose"
+  },
+  "temporalDynamics": {
+    "firstSymptomsHours": "24–72 hours for growth response",
+    "firstSymptoms": [
+      "increased growth and greening at low dose",
+      "stomatal partial closure"
+    ],
+    "lateSymptoms": [
+      "dilution chlorosis and nutrient stress at high dose"
+    ],
+    "reversible": true,
+    "recoveryTime": "Immediate — stomata respond within minutes to CO₂ changes",
+    "acclimation": true,
+    "sensitization": "Acclimation reduces initial CO₂ fertilization benefit over time (photosynthetic downregulation)"
+  },
+  "visualSimulation": {
+    "colorChanges": "Low dose: taller, slightly paler green (dilution). High dose: pale green with stomatal surface matte appearance",
+    "firstAffectedRegion": "Stomatal surface — closure reduces visual shininess",
+    "damageSpread": "Minimal",
+    "damagePattern": "Near-normal appearance at low dose; important to show POSITIVE effect — largest plant in greenhouse should be CO₂-treated",
+    "heatmapGlow": "Green glow from enhanced sucrose and Calvin cycle activity — positive signal",
+    "microbiomeParticles": "Near-normal to mildly enhanced",
+    "leafAppearance": [
+      "taller_at_low_dose",
+      "stomatal_closure_matte",
+      "pale_at_very_high_dose"
+    ],
+    "recoveryVisual": "Immediate stomatal recovery; growth benefit persists"
+  },
+  "synergies": {
+    "synergizesWith": [
+      "nitrogen"
+    ],
+    "synergyNote": "CO₂ fertilization effect is most pronounced when N is non-limiting — elevated CO₂ + adequate N produces maximum growth response. Without adequate N, CO₂ fertilization benefit is largely negated.",
+    "antagonizesWith": [
+      "ozone"
+    ],
+    "antagonismNote": "CO₂ and ozone have opposing stomatal effects — CO₂ closes stomata reducing ozone uptake; but simultaneously ozone damage reduces CO₂ uptake for photosynthesis. Real-world climate scenario.",
+    "amplifiesOxidativeStressOf": [],
+    "protectsAgainst": [
+      "ozone",
+      "mild_drought_stress"
+    ]
+  },
+  "educationalContext": {
+    "realWorldSources": "Fossil fuel combustion, deforestation, volcanic eruptions, respiration — current atmospheric concentration ~425 ppm (2024), up from 280 ppm pre-industrial",
+    "classification": "Greenhouse gas / plant nutrient",
+    "agriculturalUse": "CO₂ enrichment used in commercial greenhouses (typically 1000–1500 ppm) to boost crop yields",
+    "humanToxicity": "Not toxic at atmospheric concentrations; dangerous at high concentrations (>5000 ppm causes dizziness; >40,000 ppm lethal)",
+    "climateLink": "THE primary anthropogenic greenhouse gas — the simulator should make clear that CO₂ is both a plant nutrient AND the primary driver of the climate crisis. The fertilization effect is real but insufficient to offset climate damage.",
+    "indoorOutdoor": "Both — indoor elevated CO₂ common in crowded rooms; outdoor levels rising globally",
+    "whyStudentsCare": "CO₂ fertilization is real — climate change deniers use it to argue rising CO₂ is good for plants. But the full picture (heat stress, drought, ozone, etc.) negates the benefit. Teaches students to evaluate incomplete arguments.",
+    "realWorldIssue": "Climate change, greenhouse horticulture, CO₂ fertilization vs climate damage tradeoff, food nutrition changes under elevated CO₂"
+  },
+  "sources": [
+    "Long SP, et al. (2006). Food for thought: lower-than-expected crop yield stimulation with rising CO₂ concentrations. Science, 312(5782), 1918–1921.",
+    "Ainsworth EA, Rogers A (2007). The response of photosynthesis and stomatal conductance to rising CO₂. Plant, Cell & Environment, 30(3), 258–270.",
+    "Myers SS, et al. (2014). Increasing CO₂ threatens human nutrition. Nature, 510, 139–142."
+  ]
+}
