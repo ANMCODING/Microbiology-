@@ -97,16 +97,18 @@ function renderShell(): string {
       </header>
 
       <main class="entrance-body">
-        <section class="entrance-col">
+        <section class="entrance-col entrance-col-plants">
           <h2>1 · Choose a plant species</h2>
           <p class="entrance-hint">Each species has its own geometry, chemical sensitivities, and baseline LC-MS profile.</p>
-          <div class="plant-grid" id="plant-grid">
-            ${PLANT_IDS.map(renderPlantCard).join("")}
+          <div class="plant-stack">
+            <div class="plant-grid" id="plant-grid">
+              ${PLANT_IDS.map(renderPlantCard).join("")}
+            </div>
+            <div class="plant-detail" id="plant-detail"></div>
           </div>
-          <div class="plant-detail" id="plant-detail"></div>
         </section>
 
-        <section class="entrance-col">
+        <section class="entrance-col entrance-col-chemicals">
           <h2>2 · Pick chemicals to expose it to <span class="muted">(0 = control)</span></h2>
           <p class="entrance-hint">Click any chip to toggle, right-click for the full info card. The lab supports any combination.</p>
           <div class="chem-search-row">

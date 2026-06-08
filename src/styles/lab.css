@@ -23,6 +23,10 @@
 }
 
 * { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 html, body, #app { height: 100%; margin: 0; }
 body {
   background:
@@ -33,7 +37,9 @@ body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
-body.guide-open {
+body.guide-open,
+body.entrance-open,
+body.lab-open {
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -494,7 +500,9 @@ input[type="range"]::-moz-range-thumb {
   to   { opacity: 1; }
 }
 .info-card {
-  width: min(420px, 90vw);
+  width: min(420px, calc(100vw - 32px));
+  max-height: min(88vh, 720px);
+  overflow-y: auto;
   background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
   border: 1px solid var(--line-2);
   border-radius: 14px;
@@ -1113,15 +1121,16 @@ input[type="range"]::-moz-range-thumb {
 .guide-continue-btn:hover { filter: brightness(1.06); }
 
 .entrance-screen {
-  position: fixed; inset: 0;
+  position: relative;
   display: flex; flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(79, 209, 197, 0.08), transparent 60%),
     radial-gradient(1000px 500px at 110% 0%,  rgba(128, 207, 255, 0.07), transparent 60%),
     var(--bg-0);
   z-index: 100;
   color: var(--text);
-  overflow: hidden;
 }
 
 .entrance-bg {
@@ -1134,11 +1143,14 @@ input[type="range"]::-moz-range-thumb {
 .entrance-shell {
   position: relative;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  flex: 1;
+  width: 100%;
+  min-height: min(100vh, 100dvh);
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
 }
 
 .entrance-head {
@@ -1183,16 +1195,45 @@ input[type="range"]::-moz-range-thumb {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
   gap: 22px;
   padding: 18px 0;
-  overflow: hidden;
   min-height: 0;
+  align-items: stretch;
 }
 .entrance-col {
   display: flex; flex-direction: column;
   min-height: 0;
+  min-width: 0;
   background: linear-gradient(180deg, rgba(19,26,36,0.55), rgba(13,17,23,0.55));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 14px 16px 16px;
+}
+.plant-stack {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  gap: 10px;
+}
+.entrance-col-plants .plant-grid {
+  flex: 1 1 auto;
+  min-height: 96px;
+  max-height: clamp(120px, 34vh, 360px);
+}
+.entrance-col-plants .plant-detail {
+  flex: 0 1 auto;
+  margin-top: 0;
+  max-height: clamp(100px, 28vh, 300px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.entrance-col-plants .plant-detail:empty {
+  display: none;
+}
+.entrance-col-chemicals .chem-cats,
+.entrance-col:not(.entrance-col-plants) .chem-cats {
+  flex: 1;
+  min-height: 120px;
+  max-height: clamp(160px, 42vh, 520px);
 }
 .entrance-col h2 {
   font-size: 12px; font-weight: 600; letter-spacing: 0.16em;
@@ -1385,9 +1426,185 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer; font-size: 11px;
 }
 
-/* Responsive: collapse to single column on narrow screens */
+/* ── Responsive layout (entrance + lab + shared) ── */
+
+@media (max-width: 1400px) {
+  .layout {
+    grid-template-columns: 280px minmax(0, 1fr) 340px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #app {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    grid-template-rows: auto auto minmax(0, 1fr);
+  }
+  .topbar {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 8px 12px;
+  }
+  .brand {
+    flex: 1 1 220px;
+    min-width: 0;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .brand h1 { font-size: 12px; }
+  .brand .subtitle {
+    flex: 1 1 100%;
+    font-size: 10px;
+    line-height: 1.35;
+    white-space: normal;
+  }
+  .view-toggle {
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+  .viewport-wrap {
+    order: 1;
+    height: clamp(240px, 46vh, 520px);
+    min-height: 240px;
+    flex-shrink: 0;
+  }
+  .left-panel {
+    order: 2;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .right-panel {
+    order: 3;
+    border-left: 0;
+  }
+}
+
 @media (max-width: 980px) {
-  .entrance-body { grid-template-columns: 1fr; }
+  .entrance-body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .entrance-col-plants .plant-grid {
+    max-height: min(44vh, 400px);
+  }
+  .entrance-col-plants .plant-detail {
+    max-height: none;
+    overflow-y: visible;
+  }
+  .entrance-col-chemicals .chem-cats,
+  .entrance-col:not(.entrance-col-plants) .chem-cats {
+    max-height: min(50vh, 480px);
+  }
+  .entrance-foot {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .entrance-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  .guide-shell {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  .rigor-card {
+    max-height: 92vh;
+  }
+  .rigor-backdrop {
+    align-items: flex-end;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .entrance-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .entrance-counts {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .entrance-head-btns {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+  .entrance-foot {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .entrance-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 0;
+  }
+  .apply-mode {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .apply-mode button {
+    flex: 1 1 auto;
+    padding: 8px 10px;
+  }
+  .enter-lab-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .plant-detail .pd-grid {
+    grid-template-columns: 1fr;
+  }
+  .brand-guide,
+  .brand-rigor {
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+  .view-toggle button {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .card-head {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .overlay-hint {
+    max-width: min(260px, calc(100vw - 48px));
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .entrance-shell {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+  .entrance-col {
+    padding: 12px;
+  }
+  .plant-card {
+    padding: 8px;
+  }
+  .guide-brand h1 { font-size: 18px; }
+  .guide-card { padding: 14px 16px; }
 }
 
 /* ----- Entrance: search + plant info badge ----- */
@@ -1438,7 +1655,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* ----- Entrance: live plant detail panel ----- */
 .plant-detail {
-  margin-top: 14px;
+  margin-top: 0;
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -1691,3 +1908,324 @@ input[type="range"]::-moz-range-thumb {
 }
 .guide-rigor-btn:hover { border-color: var(--accent); background: var(--bg-2); }
 .guide-rigor-hint { font-size: 11px; color: var(--text-dim); line-height: 1.5; max-width: 52ch; }
+
+/* ── Phone / tablet presentation polish (layout only) ── */
+
+@media (max-width: 980px) {
+  .guide-screen {
+    min-height: 100dvh;
+  }
+  .guide-foot {
+    padding-bottom: max(28px, calc(16px + env(safe-area-inset-bottom)));
+  }
+  .guide-toc {
+    gap: 6px 10px;
+  }
+  .guide-toc a {
+    font-size: 10px;
+  }
+  .guide-lead {
+    max-width: none;
+  }
+  .rigor-card {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    max-height: min(92dvh, 900px);
+  }
+}
+
+@media (max-width: 720px) {
+  .guide-brand {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .guide-brand h1 {
+    font-size: 20px;
+  }
+  .guide-card p,
+  .guide-bullets,
+  .guide-steps,
+  .guide-dl dd,
+  .gloss-def {
+    font-size: 13px;
+  }
+  .guide-continue-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+  }
+  .guide-rigor-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .guide-rigor-hint {
+    max-width: none;
+  }
+
+  .entrance-foot {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    background: linear-gradient(180deg, transparent, var(--bg-0) 18%);
+    padding-bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .view-toggle {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .view-toggle button {
+    flex: 1 1 0;
+    text-align: center;
+    min-width: 0;
+  }
+  .brand-back {
+    width: 36px;
+    height: 34px;
+  }
+
+  .dash-card {
+    margin: 8px;
+  }
+  .canvas-host {
+    height: min(42vw, 200px);
+  }
+  .chart-host {
+    height: min(48vw, 220px);
+  }
+
+  .today-card .hl-row {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .today-card .hl-life {
+    margin-left: 0;
+  }
+  .today-card .hl-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .today-card .today-row {
+    grid-template-columns: 12px 1fr;
+    gap: 6px 8px;
+  }
+  .today-card .today-stats {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .today-card .group-name {
+    grid-column: 2;
+  }
+
+  .group-legend {
+    grid-template-columns: 1fr;
+  }
+  .analytics-card .anl-agg {
+    grid-template-columns: 1fr;
+  }
+  .analytics-card .anl-table-wrap {
+    max-height: 240px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .analytics-card .anl-table {
+    min-width: 280px;
+  }
+
+  .dash-card.recap-card .recap-head-right {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .dash-card.recap-card .recap-meta {
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .ms-focus-bar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .ms-plant-picker {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  .overlay-toggle {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+  .micro-legend {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  #molecular-overlay {
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px 12px max(10px, env(safe-area-inset-bottom));
+  }
+  #molecular-overlay .overlay-hint {
+    max-width: none;
+    width: 100%;
+  }
+
+  .info-backdrop {
+    align-items: flex-end;
+    padding: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  .info-card {
+    width: 100%;
+    max-height: min(88dvh, 720px);
+    border-radius: 14px 14px 0 0;
+  }
+  .info-color {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+  .info-swatch {
+    width: 48px;
+    height: 48px;
+  }
+
+  .plant-detail .pd-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .plant-detail .pd-sci {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+  .plant-detail .pd-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chem-cat-head {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .chem-cat-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .timeline-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .timeline .week-value {
+    text-align: left;
+  }
+  .seg-row button {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .entrance-brand h1 {
+    font-size: 14px;
+  }
+  .entrance-subtitle {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+  .entrance-counts .sep {
+    display: none;
+  }
+  .entrance-counts span {
+    display: block;
+  }
+  .entrance-to-guide,
+  .entrance-rigor {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .apply-mode {
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 4px;
+  }
+  .apply-mode button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+  .chem-chip {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .cat-mini {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  .tab-strip .tab {
+    max-width: min(200px, 70vw);
+  }
+  .log-feed {
+    max-height: min(40vh, 260px);
+  }
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+  .metric {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .metric:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 520px) {
+  .viewport-wrap {
+    height: clamp(200px, 38vh, 360px);
+    min-height: 200px;
+  }
+  .entrance-col-plants .plant-grid {
+    max-height: min(36vh, 280px);
+  }
+  .entrance-col-chemicals .chem-cats {
+    max-height: min(40vh, 320px);
+  }
+}
+
+@media (pointer: coarse) {
+  .plant-card {
+    min-height: 52px;
+  }
+  .plant-info-i {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    top: 4px;
+    right: 4px;
+  }
+  .chem-chip,
+  .ms-chip,
+  .tab,
+  .color-chip {
+    min-height: 36px;
+  }
+  .info-close,
+  .rigor-close {
+    width: 40px;
+    height: 38px;
+  }
+  .brand-back,
+  .brand-guide,
+  .brand-rigor {
+    min-height: 36px;
+  }
+}

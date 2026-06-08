@@ -54,6 +54,8 @@ function applyScreen(screen: ScreenMode): void {
   entranceHost.classList.toggle("hidden-screen", screen !== "entrance");
   appHost.classList.toggle("hidden-screen", screen !== "lab");
   document.body.classList.toggle("guide-open", screen === "guide");
+  document.body.classList.toggle("entrance-open", screen === "entrance");
+  document.body.classList.toggle("lab-open", screen === "lab");
   if (screen === "lab") refreshBrandSubtitle();
 }
 function refreshBrandSubtitle(): void {
@@ -306,6 +308,9 @@ ro.observe(viewport);
 ro.observe($("dash-micro-host"));
 ro.observe(rightPanel);
 window.addEventListener("resize", scheduleResize);
+window.addEventListener("orientationchange", () => {
+  requestAnimationFrame(() => requestAnimationFrame(scheduleResize));
+});
 
 // frame loop
 let last = performance.now();
